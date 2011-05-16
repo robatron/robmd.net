@@ -1,0 +1,22 @@
+{# Template for the blog index #}
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>{{ page.title }}</h2>
+
+    {% for entry in page.subpages %}
+        <div class='entry'>
+            <h3>
+                <a href='{{ entry.slug }}'> 
+                    {{ entry.title }}
+                </a>
+            </h3>
+            <h4>{{ entry.datetime }}</h4>
+            <div class='content'>
+                {{ entry.content }}
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
