@@ -1,0 +1,31 @@
+/* CSS styles for RobMD.net */
+
+body{
+    width:  500px;
+    margin: auto;
+
+    color: #4B4742;
+    font-size: 12px;
+    font-family: "lucida grande", lucida, tahoma, helvetica, arial, sans-serif;
+}
+
+a{
+    font-weight:        bold;
+    color:              #728E1C;
+    text-decoration:    none;
+}
+a:hover{
+    text-decoration:    underline;
+}
+a:visited{
+    color:              #728E1C;
+    text-decoration:    none;
+}
+
+#header{
+    background: #D9ED9D;
+    border: solid 2px #B9DA55;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}

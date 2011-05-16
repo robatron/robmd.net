@@ -1,0 +1,50 @@
+{# Base template #}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>{{ page.title }} | {{ site.title }}</title>
+
+        <link rel="stylesheet" type='text/css' href='styles.css'/>
+
+        {% block head %}{% endblock %}
+    </head>
+
+    <body>
+        <!-- Header -->
+        <div id="header">
+            <h1>RobMD.net</h1>
+        </div>
+        
+        <!-- Menu -->
+        <ul id="menu">
+            <li>
+                <a href='index.html'>Home</a> |
+            </li>
+            <li>
+                <a href='blog.html'>Blog</a> |
+            </li>
+            <li>
+                <a href='about.html'>About</a> |
+            </li>
+            <li>
+                <a href='contact.html'>Contact</a>
+            </li>
+        </ul>
+
+        <!-- Content -->
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <!-- Footer -->
+        <hr/>
+        <div id="footer">
+            &copy; Copyright <a href="http://robmd.net/">Rob McGuire-Dale</a>
+        </div>
+
+    </body>
+</html>

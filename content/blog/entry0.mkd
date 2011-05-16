@@ -1,0 +1,5 @@
+title: Test blog entry
+category: blog
+type: static_page
+---
+This is a test blog entry

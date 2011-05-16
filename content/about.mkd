@@ -1,0 +1,5 @@
+title: About
+type: static_page
+slug: about
+---
+This is the 'About' page.
