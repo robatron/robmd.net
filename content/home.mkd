@@ -3,9 +3,9 @@ type: home
 slug: index
 ---
 
-My name is Rob, and I treat the world like a giant [construction set](http://en.wikipedia.org/wiki/Construction_set). I love putting things together in useful, creative, and interesting ways. 
+My name is Rob McGuire-Dale, and I treat the world like a giant [construction set](http://en.wikipedia.org/wiki/Construction_set). I love putting things together in useful, creative, and interesting ways. 
 
-I'm a [Linux](http://en.wikipedia.org/wiki/Linux) and [open source](http://en.wikipedia.org/wiki/Open_source) enthusiast, coder, tinkerer, <=two-wheeled-vehicle rider, and an overall nerd. 
+I'm a [Linux](http://en.wikipedia.org/wiki/Linux) and [open source](http://en.wikipedia.org/wiki/Open_source) enthusiast, coder, tinkerer, two-wheeled-vehicle rider, and an overall nerd. 
 
 I have an immense curiosity and interest in many things, which drives me to learn.
 
