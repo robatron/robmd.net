@@ -6,15 +6,15 @@
     <h2>{{ page.title }}</h2>
 
     {% for entry in page.subpages %}
-        <div class='entry'>
+        <div class='blog_entry'>
             <h3>
-                <a href='{{ entry.slug }}'> 
+                <a href='blog/{{ entry.slug }}.html'> 
                     {{ entry.title }}
                 </a>
             </h3>
             <h4>{{ entry.datetime }}</h4>
             <div class='content'>
-                {{ entry.content }}
+                {{ entry.content[:10] }}
             </div>
         </div>
     {% endfor %}
