@@ -1,16 +1,20 @@
 /* CSS styles for RobMD.net */
 
+body{
+    margin: 0px;
+}
+
 #body_wrapper{
     background:     white;;
     width:          500px;
-    margin-left:    auto;
-    margin-right:   auto;
-    margin-top:     5px;
-    margin-bottom:  5px;
+    margin:         20px auto;
 
     color:          #4B4742;
     font-size:      12px;
     font-family:    "lucida grande", lucida, tahoma, helvetica, arial, sans-serif;
+
+    border-radius:  5px;
+    box-shadow:     0 0 50px #000000;
 }
 
 a{
@@ -28,11 +32,13 @@ a:visited{
 
 #header{
     background:     #D9ED9D;
+    border-radius:  5px 5px 0px 0px;
     border-bottom:  solid 1px #B9DA55;
     display:        table;
     width:          100%;
 
-    padding:    5px 10px 2px;
+    padding:    10px 20px 5px;
+
 }
 #header h1{
     margin:     0px;
@@ -49,20 +55,35 @@ a:visited{
 }
 
 #content{
-    padding:    5px 10px;
+    padding:    10px 20px;
     margin:     10px 0px;
 }
 
 #footer{
-    font-size:  .9em;
-    background: #D9ED9D;
-    padding:    5px 10px;
-    text-align: right;
-    border-top: solid 1px #B9DA55
+    font-size:      .9em;
+    background:     #D9ED9D;
+    padding:        10px 20px;
+    text-align:     right;
+    border-top:     solid 1px #B9DA55;
+    border-radius:  0px 0px 5px 5px;
 }
 
 #background{
+    left:       0px;
+    top:        0px;
+    height:     100%;
+    width:      100%;
     position:   absolute;
     z-index:    -1;
     color:      lightgrey;
+    overflow:   hidden;
 }
+
+.background_code_line{
+    position: relative;
+}
+
+.blog_entry{
+    border-top: solid 1px #D9ED9D;
+}
+
