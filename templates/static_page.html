@@ -2,5 +2,8 @@
 
 {% extends "base.html" %}
 {% block content %}
-    {{ page.content }}
+    <h2>{{ page.title }}</h2>
+    <div id='inner_content'>
+        {{ page.content }}
+    </div>
 {% endblock %}

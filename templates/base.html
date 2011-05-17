@@ -7,44 +7,54 @@
     <head>
         <title>{{ page.title }} | {{ site.title }}</title>
 
+        <!-- base CSS includes -->
         <link rel="stylesheet" type='text/css' href='styles.css'/>
+
+        <!-- base JavaScript includes -->
+        <script type='text/javascript' 
+            src='http://code.jquery.com/jquery-1.6.1.min.js'></script>
+        <script type='text/javascript'
+            src='unnecessary.js'></script>
 
         {% block head %}{% endblock %}
     </head>
 
     <body>
-        <!-- Header -->
-        <div id="header">
-            <h1>RobMD.net</h1>
-        </div>
-        
-        <!-- Menu -->
-        <ul id="menu">
-            <li>
-                <a href='index.html'>Home</a> |
-            </li>
-            <li>
-                <a href='blog.html'>Blog</a> |
-            </li>
-            <li>
-                <a href='about.html'>About</a> |
-            </li>
-            <li>
-                <a href='contact.html'>Contact</a>
-            </li>
-        </ul>
-
-        <!-- Content -->
-        <div id="content">
-            {% block content %}
-            {% endblock %}
+        <div id='background'>
+            <!-- to be filled with javascript -->
         </div>
 
-        <!-- Footer -->
-        <hr/>
-        <div id="footer">
-            &copy; Copyright <a href="http://robmd.net/">Rob McGuire-Dale</a>
+        <div id='body_wrapper'>
+            <!-- Header -->
+            <div id="header">
+                <h1 id='title'>
+                    <a href='index.html'>
+                        Rob McGuire-Dale
+                    </a>
+                </h1>
+                <div id='menu'>
+                    <a href='index.html'>   home    </a> |
+                    <a href='blog.html'>    blog    </a> |
+                    <a href='about.html'>   about   </a> | 
+                    <a href='contact.html'> contact </a>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div id="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+            <!-- Footer -->
+            <div id="footer">
+                This web site was generated using <a href='https://github.com/mythmon/wok'>wok</a>.  &copy; Copyright <a href="http://robmd.net/">Rob McGuire-Dale</a>
+            </div>
         </div>
 
+        <!-- page JavaScript -->
+        <script type='text/javascript'>
+            unnecessary.set_source_background();
+        </script>
     </body>
 </html>
