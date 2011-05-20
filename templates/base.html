@@ -8,23 +8,18 @@
         <title>{{ page.title }} | {{ site.title }}</title>
 
         <!-- base CSS includes -->
-        <link rel="stylesheet" type='text/css' href='styles.css'/>
+        <link rel="stylesheet" type='text/css' href='/styles.css'/>
 
         <!-- base JavaScript includes -->
         <script type='text/javascript' 
             src='http://code.jquery.com/jquery-1.6.1.min.js'></script>
-        <script type='text/javascript'
-            src='unnecessary.js'></script>
 
         {% block head %}{% endblock %}
     </head>
 
     <body>
-        <div id='background'>
-            <!-- to be filled with javascript -->
-        </div>
-
         <div id='body_wrapper'>
+
             <!-- Header -->
             <div id="header">
                 <h1 id='title'>
@@ -50,11 +45,7 @@
             <div id="footer">
                 This web site was generated using <a href='https://github.com/mythmon/wok'>wok</a>.  &copy; Copyright <a href="http://robmd.net/">Rob McGuire-Dale</a>
             </div>
-        </div>
 
-        <!-- page JavaScript -->
-        <script type='text/javascript'>
-            unnecessary.set_source_background();
-        </script>
+        </div>
     </body>
 </html>

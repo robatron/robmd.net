@@ -1,22 +1,27 @@
 {# Template for the blog index #}
-
 {% extends "base.html" %}
-
 {% block content %}
     <h2>{{ page.title }}</h2>
-
     {% for entry in page.subpages %}
-        <div class='blog_entry'>
-            <h3>
-                <a href='blog/{{ entry.slug }}.html'> 
-                    {{ entry.title }}
-                </a>
-            </h3>
-            <h4>{{ entry.datetime }}</h4>
-            <div class='content'>
-                {{ entry.content[:10] }}
-            </div>
-        </div>
-    {% endfor %}
 
+        <table class='blog_entry_table'>
+            <tr>
+                <td class='blog_entry_thumb_cell'>
+                    <img class='blog_entry_thumb' src='{{ entry.img }}' />
+                </td>
+
+                <td class='blog_entry_text_cell'>
+                    <a href='blog/{{ entry.slug }}.html'>
+                        <div>{{ entry.title }}</div>
+                    </a>
+
+                    <div>{{ entry.datetime }}</div>
+                    <div class='blog_entry_content'>
+                        {{ entry.content[:250] }}
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+    {% endfor %}
 {% endblock %}
