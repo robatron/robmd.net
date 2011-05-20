@@ -83,7 +83,24 @@ a:visited{
     position: relative;
 }
 
-.blog_entry{
-    border-top: solid 1px #D9ED9D;
+/* blog */
+.blog_entry_table{
+    border:     solid 1px green;
+    width:      100%;
+}
+.blog_entry_thumb_cell{
+   vertical-align:  top;
+   padding:         0px;
+   margin-right:    5px;
+}
+.blog_entry_thumb{
+    border:     solid 1px red;
+    width:      150px;
+}
+.blog_entry_text_cell{
+    border:         solid 1px blue;
+    align:          left;
+    padding:        0px;
+    margin-right:   5px;
 }
 
