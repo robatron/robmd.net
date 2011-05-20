@@ -1,27 +1,33 @@
 {# Template for the blog index #}
 {% extends "base.html" %}
+
+{% set MAX_CONTENT_LEN = 250 %}
+
 {% block content %}
     <h2>{{ page.title }}</h2>
     {% for entry in page.subpages %}
+    
+        {% set MORE_STR = "... <a href='blog/"+entry.slug+".html'>[more]</a>"%}
 
-        <table class='blog_entry_table'>
-            <tr>
-                <td class='blog_entry_thumb_cell'>
-                    <img class='blog_entry_thumb' src='{{ entry.img }}' />
-                </td>
+        <div class='blog_entry blog_bottom_underline'>
 
-                <td class='blog_entry_text_cell'>
-                    <a href='blog/{{ entry.slug }}.html'>
-                        <div>{{ entry.title }}</div>
-                    </a>
+            <a href='blog/{{ entry.slug }}.html'>
+                <h3>{{ entry.title }}</h3>
+            </a>
 
-                    <div>{{ entry.datetime }}</div>
-                    <div class='blog_entry_content'>
-                        {{ entry.content[:250] }}
-                    </div>
-                </td>
+            <div>
+                By <a href='http://robmd.net'>Rob McGuire-Dale</a> on
+                {{ entry.datetime }}
+            </div>
 
-            </tr>
-        </table>
+            <div>
+                {% if entry.content|length > MAX_CONTENT_LEN %}
+                    {{entry.content[:MAX_CONTENT_LEN-MORE_STR|length]}}{{MORE_STR}}
+                {% else %}
+                    {{entry.content}}
+                {% endif %}
+            </div>
+        </div>
+
     {% endfor %}
 {% endblock %}

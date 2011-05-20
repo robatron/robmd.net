@@ -1,11 +1,12 @@
-title: Xmonad + GNOME in Ubuntu 11.04
-img: http://goo.gl/EK5tV
-category: blog
-type: static_page
+title:      RobMD.net goes live
+date:       14 Aug 2011
+img:        http://goo.gl/EK5tV
+category:   blog
+type:       static_page
 ---
 Finally, I finally have a forward-facing web site for myself. Here's how it happened:
 
-Recently, my friend Adam DiCarlo switched VPS hosting services. I just happened to ask at the right time, and we decided to go halfsies on the monthly bill if he'd let me use it. Also, he's a bit of a Drupal guru, and he set up the new VPS to make Drupal scream.
+Recently, my friend [Adam DiCarlo](http://adamdicarlo.com/) switched VPS hosting services. I just happened to ask at the right time, and we decided to go halfsies on the monthly bill if he'd let me use it. Also, he's a bit of a Drupal guru, and he set up the new VPS to make Drupal scream.
 
 Fast forward to tonight, add in a few hours of work, and I finally have a somewhat-functioning personal web site. I don't think I've had one of these since I was in middle or high school!
 
