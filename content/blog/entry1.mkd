@@ -1,5 +1,0 @@
-title: Test blog entry 2!
-category: blog
-type: static_page
----
-This is ANOTHER test blog entry
