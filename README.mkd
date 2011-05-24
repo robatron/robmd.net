@@ -1,0 +1,8 @@
+# robmd.net
+
+These are the source files for my personal web site (http://robmd.net).
+
+This project uses the [wok][1] static web site generator created by [Mike Cooper][2]
+
+[1]: https://github.com/mythmon/wok
+[2]: https://github.com/mythmon
