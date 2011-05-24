@@ -1,3 +1,0 @@
-title: Blog
-type: blog_parent
----
