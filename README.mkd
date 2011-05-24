@@ -2,7 +2,7 @@
 
 These are the source files for my [personal web site][0].
 
-This project uses the [wok][1] static web site generator created by [Mike Cooper][2]
+This project uses the [wok][1] static web site generator created by [Mike Cooper][2].
 
 [0]: http://robmd.net
 [1]: https://github.com/mythmon/wok
