@@ -1,8 +1,6 @@
 /* Home page CSS styles */
 
-#img_wrap p{
-    color:      #777;
-    font-size:  0.8em;
+#img_wrap #caption{
+    margin:     0em;
     text-align: right;
-    margin:     0px;
 }
