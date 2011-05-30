@@ -1,5 +1,6 @@
 title: About
 type: simple
-slug: about
+category: about
+slug: index
 ---
-This is the 'About' page. It will contain more-detailed information about me.
+Placeholder
