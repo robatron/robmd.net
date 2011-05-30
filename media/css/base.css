@@ -28,6 +28,9 @@ a:hover{
 #header{
     display:    table;
     width:      100%;
+    border-bottom: solid 1px #777;
+    padding-bottom: 0.5em;
+    margin-bottom:  1em;
 }
 #header h1{
     display:    table-cell;
