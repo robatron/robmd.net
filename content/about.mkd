@@ -3,19 +3,54 @@ type: simple
 category: about
 slug: index
 ---
-My name is Rob McGuire-Dale. I am a senior at [Oregon State University][osu] about to earn my B.S. in [computer science][compsci] June 2011. I currently work as a software developer for the [Open Source Lab][osuosl].
+My name is Rob McGuire-Dale. I am a senior at [Oregon State University][osu] about to earn my B.S. in [computer science][compsci] June 2011. I currently work as a software developer for the [Open Source Lab][osl].
 
 I am interested in the more-social aspects of computer science, i.e, I have particular interests in:
 
 * [Open source software and community][opensource]
-* The web as a computing platform
-* Project management
+* The **web** as a computing platform
+* **Project management**
 
 For more details, please see my [r&eacute;sum&eacute;][resume]. Please feel free to [contact me][contact] if you have any questions or comments.
 
+## Degrees
+
+* B.S. in computer science from [Oregon State University][osu] (expected June 2011)
+
+## Employers
+
+* [The Open Source Lab][osl]
+* [The Boeing Company][boeing]
+* [The NW Film Center][nwfc] of the [The Portland Art Museaum][artmuseum]
+
+## Technical skills
+
+* Favorite languages: **Python** and **JavaScript**
+* Comfortable in **Linux** and terminal environments
+* Also familiar with these languages, tools, and technologies:
+    * [Django][django], [jQuery][jquery], [AJAX][ajax], HTML, CSS, [Drupal][drupal], PHP
+    * C/C++, Java
+    * [Git][git], [Subversion (SVN)][svn]
+    
+## Conference talks
+
+* ["Building Interactive Displays with Touchscreen 2.0"][osbridge_talk] at [Open Source Bridge][osbridge]
+
 [osu]:http://oregonstate.edu
 [compsci]:http://en.wikipedia.org/wiki/computer_science
-[osuosl]:http://osuosl.org
+[osl]:http://osuosl.org
 [opensource]:http://en.wikipedia.org/wiki/open_source
-[resume]:/media/docs/McGuire-Dale,Rob_resume.pdf
+[mhcc]:http://mhcc.edu
+[boeing]:http://boeing.com
+[nwfc]:http://nwfilm.org
+[artmuseum]:http://portlandartmuseum.org
+[osbridge_talk]:http://opensourcebridge.org/sessions/404
+[osbridge]:http://opensourcebridge.org
+[jquery]:http://jquery.org
+[ajax]:http://en.wikipedia.org/wiki/Ajax_(programming)
+[django]:https://www.djangoproject.com
+[drupal]:http://drupal.org
+[git]:http://git-scm.com
+[svn]:http://subversion.tigris.org
+[resume]:/docs/McGuire-Dale,Rob_resume.pdf
 [contact]:/contact
