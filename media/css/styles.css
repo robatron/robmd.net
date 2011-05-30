@@ -1,0 +1,68 @@
+/* CSS styles for RobMD.net 
+ *
+ * Color scheme based on main photo: 
+ * http://colorschemedesigner.com/#3D21T7tE0w0w0
+ * */
+
+/* --[ Base ]--------------------------------------------------------------- */
+
+#body_wrapper{
+    width:          960px;
+    margin:         2.5em auto;
+
+    /* Main text styles */
+    color:          #4B4742;
+    font-size:      14px;
+    font-family:    "lucida grande", lucida, tahoma, helvetica, arial, sans-serif;
+}
+
+/* Links */
+a, a:visited{
+    font-weight:        bold;
+    color:              #31527D;
+    text-decoration:    none;
+}
+a:hover{
+    color: #97A9C0;
+}
+
+/* Header */
+#header{
+    display:    table;
+    width:      100%;
+}
+#header h1{
+    display:    table-cell;
+    font-size:  2.5em;
+}
+#menu{
+    display:    table-cell;
+    font-size:  1.2em;
+    text-align: right;
+}
+#header #title a{
+    color:      #4B4742;
+}
+
+/* Content */
+#content{
+    margin:     0px 0px;
+}
+
+/* Home page image */
+#img_wrap p{
+    color:      #777;
+    font-size:  0.8em;
+    text-align: right;
+    margin:     0px;
+}
+
+/* Footer */
+#footer{
+    font-size:      .9em;
+    text-align:     right;
+    border-top:     solid 1px #777;
+    margin-top:     3em;
+    padding-top:    0.5em;
+}
+
