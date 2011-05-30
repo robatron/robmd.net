@@ -1,3 +1,4 @@
 title: Contact
-type: static_page
+type: simple
 ---
+This is the contact page. It will contain information regarding how to contact me.
