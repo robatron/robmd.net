@@ -1,10 +1,8 @@
-/* CSS styles for RobMD.net 
+/* Base CSS styles for RobMD.net 
  *
  * Color scheme based on main photo: 
  * http://colorschemedesigner.com/#3D21T7tE0w0w0
- * */
-
-/* --[ Base ]--------------------------------------------------------------- */
+ */
 
 #body_wrapper{
     width:          960px;
@@ -49,14 +47,6 @@ a:hover{
     margin:     0px 0px;
 }
 
-/* Home page image */
-#img_wrap p{
-    color:      #777;
-    font-size:  0.8em;
-    text-align: right;
-    margin:     0px;
-}
-
 /* Footer */
 #footer{
     font-size:      .9em;
@@ -65,4 +55,3 @@ a:hover{
     margin-top:     3em;
     padding-top:    0.5em;
 }
-
