@@ -3,4 +3,10 @@ type: simple
 category: contact
 slug: index
 ---
-This is the contact page. It will contain information regarding how to contact me.
+* [Twitter][twitter]
+* [Facebook][fb]
+* [GitHub][gh]
+
+[twitter]:http://twitter.com/robatron
+[fb]:http://facebook.com/robmd
+[gh]:http://github.com/robatron
