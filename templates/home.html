@@ -1,51 +1,56 @@
-{# template for the home page #}
+{# Template for pages of RobMD.net #}
 
 {% extends "base.html" %}
 
-{% block head %}
-    <script type='text/javascript'
-            src="http://widgets.twimg.com/j/2/widget.js"></script>
-{% endblock %}
-
 {% block content %}
+    <div id='img_wrap'>
+        <img src='/img/DeathValleySaltFlats.jpg'/>
+        <p>
+            Photo by 
+            <a href='http://www.flickr.com/people/daisychaining/'>
+                Elizabeth Trautman
+            </a>
+        </p>
+    </div>
 
-<h2>{{ page.title }}</h2>
+    <!-- page title -->
+    <h1 id='page_title'>{{ page.title }}</h1>
 
-<!-- main content title -->
-<div id='home_content'>
-    {{ page.content }}
-</div>
+    <!-- main content title -->
+    <div id='home_content'>
+        {{ page.content }}
+    </div>
 
-<!-- Twitter widget for my twitter feed
-<script type='text/javascript' id='twitter_widget'>
-    new TWTR.Widget({
-        version: 2,
-        type: 'profile',
-        rpp: 5,
-        interval: 6000,
-        width: 250,
-        height: 300,
-        theme: {
-            shell: {
-                background: '#333333',
-                color: '#ffffff'
-            },
-            tweets: {
-                background: '#000000',
-                color: '#ffffff',
-                links: '#4aed05'
+    <!-- Twitter widget for my twitter feed
+    <script type='text/javascript' id='twitter_widget'>
+        new TWTR.Widget({
+            version: 2,
+            type: 'profile',
+            rpp: 5,
+            interval: 6000,
+            width: 250,
+            height: 300,
+            theme: {
+                shell: {
+                    background: '#333333',
+                    color: '#ffffff'
+                },
+                tweets: {
+                    background: '#000000',
+                    color: '#ffffff',
+                    links: '#4aed05'
+                }
+              },
+            features: {
+                scrollbar: false,
+                loop: false,
+                live: false,
+                hashtags: true,
+                timestamp: true,
+                avatars: false,
+                behavior: 'all'
             }
-          },
-        features: {
-            scrollbar: false,
-            loop: false,
-            live: false,
-            hashtags: true,
-            timestamp: true,
-            avatars: false,
-            behavior: 'all'
-        }
-    }).render().setUser('robatron').start();
-</script>
--->
+        }).render().setUser('robatron').start();
+    </script>
+    -->
 {% endblock %}
