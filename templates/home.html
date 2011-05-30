@@ -1,6 +1,10 @@
-{# Template for pages of RobMD.net #}
+{# Template for the home page #}
 
 {% extends "base.html" %}
+
+{% block head %}
+    <link rel='stylesheet' type='text/css' href='/css/home.css' />
+{% endblock %}
 
 {% block content %}
     <div id='img_wrap'>
@@ -21,36 +25,4 @@
         {{ page.content }}
     </div>
 
-    <!-- Twitter widget for my twitter feed
-    <script type='text/javascript' id='twitter_widget'>
-        new TWTR.Widget({
-            version: 2,
-            type: 'profile',
-            rpp: 5,
-            interval: 6000,
-            width: 250,
-            height: 300,
-            theme: {
-                shell: {
-                    background: '#333333',
-                    color: '#ffffff'
-                },
-                tweets: {
-                    background: '#000000',
-                    color: '#ffffff',
-                    links: '#4aed05'
-                }
-              },
-            features: {
-                scrollbar: false,
-                loop: false,
-                live: false,
-                hashtags: true,
-                timestamp: true,
-                avatars: false,
-                behavior: 'all'
-            }
-        }).render().setUser('robatron').start();
-    </script>
-    -->
 {% endblock %}
