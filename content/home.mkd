@@ -5,7 +5,7 @@ slug: index
 
 My name is Rob McGuire-Dale. I love to create, and put things together in useful, creative, and interesting ways. 
 
-I am a senior at [Oregon State University][osu] studying [computer science][compsci], and work as a software developer for the [Open Source Lab][osuosl]. I have strong passion for [open source software and community][opensource], software engineering, project management, and the web. I also love bicycles, [motorcycles][motoblog], and tinkering with old vehicles. I have an immense curiosity and interest in many things, which drives me to learn.
+I am a senior at [Oregon State University][osu] studying [computer science][compsci], and work as a software developer for the [Open Source Lab][osuosl]. I have strong passion for [open source software and community][opensource], software engineering, project management, and the web. I also love [old motorcycles][motoblog], tinkering with vehicles, and commuting on my bicycle. I have an immense curiosity and interest in many things, which drives me to learn.
 
 
  * [More about me](about.html)
