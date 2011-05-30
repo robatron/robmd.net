@@ -3,4 +3,19 @@ type: simple
 category: about
 slug: index
 ---
-Placeholder
+My name is Rob McGuire-Dale. I am a senior at [Oregon State University][osu] about to earn my B.S. in [computer science][compsci] June 2011. I currently work as a software developer for the [Open Source Lab][osuosl].
+
+I am interested in the more-social aspects of computer science, i.e, I have particular interests in:
+
+* [Open source software and community][opensource]
+* The web as a computing platform
+* Project management
+
+For more details, please see my [r&eacute;sum&eacute;][resume]. Please feel free to [contact me][contact] if you have any questions or comments.
+
+[osu]:http://oregonstate.edu
+[compsci]:http://en.wikipedia.org/wiki/computer_science
+[osuosl]:http://osuosl.org
+[opensource]:http://en.wikipedia.org/wiki/open_source
+[resume]:/media/docs/McGuire-Dale,Rob_resume.pdf
+[contact]:/contact
