@@ -52,9 +52,23 @@ a:hover{
 
 /* Footer */
 #footer{
-    font-size:      .9em;
-    text-align:     right;
+    display:        table;
+    width:          100%;
     border-top:     solid 1px #777;
     margin-top:     3em;
     padding-top:    0.5em;
+}
+#footer #about_site{
+    display:        table-cell;
+    text-align:     left;
+}
+#footer #copyright{
+    display:        table-cell;
+    text-align:     right;
+}
+
+/* Misc */
+.small_text{
+    font-size:  0.8em;
+    color:      #777;
 }
