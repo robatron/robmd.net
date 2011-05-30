@@ -1,9 +1,13 @@
-{# Simple static page template (e.g. an 'about' page) #}
+{# Simple static page template #}
 
 {% extends "base.html" %}
+
 {% block content %}
-    <h2>{{ page.title }}</h2>
+
+    <h1>{{ page.title }}</h1>
+
     <div id='inner_content'>
         {{ page.content }}
     </div>
+
 {% endblock %}

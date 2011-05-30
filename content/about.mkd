@@ -1,5 +1,5 @@
 title: About
-type: static_page
+type: simple
 slug: about
 ---
-This is the 'About' page.
+This is the 'About' page. It will contain more-detailed information about me.
