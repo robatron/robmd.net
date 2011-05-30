@@ -29,7 +29,7 @@ For more details, please see my [r&eacute;sum&eacute;][resume]. Please feel free
 * Comfortable in **Linux** and terminal environments
 * Also familiar with these languages, tools, and technologies:
     * [Django][django], [jQuery][jquery], [AJAX][ajax], HTML, CSS, [Drupal][drupal], PHP
-    * C/C++, Java
+    * Java, C/C++
     * [Git][git], [Subversion (SVN)][svn]
     
 ## Conference talks
