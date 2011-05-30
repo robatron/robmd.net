@@ -1,0 +1,4 @@
+title: contact placeholder
+slug: contact
+type: simple
+---

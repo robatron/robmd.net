@@ -1,0 +1,4 @@
+title: about placeholder
+slug: about
+type: simple
+---
