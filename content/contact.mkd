@@ -1,5 +1,5 @@
 title: Contact
-type: simple
+type: contact
 category: contact
 slug: index
 ---

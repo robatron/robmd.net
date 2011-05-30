@@ -1,0 +1,28 @@
+{# Template for the contact page #}
+
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel='stylesheet' type='text/css' href='/css/contact.css' />
+{% endblock %}
+
+{% block content %}
+    <div id='img_wrap'>
+        <img src='/img/Philo.jpg'/>
+        <p id='caption' class='small_text'>
+            Photo by 
+            <a href='https://www.facebook.com/profile.php?id=584737500'>
+                Rick Fregoso
+            </a>
+        </p>
+    </div>
+
+    <!-- page title -->
+    <h1 id='page_title'>{{ page.title }}</h1>
+
+    <!-- main content title -->
+    <div id='home_content'>
+        {{ page.content }}
+    </div>
+
+{% endblock %}
