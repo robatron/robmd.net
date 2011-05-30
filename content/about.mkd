@@ -1,5 +1,5 @@
 title: About
-type: simple
+type: about
 category: about
 slug: index
 ---
