@@ -5,10 +5,12 @@ slug: index
 
 My name is Rob McGuire-Dale, and I treat the world like a giant construction set. I love putting things together in useful, creative, and interesting ways. 
 
-I'm a [Linux](http://en.wikipedia.org/wiki/Linux) and [open source](http://en.wikipedia.org/wiki/Open_source) enthusiast, web developer, coder, tinkerer, two-wheeled-vehicle rider, and an overall nerd. 
+I'm a [Linux][linux] and [open source][opensource] enthusiast, web developer, coder, tinkerer, two-wheeled-vehicle rider, and an overall nerd. 
 
 I have an immense curiosity and interest in many things, which drives me to learn.
 
  * [More about me](about.html)
  * [Contact me](contact.html)
 
+[linux]:http://en.wikipedia.org/wiki/Linux
+[opensource]:http://en.wikipedia.org/wiki/Open_source
