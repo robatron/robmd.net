@@ -1,4 +1,6 @@
 title: Contact
 type: simple
+category: contact
+slug: index
 ---
 This is the contact page. It will contain information regarding how to contact me.
