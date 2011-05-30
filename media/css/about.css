@@ -1,0 +1,18 @@
+/* About page CSS styles */
+
+#img_wrap{
+    float:          left;
+    margin-right:    3em;
+    margin-bottom:  3em;
+}
+
+#img_wrap #caption{
+    margin:     0em;
+    text-align: right;
+}
+
+/*
+#img_wrap img{
+    border: solid 1px black;
+}
+*/

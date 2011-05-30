@@ -1,0 +1,28 @@
+{# Template for the about page #}
+
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel='stylesheet' type='text/css' href='/css/about.css' />
+{% endblock %}
+
+{% block content %}
+    <div id='img_wrap'>
+        <img src='/img/DeathValleySpagetti.jpg'/>
+        <p id='caption' class='small_text'>
+            Photo by 
+            <a href='http://www.flickr.com/people/daisychaining/'>
+                Elizabeth Trautman
+            </a>
+        </p>
+    </div>
+
+    <!-- page title -->
+    <h1 id='page_title'>{{ page.title }}</h1>
+
+    <!-- main content title -->
+    <div id='home_content'>
+        {{ page.content }}
+    </div>
+
+{% endblock %}
