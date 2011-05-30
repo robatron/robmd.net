@@ -1,9 +1,9 @@
 # robmd.net
 
-These are the source files for my [personal web site][0].
+These are the source files for my [personal web site][mysite]. 
 
-This project uses the [wok][1] static web site generator created by [Mike Cooper][2].
+This site uses the [wok static website generator][woksite] created by [Mike Cooper][mikesite].
 
-[0]: http://robmd.net
-[1]: https://github.com/mythmon/wok
-[2]: https://github.com/mythmon
+[mysite]: http://robmd.net
+[woksite]: https://github.com/mythmon/wok
+[mikesite]: https://github.com/mythmon
