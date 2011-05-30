@@ -1,0 +1,18 @@
+/* Contact page CSS styles */
+
+#img_wrap{
+    float:          right;
+    margin-left:    3em;
+    margin-bottom:  3em;
+}
+
+#img_wrap #caption{
+    margin:     0em;
+    text-align: right;
+}
+
+/*
+#img_wrap img{
+    border: solid 1px black;
+}
+*/
