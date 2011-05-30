@@ -3,14 +3,16 @@ type: home
 slug: index
 ---
 
-My name is Rob McGuire-Dale, and I treat the world like a giant construction set. I love putting things together in useful, creative, and interesting ways. 
+My name is Rob McGuire-Dale. I love to create, and put things together in useful, creative, and interesting ways. 
 
-I'm a [Linux][linux] and [open source][opensource] enthusiast, web developer, coder, tinkerer, two-wheeled-vehicle rider, and an overall nerd. 
+I am a senior at [Oregon State University][osu] studying [computer science][compsci], and work as a software developer for the [Open Source Lab][osuosl]. I have strong passion for [open source software and community][opensource], software engineering, project management, and the web. I also love bicycles, [motorcycles][motoblog], and tinkering with old vehicles. I have an immense curiosity and interest in many things, which drives me to learn.
 
-I have an immense curiosity and interest in many things, which drives me to learn.
 
  * [More about me](about.html)
  * [Contact me](contact.html)
 
-[linux]:http://en.wikipedia.org/wiki/Linux
+[osu]:http://oregonstate.edu
+[compsci]:http://en.wikipedia.org/wiki/computer_science
+[osuosl]:http://osuosl.org
 [opensource]:http://en.wikipedia.org/wiki/Open_source
+[motoblog]:http://bmwr65.blogspot.com
