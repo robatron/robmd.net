@@ -10,6 +10,19 @@
         <!-- base CSS includes -->
         <link rel="stylesheet" type='text/css' href='/css/base.css'/>
 
+        <!-- JavaScript -->
+        <script type="text/javascript">
+            // Google Analytics 
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-17987944-2']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
         {% block head %}{% endblock %}
     </head>
 
@@ -41,7 +54,7 @@
             <!-- Footer -->
             <div id="footer" class="small_text">
                 <div id="about_site">
-                    The <a href='https://github.com/mythmon/wok'>wok</a> source files for this site can be found <a href='http://github.com/robatron/robmd.net'>here</a>.  
+                    This site uses <a href="https://github.com/mythmon/wok">wok</a>. Learn more about how this site works <a href="http://github.com/robatron/robmd.net">here</a>.
                 </div>
                 <div id="copyright">
                     &copy; Copyright <a href="http://robmd.net/">Rob McGuire-Dale</a>
