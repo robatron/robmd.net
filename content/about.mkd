@@ -3,38 +3,13 @@ type: about
 category: about
 slug: index
 ---
-My name is Rob McGuire-Dale. I am a senior at [Oregon State University][osu] about to earn my B.S. in [computer science][compsci] June 2011. I currently work as a software developer for the [Open Source Lab][osl].
+My name is Rob McGuire-Dale. I am a senior at [Oregon State University][osu] about to earn my B.S. in [computer science][compsci] in June 2011. I currently work as a software developer for the [Open Source Lab][osl]. In the past, I have worked as a software developer for [The Boeing Company][boeing], and a film editor/animation instructor at [The NW Film Center][nwfc] of [the Portland Art Museum][artmuseum].
 
-I am interested in the more-social aspects of computer science, i.e, I have particular interests in:
-
-* [Open source software and community][opensource]
-* The **web** as a computing platform
-* **Project management**
+I am interested in the **more-social aspects of computer science**, e.g., [Open source software and community][opensource] development, **the web** as a computing platform, [human-computer interaction][hci], and **project management**. I prefer working with **Linux**, and favorite languages are **Python** and **JavaScript**. I am also familiar with many other languages, frameworks, tools and technologies such as [Django][django], [jQuery][jquery], [Git][git], [AJAX][ajax], HTML, CSS, [Drupal][drupal], Java, C/C++, PHP, and [Subversion (SVN)][svn], among others.
+    
+Last summer, I gave a [talk][osbridge_talk] at [Open Source Bridge][osbridge] about a project I was heavily involved with called 'TouchScreen', an open source interactive kiosk framework.
 
 For more details, please see my [r&eacute;sum&eacute;][resume]. Please feel free to [contact me][contact] if you have any questions or comments.
-
-## Degrees
-
-* B.S. in computer science from [Oregon State University][osu] (expected June 2011)
-
-## Employers
-
-* [The Open Source Lab][osl]
-* [The Boeing Company][boeing]
-* [The NW Film Center][nwfc] of the [The Portland Art Museaum][artmuseum]
-
-## Technical skills
-
-* Favorite languages: **Python** and **JavaScript**
-* Comfortable in **Linux** and terminal environments
-* Also familiar with these languages, tools, and technologies:
-    * [Django][django], [jQuery][jquery], [AJAX][ajax], HTML, CSS, [Drupal][drupal], PHP
-    * Java, C/C++
-    * [Git][git], [Subversion (SVN)][svn]
-    
-## Conference talks
-
-* ["Building Interactive Displays with Touchscreen 2.0"][osbridge_talk] at [Open Source Bridge][osbridge]
 
 [osu]:http://oregonstate.edu
 [compsci]:http://en.wikipedia.org/wiki/computer_science
@@ -53,4 +28,5 @@ For more details, please see my [r&eacute;sum&eacute;][resume]. Please feel free
 [git]:http://git-scm.com
 [svn]:http://subversion.tigris.org
 [resume]:/docs/McGuire-Dale,Rob_resume.pdf
-[contact]:/contact
+[scontact]:/contact
+[hci]:http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction
