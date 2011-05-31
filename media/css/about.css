@@ -2,12 +2,12 @@
 
 #img_wrap{
     float:          left;
-    margin-right:    3em;
-    margin-bottom:  3em;
+    margin-right:   20px;
+    margin-bottom:  20px;;
 }
 
 #img_wrap #caption{
-    margin:     0em;
+    margin:     0px;
     text-align: right;
 }
 
