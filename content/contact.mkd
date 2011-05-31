@@ -6,7 +6,9 @@ slug: index
 * [Twitter][twitter]
 * [Facebook][fb]
 * [GitHub][gh]
+* [Email][email]
 
 [twitter]:http://twitter.com/robatron
 [fb]:http://facebook.com/robmd
 [gh]:http://github.com/robatron
+[email]:http://www.google.com/recaptcha/mailhide/d?k=018-TtgvnUHlo0F2ELgmo_HQ==&c=Arl6VP2X9B6mUtYlkipefebrCjMJw5D-8GkDH93uOhw=
