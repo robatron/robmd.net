@@ -28,5 +28,5 @@ For more details, please see my [r&eacute;sum&eacute;][resume]. Please feel free
 [git]:http://git-scm.com
 [svn]:http://subversion.tigris.org
 [resume]:/docs/McGuire-Dale,Rob_resume.pdf
-[scontact]:/contact
+[contact]:/contact
 [hci]:http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction
