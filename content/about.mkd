@@ -9,7 +9,7 @@ I am interested in the **more-social aspects of computer science**, e.g., [Open 
     
 Last summer, I gave a [talk][osbridge_talk] at [Open Source Bridge][osbridge] about a project I was heavily involved with called 'TouchScreen', an open source interactive kiosk framework.
 
-For more details, please see my [r&eacute;sum&eacute;][resume]. Please feel free to [contact me][contact] if you have any questions or comments.
+For more details, please see my [r&eacute;sum&eacute;][resume]. Please feel free to [contact me][contact] if you have any questions or comments..
 
 [osu]:http://oregonstate.edu
 [compsci]:http://en.wikipedia.org/wiki/computer_science
