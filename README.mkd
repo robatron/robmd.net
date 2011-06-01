@@ -2,8 +2,32 @@
 
 These are the source files for my [personal web site][mysite]. 
 
-This site uses the [wok static website generator][woksite] created by [Mike Cooper][mikesite].
+## Download the source
+
+Using git, clone this repository onto your own system:
+
+    git clone https://robatron@github.com/robatron/robmd.net.git
+
+## Installation
+
+This site uses the [wok static website generator][woksite] created by [Mike Cooper][mikesite]. You can install it on your system using [pip][pip]:
+
+    sudo pip install wok
+
+Next, make a copy of the `config.dist` file in the project rood directory and call it `config`. This is the wok configuration file for this site. Edit it to suit your own needs.
+
+    cp config.dist config
+
+# Generating the site
+
+Make sure you're in the root project directory, and run wok:
+
+    cd robmd.net
+    wok
+
+By default, files will be generated in the `output` directory in the project root. Point your web server at the directory, and you're set!
 
 [mysite]: http://robmd.net
 [woksite]: https://github.com/mythmon/wok
 [mikesite]: https://github.com/mythmon
+[pip]: http://pypi.python.org/pypi/pip
