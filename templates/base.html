@@ -11,7 +11,21 @@
         <link rel="stylesheet" type='text/css' href='/css/base.css'/>
 
         <!-- JavaScript -->
+        <script type="text/javascript" src="/js/jquery-1.6.1.min.js"></script>
         <script type="text/javascript">
+            $(function(){
+                // Document ready
+                function menu_highlight(menu_id){
+                    var menu_elem = $("#menu #"+menu_id);
+                    menu_elem.replaceWith(
+                        "<span class='disabled light_text'>" + 
+                            menu_elem.text() +
+                        "</span>"
+                    );
+                }
+                {% block js_doc_ready %}{% endblock %}
+            });
+
             // Google Analytics 
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-17987944-2']);

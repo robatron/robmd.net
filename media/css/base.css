@@ -36,6 +36,8 @@ a:hover{
     display:    table-cell;
     font-size:  2.5em;
 }
+
+/* Menu */
 #menu{
     display:    table-cell;
     font-size:  1.2em;
@@ -44,6 +46,10 @@ a:hover{
 #menu a{
     margin-left:    20px;
 }
+#menu .disabled{
+    font-weight:    bold;
+}
+
 #header #title a{
     color:      #4B4742;
 }
