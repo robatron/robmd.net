@@ -16,12 +16,7 @@
             $(function(){
                 // Document ready
                 function menu_highlight(menu_id){
-                    var menu_elem = $("#menu #"+menu_id);
-                    menu_elem.replaceWith(
-                        "<span class='disabled light_text'>" + 
-                            menu_elem.text() +
-                        "</span>"
-                    );
+                    $("#menu #"+menu_id).addClass('selected');
                 }
                 {% block js_doc_ready %}{% endblock %}
             });
