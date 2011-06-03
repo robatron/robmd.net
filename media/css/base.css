@@ -41,6 +41,9 @@ a:hover{
     font-size:  1.2em;
     text-align: right;
 }
+#menu a{
+    margin-left:    20px;
+}
 #header #title a{
     color:      #4B4742;
 }
