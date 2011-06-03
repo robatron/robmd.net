@@ -42,13 +42,12 @@ a:hover{
     font-size:  1.2em;
     text-align: right;
 }
-#menu a, #menu span{
+#menu a{
+    padding-top:    5px;
     margin-left:    20px;
 }
-#menu .disabled{
-    font-weight:    bold;
+#menu .selected{
     border-top:     solid 1px #777;
-    padding-top:    5px;
 }
 
 #header #title a{
