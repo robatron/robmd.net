@@ -72,3 +72,8 @@ a:hover{
     font-size:  0.8em;
     color:      #777;
 }
+
+.caption{
+    text-align: right;
+    margin:     0px;
+}
