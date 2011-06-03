@@ -29,7 +29,6 @@ a:hover{
     display:        table;
     width:          100%;
     border-bottom:  solid 1px #777;
-    padding-bottom: 5px;
     margin-bottom:  20px;
 }
 #header h1{
@@ -48,6 +47,8 @@ a:hover{
 }
 #menu .disabled{
     font-weight:    bold;
+    border-top:     solid 1px #777;
+    padding-top:    5px;
 }
 
 #header #title a{
