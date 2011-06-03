@@ -43,7 +43,7 @@ a:hover{
     font-size:  1.2em;
     text-align: right;
 }
-#menu a{
+#menu a, #menu span{
     margin-left:    20px;
 }
 #menu .disabled{

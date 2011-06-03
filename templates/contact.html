@@ -2,6 +2,10 @@
 
 {% extends "base.html" %}
 
+{% block js_doc_ready %}
+    menu_highlight('contact');
+{% endblock %}
+
 {% block content %}
     <div id='img_wrap'>
         <img src='/img/SarahAndIAtTheGrandCanyon.jpg'/>
