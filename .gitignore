@@ -2,4 +2,5 @@ output
 runwok
 *.swp
 config
-pulled-and-generated
+autopull.log
+
