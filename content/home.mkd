@@ -9,9 +9,9 @@ I have strong passion for **the more-social aspects of computer science**, e.g.,
 
 Most importantly, I have an immense interest and curiosity about the world, which drives me to learn.
 
- * [More about me](about.html)
+ * [More about me][/about]
  * [R&eacute;sum&eacute;][resume]
- * [Contact me](contact.html)
+ * [Contact me][/contact]
 
 [osu]:http://oregonstate.edu
 [compsci]:http://en.wikipedia.org/wiki/computer_science
