@@ -10,6 +10,7 @@ I have strong passion for **the more-social aspects of computer science**, e.g.,
 Most importantly, I have an immense interest and curiosity about the world, which drives me to learn.
 
  * [More about me](about.html)
+ * [R&eacute;sum&eacute;][resume]
  * [Contact me](contact.html)
 
 [osu]:http://oregonstate.edu
@@ -19,3 +20,4 @@ Most importantly, I have an immense interest and curiosity about the world, whic
 [opensource]:http://en.wikipedia.org/wiki/Open_source
 [motoblog]:http://bmwr65.blogspot.com
 [internet]:/img/welcomeToTheInternet.jpg
+[resume]:/docs/McGuire-Dale,Rob_resume.pdf'
