@@ -73,6 +73,9 @@ a:hover{
 /* Misc */
 .small_text{
     font-size:  0.8em;
+}
+
+.light_text{
     color:      #777;
 }
 
