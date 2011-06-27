@@ -3,7 +3,7 @@ type: about
 category: about
 slug: index
 ---
-My name is Rob McGuire-Dale. I am a senior at [Oregon State University][osu] about to earn my B.S. in [computer science][compsci] in June 2011. I currently work as a software developer for the [Open Source Lab][osl]. In the past, I have worked as a software developer for [The Boeing Company][boeing], and a film editor/animation instructor at [The NW Film Center][nwfc] of [the Portland Art Museum][artmuseum].
+My name is Rob McGuire-Dale, and I recently graduated from [Oregon State University][osu] with a [B.S.][bs] in [computer science][compsci]. I currently work for [The Boeing Company] as a software functional analyst. In the past, I have worked as a software developer for [The Open Source Lab][osuosl], and a film editor/animation instructor at [The NW Film Center][nwfc] of [the Portland Art Museum][artmuseum].
 
 I am interested in the **more-social aspects of computer science**, e.g., [Open source software and community][opensource] development, **the web** as a computing platform, [human-computer interaction][hci], and **project management**. I prefer working with **Linux**, and favorite languages are **Python** and **JavaScript**. I am also familiar with many other languages, frameworks, tools and technologies such as [Django][django], [jQuery][jquery], [Git][git], [AJAX][ajax], HTML, CSS, [Drupal][drupal], Java, C/C++, PHP, and [Subversion (SVN)][svn], among others.
     
@@ -12,6 +12,7 @@ Last summer, I gave a [talk][osbridge_talk] at [Open Source Bridge][osbridge] ab
 For more details, please see my [r&eacute;sum&eacute;][resume]. Please feel free to [contact me][contact] if you have any questions or comments.
 
 [osu]:http://oregonstate.edu
+[bs]:http://en.wikipedia.org/wiki/Bachelor_of_Science
 [compsci]:http://en.wikipedia.org/wiki/computer_science
 [osl]:http://osuosl.org
 [opensource]:http://en.wikipedia.org/wiki/open_source
