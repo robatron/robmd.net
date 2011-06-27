@@ -3,11 +3,9 @@ type: home
 slug: index
 ---
 
-My name is Rob McGuire-Dale, and I am a senior at [Oregon State University][osu] studying [computer science][compsci]. I work as a software developer for the [Open Source Lab][osuosl]. 
+My name is Rob McGuire-Dale, and I recently graduated from [Oregon State University][osu] with a B.S. in [computer science][compsci]. I am currently participating in the [Information Systems Career Foundation Program (ISCFP)][iscfp] at [The Boeing Company]. The ISCFP is a leadership roation program that will allow me to rotate through different roles within Boeing Information Systems. I am currently serving my first rotation as a software functional analyst.
 
-I have strong passion for **the more-social aspects of computer science**, e.g., [open source software and community][opensource] development, the [web][internet], [human-computer interaction][hci], and project management. I also love [old motorcycles][motoblog], tinkering with vehicles, and commuting on my bicycle. 
-
-Most importantly, I have an immense interest and curiosity about the world, which drives me to learn.
+I have strong passion for **the more-social aspects of computer science**, e.g., [open source software and community][opensource] development, the [web][internet], and [human-computer interaction][hci]. I also love [old motorcycles][motoblog], tinkering with vehicles, and commuting on my bicycle. Most importantly, I have an immense interest and curiosity about the world, which drives me to learn.
 
  * [More about me](/about)
  * [R&eacute;sum&eacute;][resume]
