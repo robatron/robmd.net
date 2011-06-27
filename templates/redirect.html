@@ -1,0 +1,12 @@
+{# Simple redirection page #}
+<html>
+    <head>
+        <title>Redirecting...</title>
+        <script type='text/javascript'>
+            window.location = "{{ page.redirect_url }}";
+        </script>
+    </head>
+    <body>
+        Redirecting to {{ page.title }}...
+    </body>
+</html>

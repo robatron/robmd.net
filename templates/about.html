@@ -3,13 +3,23 @@
 {% extends "base.html" %}
 
 {% block head %}
-    <link rel='stylesheet' type='text/css' href='/css/about.css' />
+    <style>
+        #img_wrap{
+            float:          left;
+            margin-right:   20px;
+            margin-bottom:  20px;
+        }
+    </style>
+{% endblock %}
+
+{% block js_doc_ready %}
+    menu_highlight('about');
 {% endblock %}
 
 {% block content %}
     <div id='img_wrap'>
         <img src='/img/PhiloAndI.jpg'/>
-        <p id='caption' class='small_text'>
+        <p class='caption small_text light_text'>
             Photo by 
             <a href='http://www.facebook.com/profile.php?id=584737500'>
                 Rick Fregoso
