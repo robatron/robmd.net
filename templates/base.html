@@ -10,11 +10,23 @@
         <!-- base CSS includes -->
         <link rel="stylesheet" type='text/css' href='/css/base.css'/>
 
+        <!-- JavaScript -->
+        <script type="text/javascript" src="/js/jquery-1.6.1.min.js"></script>
         <script type="text/javascript">
-            // Google Analytics 
+            $(function(){
+                // Document ready
+                function menu_highlight(menu_id){
+                    $("#menu #"+menu_id).addClass('selected');
+                }
+                {% block js_doc_ready %}{% endblock %}
+            });
+
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-17987944-2']);
+            _gaq.push(['_setDomainName', '.robmd.net']);
+            _gaq.push(['_setAllowHash', 'false']);
             _gaq.push(['_trackPageview']);
+
             (function() {
                 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
                 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -37,10 +49,9 @@
                 </h1>
 
                 <div id='menu'>
-                    <a href='/'>        home    </a> |
-                    <a href='/about'>   about   </a> | 
-                    <a href='/docs/McGuire-Dale,Rob_resume.pdf'>  r&eacute;sum&eacute; </a> |
-                    <a href='/contact'> contact </a>
+                    <a id='home'    href='/'>home</a>
+                    <a id='about'   href='/about'>about</a> 
+                    <a id='contact' href='/contact'>contact</a>
                 </div>
             </div>
 

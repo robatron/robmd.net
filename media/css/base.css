@@ -29,18 +29,27 @@ a:hover{
     display:        table;
     width:          100%;
     border-bottom:  solid 1px #777;
-    padding-bottom: 5px;
     margin-bottom:  20px;
 }
 #header h1{
     display:    table-cell;
     font-size:  2.5em;
 }
+
+/* Menu */
 #menu{
     display:    table-cell;
     font-size:  1.2em;
     text-align: right;
 }
+#menu a{
+    padding-top:    5px;
+    margin-left:    20px;
+}
+#menu .selected{
+    border-top:     solid 1px #777;
+}
+
 #header #title a{
     color:      #4B4742;
 }
@@ -70,5 +79,13 @@ a:hover{
 /* Misc */
 .small_text{
     font-size:  0.8em;
+}
+
+.light_text{
     color:      #777;
+}
+
+.caption{
+    text-align: right;
+    margin:     0px;
 }
