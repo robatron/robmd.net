@@ -11,7 +11,7 @@
     /* Main text styles */
     color:          #4B4742;
     font-size:      14px;
-    font-family:    "lucida grande", lucida, tahoma, helvetica, arial, sans-serif;
+    font-family:    "Hammersmith One", "lucida grande", lucida, tahoma, helvetica, arial, sans-serif;
 }
 
 /* Links */
@@ -30,7 +30,6 @@ a:hover{
     width:          100%;
     border-bottom:  solid 1px #777;
     margin-bottom:  20px;
-    font-family:    "Hammersmith One", sans-serif;
 }
 #header h1{
     display:    table-cell;
@@ -58,9 +57,6 @@ a:hover{
 /* Content */
 #content{
     margin:     0px 0px;
-}
-#content h1{
-    font-family:    "Hammersmith One", sans-serif;
 }
 
 /* Footer */
