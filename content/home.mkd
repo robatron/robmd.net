@@ -1,6 +1,6 @@
 title: Welcome
 type: home
-slug: index
+url: /index.html
 ---
 
 My name is Rob McGuire-Dale, and I recently graduated from [Oregon State University][osu] with a [B.S.][bs] in [computer science][compsci]. I am currently participating in the [Information Systems Career Foundation Program (ISCFP)][iscfp] at [The Boeing Company][boeing]. The ISCFP is a leadership roation program that will allow me to rotate through different roles within Boeing Information Systems. I am currently serving my first rotation as a software functional analyst.
