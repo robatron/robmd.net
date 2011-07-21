@@ -1,7 +1,6 @@
 title: About
 type: about
-category: about
-slug: index
+url: /about/index.html
 ---
 My name is Rob McGuire-Dale, and I recently graduated from [Oregon State University][osu] with a [B.S.][bs] in [computer science][compsci]. I currently work for [The Boeing Company][boeing] as a software functional analyst. In the past, I have worked as a software developer for [The Open Source Lab][osl], and a film editor/animation instructor at [The NW Film Center][nwfc] of [the Portland Art Museum][artmuseum].
 
