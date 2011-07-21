@@ -1,7 +1,6 @@
 title: Contact
 type: contact
-category: contact
-slug: index
+url: /contact/index.html
 ---
 * [Twitter][twitter]
 * [Facebook][fb]
