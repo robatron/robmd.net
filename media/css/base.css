@@ -11,7 +11,8 @@
     /* Main text styles */
     color:          #4B4742;
     font-size:      14px;
-    font-family:    "lucida grande", lucida, tahoma, helvetica, arial, sans-serif;
+    font-family:    "Veranda", lucida, tahoma, helvetica, arial, sans-serif;
+    line-height:    1.4em;
 }
 
 /* Links */
