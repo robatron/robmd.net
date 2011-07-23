@@ -1,0 +1,6 @@
+title: Blog
+type: blog
+category: blog
+url: /blog/index.html
+---
+This will eventually contain a list of blog posts.

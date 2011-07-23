@@ -1,0 +1,19 @@
+{# Template for the contact page #}
+
+{% extends "base.html" %}
+
+{% block js_doc_ready %}
+    menu_highlight('blog');
+{% endblock %}
+
+{% block content %}
+
+    <!-- page title -->
+    <h1 id='page_title'>{{ page.title }}</h1>
+
+    <!-- main content title -->
+    <div id='blog_list'>
+        {{ page.content }}
+    </div>
+
+{% endblock %}
