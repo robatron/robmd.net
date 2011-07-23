@@ -8,7 +8,8 @@
         <title>{{ page.title }} | {{ site.title }}</title>
 
         <!-- font imports -->
-        <link href='http://fonts.googleapis.com/css?family=Hammersmith+One&v2' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Hammersmith+One&v2'
+                rel='stylesheet' type='text/css'>
 
         <!-- base CSS includes -->
         <link rel="stylesheet" type='text/css' href='/css/base.css'/>
@@ -21,20 +22,21 @@
                 function menu_highlight(menu_id){
                     $("#menu #"+menu_id).addClass('selected');
                 }
+            
                 {% block js_doc_ready %}{% endblock %}
             });
 
+            // Google Analytics stuffs
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-17987944-2']);
             _gaq.push(['_setDomainName', '.robmd.net']);
             _gaq.push(['_setAllowHash', 'false']);
             _gaq.push(['_trackPageview']);
-
             (function() {
                 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
                 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+            })()
         </script>
 
         {% block head %}{% endblock %}
