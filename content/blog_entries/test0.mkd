@@ -1,6 +1,7 @@
-title: Test blog entry #0!
+title: Test blog entry 0!
 type: blog_entry
 category: blog
+date: 2011-07-23
 ---
 This is test blog entry #0.
 

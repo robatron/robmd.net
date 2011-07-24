@@ -1,5 +1,5 @@
 # wok configuration for robmd.net
 site_title: Rob McGuire-Dale
 author: Rob McGuire-Dale <rob.mcguiredale@gmail.com>
-url_pattern: /{category}/{slug}/index.html
+url_pattern: /{category}/{slug}.html
 

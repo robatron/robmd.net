@@ -1,0 +1,7 @@
+title: Test blog entry 1!
+type: blog_entry
+category: blog
+date: 2011-05-01
+---
+This is test blog entry #1.
+
