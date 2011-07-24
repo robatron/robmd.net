@@ -2,6 +2,10 @@
 
 {% extends "base.html" %}
 
+{% block head %}
+    <link rel='stylesheet' type='text/css' href='/css/blog.css'/>
+{% endblock %}
+
 {% block js_doc_ready %}
     menu_highlight('blog');
 {% endblock %}
