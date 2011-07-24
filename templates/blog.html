@@ -14,16 +14,15 @@
     <!-- blog list -->
     {% if page.subpages %}
         <div id='blog_list'>
-            {% for entry in page.subpages %}
+            {% for entry in page.subpages|sort(attribute='meta.datetime', reverse=True) %}
                 <div class='blog_entry'>
-                    <pre>
-                        {{ entry }}
-                    </pre>
                     <div class='title'>
-                        {{ entry.title }}
+                        <a href='{{ entry.meta.url }}'>
+                            {{ entry.meta.title }}
+                        </a>
                     </div>
                     <div class='subtitle'>
-                        By {{ entry.author }}, {{ entry.date }}
+                        By {{ entry.meta.author }}, {{ entry.meta.datetime }}
                     </div>
                 </div>
             {% endfor %}
