@@ -11,9 +11,25 @@
     <!-- page title -->
     <h1 id='page_title'>{{ page.title }}</h1>
 
-    <!-- main content title -->
-    <div id='blog_list'>
-        {{ page.content }}
-    </div>
+    <!-- blog list -->
+    {% if page.subpages %}
+        <div id='blog_list'>
+            {% for entry in page.subpages %}
+                <div class='blog_entry'>
+                    <pre>
+                        {{ entry }}
+                    </pre>
+                    <div class='title'>
+                        {{ entry.title }}
+                    </div>
+                    <div class='subtitle'>
+                        By {{ entry.author }}, {{ entry.date }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p> No blog entries to display. </p>
+    {% endif %}
 
 {% endblock %}
