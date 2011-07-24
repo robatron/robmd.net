@@ -1,0 +1,6 @@
+title: Test blog entry #0!
+type: blog_entry
+category: blog
+---
+This is test blog entry #0.
+
