@@ -1,9 +1,10 @@
-/* Base CSS styles for RobMD.net 
+/* Base CSS styles for robmd.net 
  *
- * Color scheme based on main photo: 
+ * Color scheme based on main photo's average color: 
  * http://colorschemedesigner.com/#3D21T7tE0w0w0
  */
 
+/* Main */
 #body_wrapper{
     width:          960px;
     margin:         25px auto;
@@ -13,6 +14,10 @@
     font-size:      14px;
     font-family:    "Veranda", lucida, tahoma, helvetica, arial, sans-serif;
     line-height:    1.4em;
+}
+
+h1, h2, #header{
+    font-family:    "Orbitron", sans-serif;
 }
 
 /* Links */
@@ -29,9 +34,8 @@ a:hover{
 #header{
     display:        table;
     width:          100%;
-    border-bottom:  solid 1px #777;
+    /*border-bottom:  solid 1px #777;*/
     margin-bottom:  20px;
-    font-family:    "Hammersmith One", sans-serif;
 }
 #header h1{
     display:    table-cell;
@@ -59,9 +63,6 @@ a:hover{
 /* Content */
 #content{
     margin:     0px 0px;
-}
-#content h1{
-    font-family:    "Hammersmith One", sans-serif;
 }
 
 /* Footer */
@@ -94,3 +95,4 @@ a:hover{
     text-align: right;
     margin:     0px;
 }
+
