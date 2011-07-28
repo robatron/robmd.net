@@ -1,7 +1,11 @@
-title: Test blog entry 2!
+title: Nunc sit amet dui nec lacus cursus blandit
 type: blog_entry
 category: blog
 date: 2011-02-01
 ---
-This is test blog entry #2.
+Sed vestibulum auctor eleifend. Praesent iaculis fermentum dui, non consectetur turpis facilisis sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce nec purus et lectus egestas mollis. Curabitur eu orci in libero viverra sollicitudin. Etiam sed tortor id tortor fermentum posuere. Nullam quam neque, adipiscing a pellentesque ut, scelerisque vel nibh.
+
+Sed adipiscing convallis est non venenatis. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque porttitor, est in hendrerit porttitor, purus sem imperdiet orci, facilisis laoreet magna tortor non est. Etiam quis odio turpis. Praesent nec sapien in diam porta ullamcorper. Phasellus lacinia nunc quis ante placerat eu commodo ipsum imperdiet.
+
+Ut ullamcorper adipiscing nisl, sed aliquam tortor dapibus vitae. Curabitur sapien turpis, sollicitudin eu imperdiet ac, commodo quis augue. 
 
