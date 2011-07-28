@@ -1,5 +1,4 @@
 title: Blog
-type: blog
-slug: blog
+type: blog_list
 url: /blog/index.html
 ---

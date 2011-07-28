@@ -1,4 +1,4 @@
-{# Template for the blog list #}
+{# Base blog template #}
 
 {% extends "base.html" %}
 
@@ -10,26 +10,4 @@
     menu_highlight('blog');
 {% endblock %}
 
-{% block content %}
-
-    <!-- blog list -->
-    {% if page.subpages %}
-        <div id='blog-list'>
-            {% for entry in page.subpages|sort(attribute='meta.datetime', reverse=True) %}
-                <div class='blog-item'>
-                    <a href='{{ entry.meta.url }}'>
-                        <h2 class='title'>
-                            {{ entry.meta.title }}
-                        </h2>
-                    </a>
-                    <div class='subtitle'>
-                        By {{ entry.meta.author }}| {{ entry.meta.datetime }}
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    {% else %}
-        <p> No blog entries to display. </p>
-    {% endif %}
-
-{% endblock %}
+{% block content %}{% endblock %}
