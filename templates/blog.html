@@ -1,4 +1,4 @@
-{# Template for the contact page #}
+{# Template for the blog list #}
 
 {% extends "base.html" %}
 
@@ -14,16 +14,16 @@
 
     <!-- blog list -->
     {% if page.subpages %}
-        <div id='blog_list'>
+        <div id='blog-list'>
             {% for entry in page.subpages|sort(attribute='meta.datetime', reverse=True) %}
-                <div class='blog_entry'>
+                <div class='blog-item'>
                     <a href='{{ entry.meta.url }}'>
                         <h2 class='title'>
                             {{ entry.meta.title }}
                         </h2>
                     </a>
                     <div class='subtitle'>
-                        By {{ entry.meta.author }}, {{ entry.meta.datetime }}
+                        By {{ entry.meta.author }}| {{ entry.meta.datetime }}
                     </div>
                 </div>
             {% endfor %}

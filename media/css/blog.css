@@ -1,6 +1,28 @@
 /* Blog-specific CSS styles
  */
 
-.blog_entry{
+/* Blog list */
+.blog-item{
     margin-bottom: 20px;
+}
+
+.blog-item .title{
+    margin-bottom: 5px;
+}
+
+.blog-item .subtitle{
+    margin-top: 0px;
+}
+
+/* Blog entry */
+#blog-heading{
+    margin-bottom: 20px;
+}
+
+#blog-heading .title{
+    margin-bottom: 5px;
+}
+
+#blog-heading .subtitle{
+    margin-top: 0px;
 }
