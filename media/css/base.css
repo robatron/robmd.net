@@ -16,10 +16,6 @@
     line-height:    1.4em;
 }
 
-h1, h2, #header{
-    font-family:    "Orbitron", sans-serif;
-}
-
 /* Links */
 a, a:visited{
     font-weight:        bold;
@@ -30,12 +26,22 @@ a:hover{
     color: #97A9C0;
 }
 
+/* Headings */
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+h1{ font-size: 2em      }
+h2{ font-size: 1.75em   }
+h3{ font-size: 1.5em    }
+h4{ font-size: 1.25em   }
+
 /* Header */
 #header{
     display:        table;
     width:          100%;
     /*border-bottom:  solid 1px #777;*/
     margin-bottom:  20px;
+    font-family:    "Orbitron", sans-serif;
 }
 #header h1{
     display:    table-cell;
