@@ -12,19 +12,16 @@
 
 {% block content %}
 
-    <!-- page title -->
-    <h1 id='page_title'>{{ page.title }}</h1>
-
     <!-- blog list -->
     {% if page.subpages %}
         <div id='blog_list'>
             {% for entry in page.subpages|sort(attribute='meta.datetime', reverse=True) %}
                 <div class='blog_entry'>
-                    <div class='title'>
-                        <a href='{{ entry.meta.url }}'>
+                    <a href='{{ entry.meta.url }}'>
+                        <h2 class='title'>
                             {{ entry.meta.title }}
-                        </a>
-                    </div>
+                        </h2>
+                    </a>
                     <div class='subtitle'>
                         By {{ entry.meta.author }}, {{ entry.meta.datetime }}
                     </div>
