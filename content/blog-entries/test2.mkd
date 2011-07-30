@@ -2,6 +2,7 @@ title: Nunc sit amet dui nec lacus cursus blandit
 type: blog-entry
 category: blog
 date: 2011-02-01
+tags: foo, bar
 ---
 Sed vestibulum auctor eleifend. Praesent iaculis fermentum dui, non consectetur turpis facilisis sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce nec purus et lectus egestas mollis. Curabitur eu orci in libero viverra sollicitudin. Etiam sed tortor id tortor fermentum posuere. Nullam quam neque, adipiscing a pellentesque ut, scelerisque vel nibh.
 

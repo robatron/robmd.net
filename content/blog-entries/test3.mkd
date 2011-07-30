@@ -2,7 +2,7 @@ title: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 type: blog-entry
 category: blog
 date: 2011-07-23
-tags: foo, bar, herp, derp
+tags: foo
 ---
 Quisque et mi leo. Sed lacinia elit leo. Aenean augue ligula, semper ut auctor 
 at, dictum id felis. Praesent placerat felis sed lectus interdum semper. Class 
