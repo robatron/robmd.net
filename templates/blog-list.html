@@ -14,9 +14,25 @@
                             {{ entry.meta.title }}
                         </h1>
                     </a>
+
                     <div class='subtitle'>
-                        By {{ entry.meta.author }}| {{ entry.meta.datetime }}
+                        By {{ entry.meta.author }}|
+                        {{ entry.meta.datetime }}
+
+                        {% if entry.meta.tags %}
+                            | Tags: 
+                            {% for tag in entry.meta.tags %}
+                                {% if loop.length == 1 %}
+                                    {{ tag }}
+                                {% else %}{% if not loop.last %}
+                                    {{ tag }},
+                                {% else %}
+                                    and {{ tag }}
+                                {% endif %}{% endif %}
+                            {% endfor %}
+                        {% endif %}
                     </div>
+
                     <div class='content'>
                         {{ entry.meta.content }}
                     </div>
