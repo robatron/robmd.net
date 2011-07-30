@@ -2,7 +2,6 @@ title: Donec egestas tempor aliquet
 type: blog-entry
 category: blog
 date: 2011-05-01
-tags: foo, bar, herp
 ---
 Cras consequat, risus id mattis venenatis, urna nulla dictum purus, vitae faucibus nulla nunc eget lorem. Integer sed aliquet enim. Integer aliquam, nisl id hendrerit vestibulum, augue velit hendrerit sem, dignissim adipiscing ipsum enim nec urna.
 
