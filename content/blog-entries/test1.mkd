@@ -1,5 +1,5 @@
 title: Donec egestas tempor aliquet
-type: blog_entry
+type: blog-entry
 category: blog
 date: 2011-05-01
 ---

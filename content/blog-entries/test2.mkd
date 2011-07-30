@@ -1,5 +1,5 @@
 title: Nunc sit amet dui nec lacus cursus blandit
-type: blog_entry
+type: blog-entry
 category: blog
 date: 2011-02-01
 ---
