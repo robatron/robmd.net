@@ -44,6 +44,7 @@ h3{
     /*border-bottom:  solid 1px #777;*/
     margin-bottom:  20px;
     font-family:    "Orbitron", sans-serif;
+    border-bottom:     solid 1px #777;
 }
 #header h1{
     display:    table-cell;
