@@ -3,15 +3,17 @@
 
 /* Blog list */
 .blog-item{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .blog-item .title{
-    margin-bottom: 5px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .blog-item .subtitle{
-    margin-top: 0px;
+    font-size: 0.9em;
+    color: #666;
 }
 
 /* Blog entry */
@@ -20,7 +22,7 @@
 }
 
 #blog-heading .title{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 #blog-heading .subtitle{

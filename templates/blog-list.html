@@ -10,12 +10,15 @@
             {% for entry in page.subpages|sort(attribute='meta.datetime', reverse=True) %}
                 <div class='blog-item'>
                     <a href='{{ entry.meta.url }}'>
-                        <h2 class='title'>
+                        <h1 class='title'>
                             {{ entry.meta.title }}
-                        </h2>
+                        </h1>
                     </a>
                     <div class='subtitle'>
                         By {{ entry.meta.author }}| {{ entry.meta.datetime }}
+                    </div>
+                    <div class='content'>
+                        {{ entry.meta.content }}
                     </div>
                 </div>
             {% endfor %}
