@@ -27,9 +27,13 @@
                 Tags
             </div>
             <ul class='options'>
-                <li>placeholder</li>
-                <li>placeholder</li>
-                <li>placeholder</li>
+                {% for tag in site.tags %}
+                    <li>
+                        <a href='#'>
+                            {{ tag }} ({{ site.tags[tag]|length }})
+                        </a>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
