@@ -1,15 +1,36 @@
 /* Blog-specific CSS styles
  */
 
+/* Blog menu */
+#blog-wrap{
+    display: table;
+}
+
+
+#blog-wrap #blog-content, #blog-wrap #blog-menu{
+    display: table-cell;
+}
+
+#blog-wrap #blog-content{
+    padding-right: 20px;
+}
+
+#blog-wrap #blog-menu{
+    padding-left: 20px;
+    border-left: solid #CCC 1px;
+    width: 200px;
+}
+
 /* Blog list */
 .blog-item{
     margin-bottom: 20px;
-    border-bottom: solid #E5E5E5 1px;
+    border-bottom: solid #CCC 1px;
 }
 
 .blog-item .title{
     font-size: 1.5em;
     margin-bottom: 5px;
+    margin-top: 0px;
 }
 
 .blog-item .subtitle{
