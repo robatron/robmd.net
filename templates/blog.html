@@ -10,4 +10,27 @@
     menu_highlight('blog');
 {% endblock %}
 
-{% block content %}{% endblock %}
+{% block content %}
+    <div id="blog-wrap">
+        <div id="blog-content">
+            {% block blog_content %}{% endblock %}
+        </div>
+        <div id='blog-menu'>
+            <div class='title'>
+                View
+            </div>
+            <ul class='options'>
+                <li>Full</li>
+                <li>Collapsed</li>
+            </ul>
+            <div class='title'>
+                Tags
+            </div>
+            <ul class='options'>
+                <li>placeholder</li>
+                <li>placeholder</li>
+                <li>placeholder</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
