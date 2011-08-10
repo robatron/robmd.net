@@ -28,6 +28,7 @@ a:hover{
 /* Headings */
 h1, h2, h3{
     font-weight: normal;
+    margin: 0px;
 }
 h1{ font-size: 2em      }
 h2{ font-size: 1.5em    }
@@ -40,10 +41,9 @@ h3{
 #header{
     display:        table;
     width:          100%;
-    /*border-bottom:  solid 1px #777;*/
     margin-bottom:  20px;
     font-family:    "Orbitron", sans-serif;
-    border-bottom:     solid 1px #777;
+    border-bottom:  solid 1px #777;
 }
 #header h1{
     display:    table-cell;
@@ -57,7 +57,6 @@ h3{
     text-align: right;
 }
 #menu a{
-    padding-top:    5px;
     margin-left:    20px;
 }
 #menu .selected{
