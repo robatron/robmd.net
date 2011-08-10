@@ -39,6 +39,11 @@
     color: #888;
 }
 
+.blog-item.last{
+    border:         none;
+    margin-bottom:  20px;
+}
+
 /* Blog entry */
 #blog-heading{
     margin-bottom: 20px;

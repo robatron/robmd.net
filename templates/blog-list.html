@@ -8,7 +8,7 @@
     {% if page.subpages %}
         <div id='blog-list'>
             {% for entry in page.subpages|sort(attribute='meta.datetime', reverse=True) %}
-                <div class='blog-item'>
+                <div class='blog-item {% if loop.last %}last{% endif %}'>
                     <a href='{{ entry.meta.url }}'>
                         <h1 class='title'>
                             {{ entry.meta.title }}
@@ -20,7 +20,7 @@
                         {{ entry.meta.datetime }}
 
                         {% if entry.meta.tags %}
-                            | Tags: 
+                            | under 
                             {% for tag in entry.meta.tags %}
                                 {% if loop.length == 1 %}
                                     {{ tag }}
