@@ -4,31 +4,36 @@
 
 {% block blog_content %}
 
-    <!-- title heading -->
-    <div class='blog-item last'>
-        <h1 class='title'>
-            {{ page.title }}
-        </h1>
-            <div class='subtitle'>
-                By {{ page.author }}|
-                {{ page.datetime }}
-                {% if page.tags %}| in 
-                    {% for tag in page.tags %}
-                        {% if loop.length == 1 %}
-                            {{ tag }}
-                        {% else %}{% if not loop.last %}
-                            {{ tag }},
-                        {% else %}
-                            and {{ tag }}
-                        {% endif %}{% endif %}
-                    {% endfor %}
-                {% endif %}
-            </div>
-    </div>
+    <div class='blog-item'>
+        <a href='{{ page.url }}'>
+            <h1 class='title'>
+                {{ page.title }}
+            </h1>
+        </a>
 
-    <!-- entry content -->
-    <div id='content'>
-        {{ page.content }}
+        <div class='subtitle'>
+            By {{ page.author }}|
+            {{ page.datetime }}
+            {% if page.tags %}| in 
+                {% for tag in page.tags %}
+                    {% if loop.length == 1 %}
+                        {{ tag }}
+                    {% else %}{% if not loop.last %}
+                        {{ tag }},
+                    {% else %}
+                        and {{ tag }}
+                    {% endif %}{% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div id='content'>
+            {{ page.content }}
+        </div>
     </div>
+    
+    <a href='/blog'>
+        << back to blog list
+    </a>
 
 {% endblock %}
