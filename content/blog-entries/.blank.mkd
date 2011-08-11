@@ -1,0 +1,6 @@
+type: blog-entry
+category: blog
+title:
+date:
+tags:
+---

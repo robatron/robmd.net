@@ -1,0 +1,24 @@
+type: blog-entry
+category: blog
+title: New website
+date: 2011-06-01
+tags: web-development
+---
+Here it is, [my new website][mysite]. It was created using [wok][], an awesome
+static website generator written by my friend and ex-coworker, 
+[Mike Cooper][cooper].
+
+[mysite]:http://robmd.net
+[wok]:https://github.com/mythmon/wok
+[cooper]:http://facebook.com/mythmon
+
+Wok allowed me to create a consistant and maintainable website without the need
+for any kind of server-side engine like Django or PHP. It's just a clean set
+of HTML, so nothing special is needed to serve or view it. Prety nifty :)
+
+Please feel free to puruse the code on its [GitHub project page][github] and
+leave any comments that you'd like.
+
+[github]:https://github.com/robatron/robmd.net
+
+Enjoy the site and thanks for reading!

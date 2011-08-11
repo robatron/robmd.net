@@ -1,0 +1,20 @@
+title: M-m-m-meta post!
+type: blog-entry
+category: blog
+date: 2011-08-10
+tags: web-development
+---
+Finally, a simple blog system implemented using [wok][]. There's 
+not much to this, just a simple list of blog entries, but there are more 
+features to come soon including:
+
+[wok]:https://github.com/mythmon/wok
+
+- **Tag filtering** so the user can chose to view only the entries associated
+with a particular tag.
+- **Paging** so all entries don't load on a single page.
+
+If you want to see my current work-in-progress, you can find it on my
+[development site][devsite].
+
+[devsite]:http://dev.robmd.net/blog
