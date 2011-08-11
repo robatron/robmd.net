@@ -2,7 +2,7 @@ title: M-m-m-meta post!
 type: blog-entry
 category: blog
 date: 2011-08-10
-tags: web-development
+tags: web development, meta, projects
 ---
 Finally, a simple blog system implemented using [wok][]. There's 
 not much to this, just a simple list of blog entries, but there are more 

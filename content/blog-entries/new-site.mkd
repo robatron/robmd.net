@@ -2,7 +2,7 @@ type: blog-entry
 category: blog
 title: New website
 date: 2011-06-01
-tags: web-development
+tags: meta
 ---
 Here it is, [my new website][mysite]. It was created using [wok][], an awesome
 static website generator written by my friend and ex-coworker, 

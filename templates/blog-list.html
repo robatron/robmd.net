@@ -20,7 +20,7 @@
                         {{ entry.meta.datetime }}
 
                         {% if entry.meta.tags %}
-                            | under 
+                            | in 
                             {% for tag in entry.meta.tags %}
                                 {% if loop.length == 1 %}
                                     {{ tag }}
