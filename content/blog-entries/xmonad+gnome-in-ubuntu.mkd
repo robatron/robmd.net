@@ -4,7 +4,6 @@ title: Xmonad + GNOME in Ubuntu 11.04
 date: 2011-09-29
 tags: how-to, linux
 ---
-(Originally written May 2011)
 
 Dislike the [Unity shell][unity] in Ubuntu? Like [tiling window 
 managers][twm]? Here's how to replace GNOME's 
@@ -104,3 +103,4 @@ looks:
 - [Haskell wiki: Using Xmonad in GNOME](http://www.haskell.org/haskellwiki/Xmonad/Using_xmonad_in_Gnome#Ubuntu_Natty)
 - [Haskell wiki: Xmonad config archive](http://www.haskell.org/haskellwiki/Xmonad/Config_archive)
 
+(This blog entry originally written May 2011)
