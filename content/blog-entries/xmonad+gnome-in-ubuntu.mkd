@@ -1,14 +1,65 @@
 type: blog-entry
 category: blog
-title: Syntax highlight test
-date: 2011-09-29
+title: Xmonad + GNOME in Ubuntu 11.04
+date: 2011-05-02
 tags: how-to, linux
 ---
-Hi there. This is a Pygments test.
 
-    ::python
-    class Foo(object):
-        pass
+Dislike the new [Unity shell][unity] in Ubuntu 11.04? Like [tiling window 
+managers][twm]? Here's how to replace GNOME's 
+[default window manager][defaultwm] with the [Xmonad][xmonad] 
+dynamically-tiling window manager to create a slick GNOME/Xmonad hybrid in 
+Ubuntu 11.04 (and possibly later versions).
 
-Did it work? What does it look like?
+[unity]:http://en.wikipedia.org/wiki/Unity_(desktop_environment)
+[twm]:http://en.wikipedia.org/wiki/Tiling_window_manager
+[defaultwm]:http://en.wikipedia.org/wiki/Metacity
+[xmonad]:http://xmonad.org
+
+# Install Xmonad
+
+First, install xmonad from the repositories with [APT][]. This will install
+Xmonad and all of it's [Haskell][]-related dependencies. (**Warning:** This can
+sometimes be quite a bit of stuff, i.e., 60-300 MiB.)
+
+[APT]:http://en.wikipedia.org/wiki/Advanced_Packaging_Tool
+[Haskell]:http://en.wikipedia.org/wiki/Haskell_%28programming_language%29
+
+    ::
+    sudo apt-get install xmonad
+
+# Edit the default Xmonad GNOME session
+
+Now we'll need to edit Xmonad's GNOME session to include GNOME stuff, e.g., the
+gnome panels, the [Nautilus file manager][nautilus], etc. Open 
+`/usr/share/gnome-sessions/xmonad.session` and make it look something like
+this: 
+
+[nautilus]:http://live.gnome.org/Nautilus
+
+    ::
+    [GNOME Session]
+    Name=Xmonad
+    Required=windowmanager;panel;filemanager;
+    Required-windowmanager=xmonad
+    Required-panel=gnome-panel
+    Required-filemanager=nautilus
+    DefaultApps=gnome-settings-daemon;
+
+# Create a new X session
+
+Now let's add a new X session entry for our GNOME/Xmonad hybrid. Copy
+`/usr/share/xsessions/xmonad.desktop` to 
+`/usr/share/xsessions/xmonad-gnome.desktop` and make it look something like
+this:
+
+    ::
+    [Desktop Entry]
+    Encoding=UTF-8
+    Name=GNOME/xmonad hybrid of amazingness
+    Comment=GNOME + XMonad tiling window manager
+    Exec=gnome-session --session=xmonad
+    Icon=xmonad.png
+    Type=XSession
+
 
