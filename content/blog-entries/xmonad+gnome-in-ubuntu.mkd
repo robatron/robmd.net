@@ -1,0 +1,14 @@
+type: blog-entry
+category: blog
+title: Syntax highlight test
+date: 2011-09-29
+tags: how-to, linux
+---
+Hi there. This is a Pygments test.
+
+    ::python
+    class Foo(object):
+        pass
+
+Did it work? What does it look like?
+
