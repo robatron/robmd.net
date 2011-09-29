@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+    # Virtual host for robmd.net (production)
+
+    # Specify server name to react to
+    ServerName new.robmd.net
+
+    # Specify document root to serve
+    DocumentRoot /home/rob/robmd.net/output
+
+    # Redirect and rewrite URLs. Following this guide:
+    # http://www.workingwith.me.uk/articles/scripting/mod_rewrite
+    RewriteEngine on
+    RewriteRule ^/node/16.?$ http://new.robmd.net/blog/xmonad-+-gnome-in-ubuntu-11-04.html [R=301]
+
+</VirtualHost>
+
