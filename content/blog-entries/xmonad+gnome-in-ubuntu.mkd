@@ -103,4 +103,4 @@ looks:
 - [Haskell wiki: Using Xmonad in GNOME](http://www.haskell.org/haskellwiki/Xmonad/Using_xmonad_in_Gnome#Ubuntu_Natty)
 - [Haskell wiki: Xmonad config archive](http://www.haskell.org/haskellwiki/Xmonad/Config_archive)
 
-(This blog entry originally written May 2011)
+(Originally written May 2011)
