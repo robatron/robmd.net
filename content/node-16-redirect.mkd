@@ -1,5 +1,0 @@
-title: Redirecting to old blog post "Xmonad + GNOME in Ubuntu 11.04"
-type: redirect
-redirect_url: http://old.robmd.net/node/16
-url: /node/16/index.html
----
