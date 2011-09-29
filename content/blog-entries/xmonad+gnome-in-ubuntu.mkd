@@ -1,11 +1,12 @@
 type: blog-entry
 category: blog
 title: Xmonad + GNOME in Ubuntu 11.04
-date: 2011-05-02
+date: 2011-09-29
 tags: how-to, linux
 ---
+(Originally written May 2011)
 
-Dislike the new [Unity shell][unity] in Ubuntu 11.04? Like [tiling window 
+Dislike the [Unity shell][unity] in Ubuntu? Like [tiling window 
 managers][twm]? Here's how to replace GNOME's 
 [default window manager][defaultwm] with the [Xmonad][xmonad] 
 dynamically-tiling window manager to create a slick GNOME/Xmonad hybrid in 
