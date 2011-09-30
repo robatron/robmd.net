@@ -9,12 +9,12 @@
         <div id='blog-list'>
             {% for entry in page.subpages|sort(attribute='datetime', reverse=True) %}
                 <div class='blog-item {% if loop.last %}last{% endif %}'>
-                    {{ blog_entry( entry.title, entry.url, entry.author, entry.datetime, entry.tags, entry.content ) }}
+                    {{ blog_entry( entry.title, entry.url, entry.author, entry.datetime, entry.tags, entry.content, entry.title_image ) }}
                 </div>
             {% endfor %}
         </div>
     {% else %}
-        <p> No blog entries to display. </p>
+        <p> No blog entries to display :-(</p>
     {% endif %}
 
 {% endblock %}

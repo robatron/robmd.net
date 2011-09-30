@@ -5,7 +5,7 @@
 {# Blog entry macro #}
 {# For more info, visit #}
 {# http://jinja.pocoo.org/docs/templates/#macros #}
-{% macro blog_entry(title, url, author, date, tags, content) -%}
+{% macro blog_entry(title, url, author, date, tags, content, title_image=None) -%}
     <a href='{{ url }}'>
         <h1 class='title'>
             {{ title }}
@@ -29,6 +29,12 @@
             {% endfor %}
         {% endif %}
     </div>
+
+    {% if title_image %}
+        <div class='title-image'>
+            <img src='{{ title_image }}'/>
+        </div>
+    {% endif %}
 
     <div class='content'>
         {{ content }}
