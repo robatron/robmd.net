@@ -2,6 +2,39 @@
 
 {% extends "base.html" %}
 
+{# Blog entry macro #}
+{# For more info, visit #}
+{# http://jinja.pocoo.org/docs/templates/#macros #}
+{% macro blog_entry(title, url, author, date, tags, content) -%}
+    <a href='{{ url }}'>
+        <h1 class='title'>
+            {{ title }}
+        </h1>
+    </a>
+
+    <div class='subtitle'>
+        {# By {{ author }}| #}
+        {{ date }}
+
+        {% if tags %}
+            | in
+            {% for tag in tags %}
+                {% if loop.lenght == 1 %}
+                    {{ tag }}
+                {% elif not loop.last %}
+                    {{ tag }},
+                {% else %}
+                    and {{ tag }}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class='content'>
+        {{ content }}
+    </div>
+{%- endmacro %}
+
 {% block head %}
     <link rel='stylesheet' type='text/css' href='/css/blog.css'/>
 {% endblock %}
