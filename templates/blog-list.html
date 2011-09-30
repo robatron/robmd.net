@@ -1,6 +1,6 @@
 {# Blog list template #}
 
-{% extends "blog.html" %}
+{% extends "blog-base.html" %}
 
 {% block blog_content %}
 
@@ -9,34 +9,7 @@
         <div id='blog-list'>
             {% for entry in page.subpages|sort(attribute='datetime', reverse=True) %}
                 <div class='blog-item {% if loop.last %}last{% endif %}'>
-                    <a href='{{ entry.url }}'>
-                        <h1 class='title'>
-                            {{ entry.title }}
-                        </h1>
-                    </a>
-
-                    <div class='subtitle'>
-                        {# By {{ entry.author }}| #}
-                        {{ entry.datetime }}
-
-
-                        {% if entry.tags %}
-                            | in 
-                            {% for tag in entry.tags %}
-                                {% if loop.length == 1 %}
-                                    {{ tag }}
-                                {% else %}{% if not loop.last %}
-                                    {{ tag }},
-                                {% else %}
-                                    and {{ tag }}
-                                {% endif %}{% endif %}
-                            {% endfor %}
-                        {% endif %}
-                    </div>
-
-                    <div class='content'>
-                        {{ entry.content }}
-                    </div>
+                    {{ blog_entry( entry.title, entry.url, entry.author, entry.datetime, entry.tags, entry.content ) }}
                 </div>
             {% endfor %}
         </div>
