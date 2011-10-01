@@ -22,14 +22,23 @@
     width: 200px;
 }
 
-/* Blog list */
 .blog-item{
     margin-bottom: 40px;
-    border-bottom: solid #CCC 1px;
+    border-bottom: 1px solid #777;
+}
+
+.blog-item .title-bar{
+    /*
+    background: -webkit-gradient(linear, left top, right bottom, from(#CCC), to(#FFF));
+    background: -moz-linear-gradient(left,  #CCC,  #FFF);
+    */
+    padding-top: 5px;
+    border-bottom: 1px solid #ccc;
+    background: #eee;
 }
 
 .blog-item .title{
-    font-size: 1.5em;
+    font-size: 2em;
     margin-bottom: 5px;
     margin-top: 0px;
 }
