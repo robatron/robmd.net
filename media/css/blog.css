@@ -45,7 +45,7 @@
 }
 
 .blog-item .content{
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .blog-item h1{
@@ -53,15 +53,8 @@
     font-size: 1.25em;
 }
 
-/* Blog entry */
-#blog-heading{
+.blog-item .title-image{
+    text-align: center;
+    margin-top: 20px;
     margin-bottom: 20px;
-}
-
-#blog-heading .title{
-    margin-bottom: 10px;
-}
-
-#blog-heading .subtitle{
-    margin-top: 0px;
 }
