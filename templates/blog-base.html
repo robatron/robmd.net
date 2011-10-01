@@ -5,7 +5,7 @@
 {# Blog entry macro #}
 {# For more info on jinja2 macros, visit #}
 {# http://jinja.pocoo.org/docs/templates/#macros #}
-{% macro blog_entry(title, url, author, date, tags, content, title_image=None) -%}
+{% macro blog_entry(title, url, author, datetime, tags, content, title_image=None) -%}
     <h1 class='title'>
         <a href='{{ url }}'>
             {{ title }}
@@ -14,7 +14,7 @@
 
     <div class='subtitle'>
         {# By {{ author }}| #}
-        {{ date }}
+        {{ datetime }}
 
         {% if tags %}
             | in
