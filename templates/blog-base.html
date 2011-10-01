@@ -3,14 +3,14 @@
 {% extends "base.html" %}
 
 {# Blog entry macro #}
-{# For more info, visit #}
+{# For more info on jinja2 macros, visit #}
 {# http://jinja.pocoo.org/docs/templates/#macros #}
 {% macro blog_entry(title, url, author, date, tags, content, title_image=None) -%}
-    <a href='{{ url }}'>
-        <h1 class='title'>
+    <h1 class='title'>
+        <a href='{{ url }}'>
             {{ title }}
-        </h1>
-    </a>
+        </a>
+    </h1>
 
     <div class='subtitle'>
         {# By {{ author }}| #}
@@ -32,7 +32,9 @@
 
     {% if title_image %}
         <div class='title-image'>
-            <img src='{{ title_image }}'/>
+            <a href='{{ title_image }}'>
+                <img src='{{ title_image }}'/>
+            </a>
         </div>
     {% endif %}
 
@@ -46,7 +48,32 @@
 {% endblock %}
 
 {% block js_doc_ready %}
+    // Highlight the 'blog' menu item
     menu_highlight('blog');
+
+    // Make title images correct size
+    var IMG_WIDTH = 480;
+    $(".title-image").each(function(index){
+        // For each title image...
+
+        var cur_img = $(this).find("a img");
+        var cur_link = $(this).find("a");
+
+        var src_split = cur_img.attr('src').split('/');
+
+        var src_before_size_prop = 
+            src_split.slice(0, src_split.length-2).join('/'); 
+        var src_after_size_prop = 
+            src_split.slice(src_split.length-1).join('/');
+
+        var src_resized = src_before_size_prop + '/s' + IMG_WIDTH + '/' + 
+            src_after_size_prop;
+
+        var src_full = src_before_size_prop + '/' + src_after_size_prop;
+
+        cur_img.attr('src', src_resized);
+        cur_link.attr('href', src_full);
+    });
 {% endblock %}
 
 {% block content %}
