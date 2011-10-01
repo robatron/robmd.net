@@ -1,7 +1,7 @@
 type: blog-entry
 category: blog
-title: Xmonad + GNOME in Ubuntu 11.04
-date: 2011-09-29
+title: Xmonad + GNOME in Ubuntu
+date: 2011-05-02
 tags: how-to, linux
 title_image: https://lh5.googleusercontent.com/-XYXWyrfQNPk/Tb4Htcs9mLI/AAAAAAAACZ8/AcXqaLkziPE/s144/Screenshot.png
 ---
@@ -103,5 +103,3 @@ looks:
 
 - [Haskell wiki: Using Xmonad in GNOME](http://www.haskell.org/haskellwiki/Xmonad/Using_xmonad_in_Gnome#Ubuntu_Natty)
 - [Haskell wiki: Xmonad config archive](http://www.haskell.org/haskellwiki/Xmonad/Config_archive)
-
-(Originally written May 2011)
