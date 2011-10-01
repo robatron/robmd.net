@@ -6,28 +6,31 @@
 {# For more info on jinja2 macros, visit #}
 {# http://jinja.pocoo.org/docs/templates/#macros #}
 {% macro blog_entry(title, url, author, datetime, tags, content, title_image=None) -%}
-    <h1 class='title'>
-        <a href='{{ url }}'>
-            {{ title }}
-        </a>
-    </h1>
 
-    <div class='subtitle'>
-        {# By {{ author }}| #}
-        {{ datetime }}
+    <div class='title-bar'>
+        <h1 class='title'>
+            <a href='{{ url }}'>
+                {{ title }}
+            </a>
+        </h1>
 
-        {% if tags %}
-            | in
-            {% for tag in tags %}
-                {% if loop.lenght == 1 %}
-                    {{ tag }}
-                {% elif not loop.last %}
-                    {{ tag }},
-                {% else %}
-                    and {{ tag }}
-                {% endif %}
-            {% endfor %}
-        {% endif %}
+        <div class='subtitle'>
+            {# By {{ author }}| #}
+            {{ datetime }}
+
+            {% if tags %}
+                | in
+                {% for tag in tags %}
+                    {% if loop.lenght == 1 %}
+                        {{ tag }}
+                    {% elif not loop.last %}
+                        {{ tag }},
+                    {% else %}
+                        and {{ tag }}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
 
     {% if title_image %}
