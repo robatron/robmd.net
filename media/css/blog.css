@@ -24,17 +24,14 @@
 
 .blog-item{
     margin-bottom: 40px;
-    border-bottom: 1px solid #777;
+}
+
+.blog-item.last{
+    margin-bottom: 20px;
 }
 
 .blog-item .title-bar{
-    /*
-    background: -webkit-gradient(linear, left top, right bottom, from(#CCC), to(#FFF));
-    background: -moz-linear-gradient(left,  #CCC,  #FFF);
-    */
-    padding-top: 5px;
     border-bottom: 1px solid #ccc;
-    background: #eee;
 }
 
 .blog-item .title{
@@ -46,11 +43,6 @@
 .blog-item .subtitle{
     font-size: 0.9em;
     color: #888;
-}
-
-.blog-item.last{
-    border:         none;
-    margin-bottom:  -10px;
 }
 
 .blog-item .content{
