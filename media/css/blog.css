@@ -1,24 +1,13 @@
 /* Blog-specific CSS styles
  */
 
-/* Blog menu */
 #blog-wrap{
     display: table;
 }
 
-
-#blog-wrap #blog-content, #blog-wrap #blog-menu{
-    display: table-cell;
-}
-
 #blog-wrap #blog-content{
-     padding-right: 20px;
-}
-
-#blog-wrap #blog-menu{
-    padding-left: 20px;
-    border-left: solid #CCC 1px;
-    width: 200px;
+    display: table-cell;
+    padding-right: 20px;
 }
 
 .blog-item{
@@ -57,4 +46,12 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+/* Blog sidebar */
+#blog-wrap #sidebar{
+    display: table-cell;
+    padding-left: 20px;
+    border-left: solid #CCC 1px;
+    width: 200px;
 }
