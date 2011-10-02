@@ -85,26 +85,36 @@
             {% block blog_content %}{% endblock %}
         </div>
 
-        <div id='blog-menu'>
-            <div class='title'>
-                View
+        <!-- Blog sidebar -->
+        <div id='sidebar'>
+            <div class='tags'>
+                <div class='title'>
+                    Tags
+                </div>
+                <ul>
+                    {% for tag in site.tags %}
+                        <li>
+                            <a href='#'>
+                                {{ tag }} ({{ site.tags[tag]|length }})
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
-            <ul class='options'>
-                <li>Full</li>
-                <li>Collapsed</li>
-            </ul>
-            <div class='title'>
-                Tags
+            <div class='recent-posts'>
+                <div class='title'>
+                    Recent posts
+                </div>
+                <ul>
+                    {% for post in site.categories['blog'] %}
+                        <li>
+                            <a href='{{ post.url }}'>
+                                {{ post.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
-            <ul class='options'>
-                {% for tag in site.tags %}
-                    <li>
-                        <a href='#'>
-                            {{ tag }} ({{ site.tags[tag]|length }})
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
         </div>
     </div>
 {% endblock %}

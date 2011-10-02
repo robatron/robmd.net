@@ -1,6 +1,6 @@
 type: blog-entry
 category: blog
-title: Preparing Ubuntu for nVidia CUDA multi-core development
+title: nVidia CUDA multi-core development in Ubuntu
 date: 2010-09-21
 tags: how-to, linux, programming
 title_image: https://lh6.googleusercontent.com/-aO3oKZEMCpg/TM3JTfO7giI/AAAAAAAACWg/H6o3MoxiAYY/s144/Screenshot.png
