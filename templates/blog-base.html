@@ -8,57 +8,67 @@
 {# For more info on jinja2 macros, visit #}
 {# http://jinja.pocoo.org/docs/templates/#macros #}
 
+{# Nospace macro #}
+{# Replace spaces with dashes #}
+{% macro nospace(s) -%}
+    {{ s|replace(" ", "-") }}
+{%- endmacro %}
+
 {# Tag link macro #}
 {# Build a link for a tag, link to its hashed name #}
 {% macro tag_link(tag, label=None) -%}
-    <a href='#{{ tag|replace(" ", "-") }}'>
-        {% if label %}
-            {{ label }}
-        {% else %}
-            {{ tag }}
-        {% endif %}
-    </a>
+    <span class='tag-link'>
+        <a href='#{{ nospace(tag) }}' class='{{ nospace(tag) }}'>
+            {% if label %}
+                {{ label }}
+            {% else %}
+                {{ tag }}
+            {% endif %}
+        </a>
+    </span>
 {%- endmacro %}
 
 {# Blog entry macro #}
 {# Build a blog entry in a standard way #}
 {% macro blog_entry(title, url, author, datetime, tags, content, title_image=None) -%}
-    <div class='title-bar'>
-        <h1 class='title'>
-            <a href='{{ url }}'>
-                {{ title }}
-            </a>
-        </h1>
+    <div class='{% for tag in tags %}{{ nospace(tag) }} {% endfor %}'>
+        <div class='title-bar'>
+            <h1 class='title'>
+                <a href='{{ url }}'>
+                    {{ title }}
+                </a>
+            </h1>
 
-        <div class='subtitle'>
-            {# By {{ author }}| #}
-            {{ datetime }}
+            <div class='subtitle'>
+                {# By {{ author }}| #}
+                {{ datetime }}
 
-            {% if tags %}
-                | in
-                {% for tag in tags %}
-                    {% if loop.lenght == 1 %}
-                        {{ tag_link(tag) }}
-                    {% elif not loop.last %}
-                        {{ tag_link(tag) }},
-                    {% else %}
-                        and {{ tag_link(tag) }}
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
+                {% if tags %}
+                    | in
+                    {% for tag in tags %}
+                        {% if loop.lenght == 1 %}
+                            {{ tag_link(tag) }}
+                        {% elif not loop.last %}
+                            {{ tag_link(tag) }},
+                        {% else %}
+                            and {{ tag_link(tag) }}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </div>
         </div>
-    </div>
 
-    {% if title_image %}
-        <div class='title-image'>
-            <a href='{{ title_image }}'>
-                <img src='{{ title_image }}'/>
-            </a>
+        {% if title_image %}
+            <div class='title-image'>
+                <a href='{{ title_image }}'>
+                    <img src='{{ title_image }}'/>
+                </a>
+            </div>
+        {% endif %}
+
+        <div class='content'>
+            {{ content }}
         </div>
-    {% endif %}
-
-    <div class='content'>
-        {{ content }}
     </div>
 {%- endmacro %}
 
@@ -67,14 +77,35 @@
     <link rel='stylesheet' type='text/css' href='/css/blog.css'/>
 {% endblock %}
 
-{# JavaScript to run after the document is loaded #}
+{# JavaScript #}
+{# ---------- #}
+
+{# JavaScript to run before document loads #}
+{% block js_init %}
+    var IMG_WIDTH = 480; // Width of the title images
+
+    // Tag filtering
+    // -------------
+    function filter_by_tag(tag){
+        // Remove all blog posts that aren't tagged with `tag`, show
+        // all that are
+
+        $(".blog-item").each(function(index){
+            if( !$(this).find("." + tag).length ){
+                $(this).hide();
+            } else {
+                $(this).show();
+            }
+        });
+    }
+{% endblock %}
+
+{# JavaScript to run when document is ready #}
 {% block js_doc_ready %}
     // Highlight the 'blog' menu item
     menu_highlight('blog');
 
-    // Correctly size title images, and link them to their full-sized
-    // versions
-    var IMG_WIDTH = 480;
+    // Size and link the title images
     $(".title-image").each(function(index){
         // For each title image...
 
@@ -95,6 +126,11 @@
 
         cur_img.attr('src', src_resized);
         cur_link.attr('href', src_full);
+    });
+
+    // Tag link filter handling
+    $(".tag-link").click(function(){
+        filter_by_tag($(this).find("a").attr('class'));
     });
 {% endblock %}
 
