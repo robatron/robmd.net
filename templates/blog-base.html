@@ -117,7 +117,7 @@
                 <ul>
                     {% for tag in site.tags|sort %}
                         <li>
-                            {{ tag_link(tag, tag + "(" + site.tags[tag]|length|string() +")") }} 
+                            {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")") }} 
                         </li>
                     {% endfor %}
                 </ul>
