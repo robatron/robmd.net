@@ -2,11 +2,27 @@
 
 {% extends "base.html" %}
 
-{# Blog entry macro #}
+{# Template macros #}
+{# --------------- #}
+{# Macros to help build the blog system. #}
 {# For more info on jinja2 macros, visit #}
 {# http://jinja.pocoo.org/docs/templates/#macros #}
-{% macro blog_entry(title, url, author, datetime, tags, content, title_image=None) -%}
 
+{# Tag link macro #}
+{# Build a link for a tag, link to its hashed name #}
+{% macro tag_link(tag, label=None) -%}
+    <a href='#{{ tag|replace(" ", "-") }}'>
+        {% if label %}
+            {{ label }}
+        {% else %}
+            {{ tag }}
+        {% endif %}
+    </a>
+{%- endmacro %}
+
+{# Blog entry macro #}
+{# Build a blog entry in a standard way #}
+{% macro blog_entry(title, url, author, datetime, tags, content, title_image=None) -%}
     <div class='title-bar'>
         <h1 class='title'>
             <a href='{{ url }}'>
@@ -22,11 +38,11 @@
                 | in
                 {% for tag in tags %}
                     {% if loop.lenght == 1 %}
-                        {{ tag }}
+                        {{ tag_link(tag) }}
                     {% elif not loop.last %}
-                        {{ tag }},
+                        {{ tag_link(tag) }},
                     {% else %}
-                        and {{ tag }}
+                        and {{ tag_link(tag) }}
                     {% endif %}
                 {% endfor %}
             {% endif %}
@@ -46,15 +62,18 @@
     </div>
 {%- endmacro %}
 
+{# Import blog-specific CSS styles #}
 {% block head %}
     <link rel='stylesheet' type='text/css' href='/css/blog.css'/>
 {% endblock %}
 
+{# JavaScript to run after the document is loaded #}
 {% block js_doc_ready %}
     // Highlight the 'blog' menu item
     menu_highlight('blog');
 
-    // Make title images correct size
+    // Correctly size title images, and link them to their full-sized
+    // versions
     var IMG_WIDTH = 480;
     $(".title-image").each(function(index){
         // For each title image...
@@ -81,12 +100,16 @@
 
 {% block content %}
     <div id="blog-wrap">
+
+        <!-- Blog content (e.g., list, post) -->
         <div id="blog-content">
             {% block blog_content %}{% endblock %}
         </div>
 
         <!-- Blog sidebar -->
         <div id='sidebar'>
+
+            <!-- Blog tag list -->
             <div class='tags'>
                 <div class='title'>
                     Tags
@@ -94,13 +117,13 @@
                 <ul>
                     {% for tag in site.tags|sort %}
                         <li>
-                            <a href='#'>
-                                {{ tag }} ({{ site.tags[tag]|length }})
-                            </a>
+                            {{ tag_link(tag, tag + "(" + site.tags[tag]|length|string() +")") }} 
                         </li>
                     {% endfor %}
                 </ul>
             </div>
+
+            <!-- Recent blog post list -->
             <div class='recent-posts'>
                 <div class='title'>
                     Recent posts
