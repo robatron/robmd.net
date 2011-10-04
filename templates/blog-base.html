@@ -84,8 +84,8 @@
 {% block js_init %}
     var IMG_WIDTH = 480; // Width of the title images
 
-    // Tag filtering
-    // -------------
+    // Tag filtering (pre-load)
+    // ------------------------
     function filter_by_tag(tag){
         // Remove all blog posts that aren't tagged with `tag`, show
         // all that are
@@ -128,10 +128,22 @@
         cur_link.attr('href', src_full);
     });
 
-    // Tag link filter handling
+    // Tag filtering (post-load)
+    // -------------------------
+
     $(".tag-link").click(function(){
+        // Set up tag click handling
+
         filter_by_tag($(this).find("a").attr('class'));
     });
+
+    var filter_on_hash = function(){
+        // If there is a hash in the URL, filter immediately
+
+        if( window.location.hash ){
+            filter_by_tag(  window.location.hash.slice(1) );
+        }
+    }(); 
 {% endblock %}
 
 {% block content %}
@@ -148,7 +160,7 @@
             <!-- Blog tag list -->
             <div class='tags'>
                 <div class='title'>
-                    Tags
+                    Tags <a href='.'>(show all)</a>
                 </div>
                 <ul>
                     {% for tag in site.tags|sort %}
