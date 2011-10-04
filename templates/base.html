@@ -17,36 +17,6 @@
         <!-- Pygments CSS for syntax highlighting -->
         <link rel="stylesheet" type='text/css' href='/css/pygments.css'/>
 
-        <!-- JavaScript -->
-        <script type="text/javascript" src="/js/jquery-1.6.1.min.js"></script>
-        <script type="text/javascript">
-            $(function(){
-                // Document ready
-                function menu_highlight(menu_id){
-                    $("#menu #"+menu_id).addClass('selected');
-                }
-            
-                {% block js_doc_ready %}{% endblock %}
-            });
-
-            // Google Analytics stuffs
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-17987944-2']);
-            _gaq.push(['_setDomainName', '.robmd.net']);
-            _gaq.push(['_setAllowHash', 'false']);
-            _gaq.push(['_trackPageview']);
-            (function() {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript'; ga.async = true;
-                if(document.location.protocol == 'https:'){
-                    ga.src = 'https://ssl.google-analytics.com/ga.js';
-                } else {
-                    ga.src = 'http://www.google-analytics.com/ga.js';
-                }
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(ga, s);
-            })()
-        </script>
 
         {% block head %}{% endblock %}
     </head>
@@ -88,4 +58,42 @@
 
         </div>
     </body>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // Run when the document is loaded and ready
+
+            {# Allow adding JavaScript to the document ready #}
+            {% block js_doc_ready %}{% endblock %}
+        });
+
+        function menu_highlight(menu_id){
+            // Highlight the specified menu item
+
+            $("#menu #"+menu_id).addClass('selected');
+        }
+
+        {# Allow adding to the JavaScript initialization #}
+        {% block js_init %}{% endblock %}
+
+        // Google Analytics stuffs
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-17987944-2']);
+        _gaq.push(['_setDomainName', '.robmd.net']);
+        _gaq.push(['_setAllowHash', 'false']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript'; ga.async = true;
+            if(document.location.protocol == 'https:'){
+                ga.src = 'https://ssl.google-analytics.com/ga.js';
+            } else {
+                ga.src = 'http://www.google-analytics.com/ga.js';
+            }
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })()
+    </script>
 </html>
