@@ -6,3 +6,6 @@ RewriteEngine on
 
 # Redirect the old Xmonad blog post URL to the new one
 RewriteRule ^.+/node/16/?$ /blog/xmonad-+-gnome-in-ubuntu.html [R,NC]
+
+# Custom 404 page
+ErrorDocument 404 /404.html
