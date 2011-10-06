@@ -1,0 +1,5 @@
+title: Page not found!
+type: simple
+url: /404.html
+---
+Sorry, that doesn't exist here :(
