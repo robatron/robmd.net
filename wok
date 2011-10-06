@@ -8,5 +8,5 @@
 export NEWEST_WOK_PATH=$HOME/wok
 
 export PYTHONPATH=$NEWEST_WOK_PATH:$PYTHONPATH
-$NEWEST_WOK_PATH/scripts/wok
+$NEWEST_WOK_PATH/scripts/wok $1 $2 $3 $4
 
