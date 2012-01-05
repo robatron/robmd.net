@@ -2,7 +2,7 @@ title: M-m-m-m-meta post
 type: blog-entry
 category: blog
 date: 2011-08-10
-tags: web development, meta, projects
+tags: [web development, meta, projects]
 title_image: https://lh6.googleusercontent.com/-I4HY5n4IR0w/ToZWu6jcVfI/AAAAAAAADHI/prnmyIiVqcw/s144/Capture.PNG 
 ---
 Finally, a simple blog system implemented using [wok][]. There's 
