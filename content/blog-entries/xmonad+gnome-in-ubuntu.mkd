@@ -2,7 +2,7 @@ type: blog-entry
 category: blog
 title: Xmonad + GNOME in Ubuntu
 date: 2011-05-02
-tags: how-to, linux
+tags: [how-to, linux]
 title_image: https://lh5.googleusercontent.com/-XYXWyrfQNPk/Tb4Htcs9mLI/AAAAAAAACZ8/AcXqaLkziPE/s144/Screenshot.png
 ---
 
