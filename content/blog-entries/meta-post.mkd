@@ -17,6 +17,7 @@ with a particular tag.
 - **JavaScript-based search** (maybe)
 
 If you want to see my current work-in-progress, you can find it on my
-[development site][devsite].
+[development site][devsite]. Source code available on [GitHub][gh].
 
+[gh]:https://github.com/robatron/robmd.net
 [devsite]:http://dev.robmd.net/blog
