@@ -18,7 +18,7 @@
 {# Build a link for a tag, link to its hashed name #}
 {% macro tag_link(tag, label=None) -%}
     <span class='tag-link'>
-        <a href='#{{ nospace(tag) }}' class='{{ nospace(tag) }}'>
+        <a href='/blog/#{{ nospace(tag) }}' class='{{ nospace(tag) }}'>
             {% if label %}
                 {{ label }}
             {% else %}
