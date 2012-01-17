@@ -3,4 +3,5 @@ output
 autopull.log
 *.log
 robots.txt
+*.pyc
 

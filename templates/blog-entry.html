@@ -1,11 +1,15 @@
-{# Blog entry template #}
+{# Single blog entry template #}
 
 {% extends "blog-base.html" %}
 
 {% block blog_content %}
 
+    <script>
+        alert('Full-sized title image source: {{page.title_img_full}}')
+    </script>
+
     <div class='blog-item'>
-        {{ blog_entry( page.title, page.url, page.author, page.date, page.tags, page.content, page.title_image ) }}
+        {{ blog_entry( page.title, page.url, page.author, page.date, page.tags, page.content, page.title_img_full, page.title_img_resized ) }}
     </div>
     
     <a href='/blog'>
