@@ -1,8 +1,11 @@
-def process_title_image(page, templ_vars):
-    ''' For every page, process the `title_img_src` from Picasa Web Albums, if
-    it exists, and create two new variables for the template called
-    `title_img_full` and `title_img_resized`
+def process_title_images(pages):
+    ''' For every content page, process the `title_img_src` in the YAML header
+    from Picasa Web Albums, if it exists, and create two new variables for use
+    in the templates called `title_img_full` and `title_img_resized`
     '''
+    pass
+
+''' Old attempt using page.template.post hook
 
     # declare standard image width, in pixels, for title images
     IMG_WIDTH = 480
@@ -30,4 +33,4 @@ def process_title_image(page, templ_vars):
     except KeyError:
         # ignore any page that doesn't have a `title_img_src` variable
         pass
-
+'''
