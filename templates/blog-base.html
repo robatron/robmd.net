@@ -30,7 +30,7 @@
 
 {# Blog entry macro #}
 {# Build a blog entry in a standard way #}
-{% macro blog_entry(title, url, author, datetime, tags, content, title_image=None) -%}
+{% macro blog_entry(title, url, author, datetime, tags, content, title_img_full=None, title_img_resized=None) -%}
     <div class='{% for tag in tags %}{{ nospace(tag) }} {% endfor %}'>
         <div class='title-bar'>
             <h1 class='title'>
@@ -58,13 +58,11 @@
             </div>
         </div>
 
-        {% if title_image %}
             <div class='title-image'>
-                <a href='{{ title_image }}'>
-                    <img src='{{ title_image }}'/>
+                <a href='{{ title_img_full }}'>
+                    <img src='{{ title_img_resized }}'/>
                 </a>
             </div>
-        {% endif %}
 
         <div class='content'>
             {{ content }}
@@ -82,8 +80,6 @@
 
 {# JavaScript to run before document loads #}
 {% block js_init %}
-    var IMG_WIDTH = 480; // Width of the title images
-
     // Tag filtering (pre-load)
     // ------------------------
     function filter_by_tag(tag){
@@ -104,29 +100,6 @@
 {% block js_doc_ready %}
     // Highlight the 'blog' menu item
     menu_highlight('blog');
-
-    // Size and link the title images
-    $(".title-image").each(function(index){
-        // For each title image...
-
-        var cur_img = $(this).find("a img");
-        var cur_link = $(this).find("a");
-
-        var src_split = cur_img.attr('src').split('/');
-
-        var src_before_size_prop = 
-            src_split.slice(0, src_split.length-2).join('/'); 
-        var src_after_size_prop = 
-            src_split.slice(src_split.length-1).join('/');
-
-        var src_resized = src_before_size_prop + '/s' + IMG_WIDTH + '/' + 
-            src_after_size_prop;
-
-        var src_full = src_before_size_prop + '/' + src_after_size_prop;
-
-        cur_img.attr('src', src_resized);
-        cur_link.attr('href', src_full);
-    });
 
     // Tag filtering (post-load)
     // -------------------------
