@@ -58,11 +58,13 @@
             </div>
         </div>
 
+        {% if title_img_full %}
             <div class='title-image'>
                 <a href='{{ title_img_full }}'>
                     <img src='{{ title_img_resized }}'/>
                 </a>
             </div>
+        {% endif %}
 
         <div class='content'>
             {{ content }}
