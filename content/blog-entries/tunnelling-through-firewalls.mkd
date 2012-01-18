@@ -1,0 +1,20 @@
+type: blog-entry
+category: blog
+title: Tunnelling through firewalls and filters with PuTTY
+date: 2012-01-18
+tags: [netsec, networking, security, software, linux]
+title_img_src: https://lh6.googleusercontent.com/-TntWYOVFahs/Txc-DfyxXUI/AAAAAAAADUA/wN2GbuTQUfc/s144/SSHTunnel.png
+---
+
+_**Disclaimer:** This article is intended for informational/educational 
+purposes only. I do not advocate or condone illegal/unethical behavior, and 
+assume no responsibility or liability for any consequences resulting from the 
+use of any information below._
+
+Firewalls and web filters block access to websites and other Internet services,
+usually for the purpose of preventing 
+The websites/services blocked are determined by the 
+person/people/company/institution controlling them. These
+firewalls/filters often prevent access to useful, important, and controversial
+websites necessary , and squelch the free flow of information.
+
