@@ -8,11 +8,6 @@
     {% if page.subpages %}
         <div id='blog-list'>
             {% for entry in page.subpages|sort(attribute='datetime', reverse=True) %}
-                
-                <script>
-                    alert('{{entry.title}}: {{entry.title_img_full}}')
-                </script>
-
                 <div class='blog-item {% if loop.last %}last{% endif %}'>
                     {{ blog_entry( entry.title, entry.url, entry.author, entry.date, entry.tags, entry.content, entry.title_img_full, entry.title_img_resized ) }}
                 </div>
