@@ -3,7 +3,7 @@ category: blog
 title: Xmonad + GNOME in Ubuntu
 date: 2011-05-02
 tags: [how-to, linux]
-title_image: https://lh5.googleusercontent.com/-XYXWyrfQNPk/Tb4Htcs9mLI/AAAAAAAACZ8/AcXqaLkziPE/s144/Screenshot.png
+title_img_src: https://lh5.googleusercontent.com/-XYXWyrfQNPk/Tb4Htcs9mLI/AAAAAAAACZ8/AcXqaLkziPE/s144/Screenshot.png
 ---
 
 Dislike the [Unity shell][unity] in Ubuntu? Like [tiling window 
