@@ -1,8 +1,8 @@
 type: blog-entry
 category: blog
-title: Tunnelling through firewalls and filters with PuTTY
+title: Tunneling with PuTTY
 date: 2012-01-18
-tags: [netsec, networking, security, software, linux]
+tags: [netsec, software, linux, windows]
 title_img_src: https://lh6.googleusercontent.com/-TntWYOVFahs/Txc-DfyxXUI/AAAAAAAADUA/wN2GbuTQUfc/s144/SSHTunnel.png
 ---
 
@@ -11,10 +11,76 @@ purposes only. I do not advocate or condone illegal/unethical behavior, and
 assume no responsibility or liability for any consequences resulting from the 
 use of any information below._
 
-Firewalls and web filters block access to websites and other Internet services,
-usually for the purpose of preventing 
-The websites/services blocked are determined by the 
-person/people/company/institution controlling them. These
-firewalls/filters often prevent access to useful, important, and controversial
-websites necessary , and squelch the free flow of information.
+[Tunneling][wp-tunneling] is the process of encapsulating one kind of network 
+traffic (the [payload][]) inside of another kind of network traffic (the 
+container). The resulting traffic would look just like the container traffic to
+an outside observer.
 
+[payload]: http://en.wikipedia.org/wiki/Payload_(computing)
+[wp-tunneling]: http://en.wikipedia.org/wiki/Tunneling_protocol
+
+A common type of network tunnel is the *[SSH][] tunnel*, which can be used to 
+transfer network traffic through untrusted zones in a secure way. With an SSH
+tunnel, each [packet][] of the payload traffic is wrapped inside an 
+[encrypted][encrypt] SSH packet.
+
+[ssh]: http://en.wikipedia.org/wiki/Secure_Shell
+[packet]: http://en.wikipedia.org/wiki/Network_packet
+[encrypt]: http://en.wikipedia.org/wiki/Encryption
+
+# SSH tunnel usage examples
+
+## Secure your Internet traffic at the coffee shop
+
+Let's say you would like to transfer your personal email or Internet browsing 
+traffic through an untrusted zone like a public WiFi network. You could 
+create an encrypted SSH tunnel from your computer to a trusted network to 
+ensure your traffic stays secure.
+
+![SSH tunnel example: Traffic from your computer travels through the tunnel to a trusted network]()
+
+## Circumvent firewalls and web filters
+
+Firewalls and web filters block access to websites and other Internet services,
+usually for the purpose of squelching content and services deemed inappropriate
+by the individuals, organizations, or governments controlling them. The problem
+is, these systems often prevent access to useful and important content and 
+services as well. This can result in anything from minor annoyances like being
+blocked from [Wikipedia][wp] at school or work, to a government or organization
+censoring political events.
+
+![SSH tunnel example: Traffic from your computer travels through the firewall/filter via the SSH tunnel]()
+
+# Creating an SSH tunnel with PuTTY
+
+Here's a guide on how to create an SSH tunnel with PuTTY. This
+guide makes the following assumptions:
+
+- You have a Windows machine and administrative access
+- You have SSH access to a trusted server
+- The network you are tunnelling through doesn't bock SSH traffic
+
+
+## Install PuTTY on your computer
+
+Download and install PuTTY from its [download page][putty-download]
+
+[putty-download]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+
+## Test the connection to your SSH server
+
+Run PuTTY and make sure you can connect to your SSH server from the network
+you're trying to tunnel through.
+
+![PuTTY SSH session]()
+
+## Set up PuTTY as a local SOCKS proxy
+
+Once you're sure you can connect to your SSH server normally, you set PuTTY to
+act like a local SOCKS proxy, and tunnel all of your system's traffic through
+it to your SSH server.
+
+## Configure Windows to connect through the proxy
+
+The final step is to configure Windows to connect through the local proxy you
+just made. Open up 
