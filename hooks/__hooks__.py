@@ -3,5 +3,5 @@
 import blog
 
 hooks = {
-    'site.content.gather.post': [blog.process_title_images]
+    'site.content.gather.post': [blog.process_images]
 }

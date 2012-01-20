@@ -41,7 +41,7 @@ ensure your traffic stays secure.
 
 ## Circumvent firewalls and web filters
 
-![Traffic from your computer travels through the firewall/filter via the SSH tunnel](https://lh3.googleusercontent.com/-t9Fpjvng-Tc/TxiIf0h3wUI/AAAAAAAADU8/LQv7jf5vW1I/s144/sshtunnel.PNG)
+picasaweb-img: https://lh3.googleusercontent.com/-t9Fpjvng-Tc/TxiIf0h3wUI/AAAAAAAADU8/LQv7jf5vW1I/s144/sshtunnel.PNG
 
 Firewalls and web filters block access to websites and other Internet services,
 usually for the purpose of squelching content and services deemed inappropriate
@@ -51,7 +51,7 @@ services as well. This can result in anything from minor annoyances like being
 blocked from [Wikipedia][wp] at school or work, to a government or organization
 censoring political events.
 
-![Content blocked by your organization. This category is filtered: LGBT content](https://lh6.googleusercontent.com/-U-bNfxwZhvI/Txda99AHtjI/AAAAAAAADUc/UodWC1eGEFQ/s144/Website_blocked_for_gay_content-450x303.jpg)
+picasaweb-img: https://lh6.googleusercontent.com/-U-bNfxwZhvI/Txda99AHtjI/AAAAAAAADUc/UodWC1eGEFQ/s144/Website_blocked_for_gay_content-450x303.jpg
 
 # Creating an SSH tunnel with PuTTY
 
@@ -74,20 +74,22 @@ Download and install PuTTY from its [download page][putty-download]
 Run PuTTY and make sure you can connect to your SSH server from the network
 you're trying to tunnel through.
 
-![PuTTY SSH session](https://lh3.googleusercontent.com/-weHjuYO2yh4/TxiJxu009YI/AAAAAAAADVI/aEmxUG-B9s8/s144/putty-main.PNG)
+picasaweb-img: https://lh3.googleusercontent.com/-weHjuYO2yh4/TxiJxu009YI/AAAAAAAADVI/aEmxUG-B9s8/s144/putty-main.PNG
 
-## Set up PuTTY as a local SOCKS proxy
+## Set up PuTTY as a local proxy
 
 Once you're sure you can connect to your SSH server normally, you can set PuTTY
-to act like a local SOCKS proxy, and tunnel all of your system's traffic 
+to act like a local [SOCKS proxy][socks], and tunnel all of your system's traffic 
 through to your SSH server.
+
+[socks]: http://en.wikipedia.org/wiki/SOCKS
 
 1. Under *connection*, expand *SSH*, and click on *Tunnels*
 1. Enter a local *source port* port to run the proxy on, e.g., `8888`, and
 choose *Dynamic* for the *Destination*.
 1. Click *OK*
 
-![PuTTY: Creating the tunnel](https://lh6.googleusercontent.com/-kxzRYftlDbE/TxiJ0cxM3CI/AAAAAAAADVQ/eK1KTeQKHvg/s144/putty-tunnel.PNG)
+picasaweb-img: https://lh6.googleusercontent.com/-kxzRYftlDbE/TxiJ0cxM3CI/AAAAAAAADVQ/eK1KTeQKHvg/s144/putty-tunnel.PNG
 
 **Note:** It's probably a good idea to save this configuration to as a session
 so you don't have to configure it each time.
@@ -104,7 +106,7 @@ the *Address* and the port number you chose in the last stem, e.g., `7777` in
 the *Port* field.
 1. Click *OK* and *OK* again.
 
-![Control Panel -> Internet Options -> Connections -> LAN settings: Enter your local proxy info](https://lh5.googleusercontent.com/-Ctqi8nOlqaY/TxiNtWX3mnI/AAAAAAAADVc/TOupz5euS-8/s144/lan-settings.PNG)
+picasaweb-img: https://lh5.googleusercontent.com/-Ctqi8nOlqaY/TxiNtWX3mnI/AAAAAAAADVc/TOupz5euS-8/s144/lan-settings.PNG
 
 **Note:** Alternatively, you could set up individual programs to use the proxy
 instead of your whole system
@@ -114,5 +116,5 @@ instead of your whole system
 That's it! Just log into your SSH server like normal, and the tunnel should 
 open up. Now you're browsing with tunnels.
 
-![All together now...](https://lh4.googleusercontent.com/-KHYg1VmquQE/TxiTfX8OJHI/AAAAAAAADVo/_Q86fZLjlog/s144/ssh-tunnel-together.PNG)
+picasaweb-img: https://lh4.googleusercontent.com/-KHYg1VmquQE/TxiTfX8OJHI/AAAAAAAADVo/_Q86fZLjlog/s144/ssh-tunnel-together.PNG
 
