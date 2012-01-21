@@ -7,7 +7,7 @@ def process_images(pages):
 
     # default image sizes
     TITLE_IMG_SIZE = 480
-    ARTICLE_IMG_SIZE = 480
+    ARTICLE_IMG_SIZE = 320
 
     def run():
         ''' Process images on all blog articles. Called at the start of 
