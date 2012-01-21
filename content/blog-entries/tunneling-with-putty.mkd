@@ -9,7 +9,7 @@ title_img_src: https://lh5.googleusercontent.com/-TlA-iiZqN3c/TxiFNHFgYlI/AAAAAA
 _**Disclaimer:** This article is intended for informational/educational 
 purposes only. I do not advocate or condone illegal/unethical behavior, and 
 assume no responsibility or liability for any consequences resulting from the 
-use of any information below._
+use of the information below._
 
 [Tunneling][wp-tunneling] is the process of encapsulating one kind of network 
 traffic (the [payload][]) inside of another kind of network traffic (the 
@@ -46,10 +46,12 @@ picasaweb-img: https://lh3.googleusercontent.com/-t9Fpjvng-Tc/TxiIf0h3wUI/AAAAAA
 Firewalls and web filters block access to websites and other Internet services,
 usually for the purpose of squelching content and services deemed inappropriate
 by the individuals, organizations, or governments controlling them. The problem
-is, these systems often prevent access to useful and important content and 
-services as well. This can result in anything from minor annoyances like being
+is, these systems also prevent access to useful and important content and 
+services. This can result in anything from minor annoyances like being
 blocked from [Wikipedia][wp] at school or work, to a government or organization
 censoring political events.
+
+[wp]: http://en.wikipedia.org
 
 picasaweb-img: https://lh6.googleusercontent.com/-U-bNfxwZhvI/Txda99AHtjI/AAAAAAAADUc/UodWC1eGEFQ/s144/Website_blocked_for_gay_content-450x303.jpg
 
@@ -60,12 +62,12 @@ guide makes the following assumptions:
 
 - You have a Windows machine and administrative access
 - You have SSH access to a trusted server
-- The network you are tunnelling through doesn't bock SSH traffic
+- The network you are tunnelling through allows SSH traffic
 
 
 ## Install PuTTY on your computer
 
-Download and install PuTTY from its [download page][putty-download]
+Download and install PuTTY from its [download page][putty-download].
 
 [putty-download]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
 
@@ -79,42 +81,42 @@ picasaweb-img: https://lh3.googleusercontent.com/-weHjuYO2yh4/TxiJxu009YI/AAAAAA
 ## Set up PuTTY as a local proxy
 
 Once you're sure you can connect to your SSH server normally, you can set PuTTY
-to act like a local [SOCKS proxy][socks], and tunnel all of your system's traffic 
-through to your SSH server.
+to act like a local [SOCKS proxy][socks], and tunnel all of your system's 
+traffic to your SSH server.
 
 [socks]: http://en.wikipedia.org/wiki/SOCKS
 
 1. Under *connection*, expand *SSH*, and click on *Tunnels*
-1. Enter a local *source port* port to run the proxy on, e.g., `8888`, and
-choose *Dynamic* for the *Destination*.
-1. Click *OK*
+1. Enter a local *source port* to run the proxy on, e.g., `8888`, and
+choose *Dynamic* for the *Destination*
+1. Click *add*
 
 picasaweb-img: https://lh6.googleusercontent.com/-kxzRYftlDbE/TxiJ0cxM3CI/AAAAAAAADVQ/eK1KTeQKHvg/s144/putty-tunnel.PNG
 
-**Note:** It's probably a good idea to save this configuration to as a session
+**Note:** It's probably a good idea to save this configuration as a session
 so you don't have to configure it each time.
 
 ## Configure Windows to connect through the proxy
 
 Next, we'll need to configure Windows to connect through the local proxy you 
-just created:
+just created.
 
 1. Open *Internet Options* from the *Control Panel*
 1. Click on the *Connections* tab, and then the *LAN settings* button
 1. Check the box *Use a proxy server for your LAN* and enter `localhost` for 
-the *Address* and the port number you chose in the last stem, e.g., `7777` in
-the *Port* field.
-1. Click *OK* and *OK* again.
+the *Address* and the port number you chose in the last step, e.g., `8888` in
+the *Port* field
+1. Click *OK* and *OK* again
 
 picasaweb-img: https://lh5.googleusercontent.com/-Ctqi8nOlqaY/TxiNtWX3mnI/AAAAAAAADVc/TOupz5euS-8/s144/lan-settings.PNG
 
 **Note:** Alternatively, you could set up individual programs to use the proxy
-instead of your whole system
+instead of your whole system.
 
 ## Log in and connect
 
 That's it! Just log into your SSH server like normal, and the tunnel should 
-open up. Now you're browsing with tunnels.
+open up. Now you're browsing with <del>portals</del> tunnels.
 
 picasaweb-img: https://lh4.googleusercontent.com/-KHYg1VmquQE/TxiTfX8OJHI/AAAAAAAADVo/_Q86fZLjlog/s144/ssh-tunnel-together.PNG
 
