@@ -5,8 +5,19 @@ import re
 def process_images(pages):
     ''' Process images on each blog article '''
 
-    TITLE_IMG_WIDTH = 480
+    # default image sizes
+    TITLE_IMG_SIZE = 480
     ARTICLE_IMG_SIZE = 480
+
+    def run():
+        ''' Process images on all blog articles. Called at the start of 
+        `process_images`
+        '''
+        for page in pages:
+            if 'blog' in page.meta['category']:
+                process_title_image(page)
+                process_article_images(page, ARTICLE_IMG_SIZE)
+
 
     def process_title_image(page):
         ''' For every content page, process the `title_img_src` in the YAML header
@@ -28,7 +39,7 @@ def process_images(pages):
             src_after_size = src_split[-1]
 
             # construct the resized/full versions of the src URL
-            src_resized = "%s/s%s/%s"%(src_before_size, TITLE_IMG_WIDTH,
+            src_resized = "%s/s%s/%s"%(src_before_size, TITLE_IMG_SIZE,
                     src_after_size)
             src_full= "%s/s%s/%s"%(src_before_size, 0, src_after_size)
 
@@ -39,6 +50,7 @@ def process_images(pages):
         except KeyError:
             # ignore any page that doesn't have a `title_img_src` variable
             pass
+
 
     def split_picasaweb_src(src, size):
         ''' Split a Picasa Web Album's image URL source into a resized and full
@@ -61,6 +73,7 @@ def process_images(pages):
 
         # return a tuple of the resized and full versions of the source URL
         return (src_resized, src_full)
+
 
     def process_article_images(page, img_size):
         ''' Find all Picasa Web Album image source URLs in the given `page`,
@@ -102,9 +115,6 @@ def process_images(pages):
         # write the modified content back to the page
         page.meta['content'] = content
 
-    # run image processors on each blog article
-    for page in pages:
-        if 'blog' in page.meta['category']:
-            process_title_image(page)
-            process_article_images(page, ARTICLE_IMG_SIZE)
 
+    # run all image processing functions
+    run()
