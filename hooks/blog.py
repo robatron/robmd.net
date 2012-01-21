@@ -15,64 +15,28 @@ def process_images(pages):
         '''
         for page in pages:
             if 'blog' in page.meta['category']:
-                process_title_image(page)
+                process_title_image(page, TITLE_IMG_SIZE)
                 process_article_images(page, ARTICLE_IMG_SIZE)
 
 
-    def process_title_image(page):
-        ''' For every content page, process the `title_img_src` in the YAML header
-        from Picasa Web Albums, if it exists, and create two new variables for use
-        in the templates called `title_img_full` and `title_img_resized`
+    def process_title_image(page, size):
+        ''' For every blog article,  process the `title_img_src` in the YAML 
+        header from Picasa Web Albums, if it exists, and create two new 
+        variables for use in the templates called `title_img_full` and 
+        `title_img_resized`
         '''
 
         try:
-            # grab the Picasa Web Albums' title image source URL from the 
-            # 'title_img_src' variable in the page's meta data
             src = page.meta['title_img_src']
-            src_split = src.split('/')
-
-            # figure out URL portion before and after the 'size' property 
-            # denoted by /s<number>/ in the source URL which should look 
-            # something like
-            # https://googleusercontent.com/foo/bar/herp/derp/s144/capture.png
-            src_before_size = '/'.join(src_split[:-2])
-            src_after_size = src_split[-1]
-
-            # construct the resized/full versions of the src URL
-            src_resized = "%s/s%s/%s"%(src_before_size, TITLE_IMG_SIZE,
-                    src_after_size)
-            src_full= "%s/s%s/%s"%(src_before_size, 0, src_after_size)
+            src_resized, src_full = split_picasaweb_src(src, size)
 
             # insert the new variables for the template
-            page.meta['title_img_full'] = src_full
             page.meta['title_img_resized'] = src_resized
+            page.meta['title_img_full'] = src_full
 
         except KeyError:
-            # ignore any page that doesn't have a `title_img_src` variable
+            # ignore any article that doesn't have a `title_img_src` variable
             pass
-
-
-    def split_picasaweb_src(src, size):
-        ''' Split a Picasa Web Album's image URL source into a resized and full
-        version of that URL. The resized version will be of size `size`. The
-        source URL should look something like
-        https://googleusercontent.com/foo/bar/herp/derp/s144/capture.png
-        '''
-
-        src_split = src.split('/')
-
-        # figure out URL portion before and after the 'size' property 
-        # denoted by /s<number>/ in the source URL
-        src_before_size = '/'.join(src_split[:-2])
-        src_after_size = src_split[-1]
-
-        # construct the resized/full versions of the src URL
-        src_resized = "%s/s%s/%s"%(src_before_size, size,
-                src_after_size)
-        src_full= "%s/s%s/%s"%(src_before_size, 0, src_after_size)
-
-        # return a tuple of the resized and full versions of the source URL
-        return (src_resized, src_full)
 
 
     def process_article_images(page, img_size):
@@ -114,6 +78,29 @@ def process_images(pages):
 
         # write the modified content back to the page
         page.meta['content'] = content
+
+
+    def split_picasaweb_src(src, size):
+        ''' Split a Picasa Web Album's image URL source into a resized and full
+        version of that URL. The resized version will be of size `size`. The
+        source URL should look something like
+        https://googleusercontent.com/foo/bar/herp/derp/s144/capture.png
+        '''
+
+        src_split = src.split('/')
+
+        # figure out URL portion before and after the 'size' property 
+        # denoted by /s<number>/ in the source URL
+        src_before_size = '/'.join(src_split[:-2])
+        src_after_size = src_split[-1]
+
+        # construct the resized/full versions of the src URL
+        src_resized = "%s/s%s/%s"%(src_before_size, size,
+                src_after_size)
+        src_full= "%s/s%s/%s"%(src_before_size, 0, src_after_size)
+
+        # return a tuple of the resized and full versions of the source URL
+        return (src_resized, src_full)
 
 
     # run all image processing functions
