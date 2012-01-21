@@ -48,6 +48,12 @@
     margin-bottom: 20px;
 }
 
+.blog-item .article-image{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* Blog sidebar */
 #blog-wrap #sidebar{
     display: table-cell;

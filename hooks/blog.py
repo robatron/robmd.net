@@ -62,10 +62,12 @@ def process_images(pages):
 
         PICASAWEB_IMG_FIND = r'^.*picasaweb-img:\s*(%s)<+?.*$'
         PICASAWEB_IMG_REPL = '''
-            <a href='%s'>
-                <img class='article-image' src='%s'>
-            </a>
-        '''
+            <div class='article-image'>
+                <a href='%s'>
+                    <img class='article-image' src='%s'>
+                </a>
+            </div>
+            '''
 
         content = page.meta['content']
         matches = re.findall(PICASAWEB_IMG_FIND%('.*'), content, re.MULTILINE)
