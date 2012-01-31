@@ -135,7 +135,7 @@
             <!-- Blog tag list -->
             <div class='tags'>
                 <div class='title'>
-                    Tags <a href='.'>(show all)</a>
+                    Tags <a href='.'>(all)</a>
                 </div>
                 <ul>
                     {% for tag in site.tags|sort %}
@@ -149,7 +149,7 @@
             <!-- Recent blog post list -->
             <div class='recent-posts'>
                 <div class='title'>
-                    Recent posts
+                    Recent posts <a href='.'>(all)</a>
                 </div>
                 <ul>
                     {% for post in site.categories['blog']|sort(attribute='datetime', reverse=True) %}
