@@ -133,9 +133,15 @@
         <div id='sidebar'>
 
             <!-- Blog tag list -->
+            <div class='show-all'>
+                <a href='.'>
+                    Show all
+                    ({{ site.categories['blog']|length }})
+                </a>
+            </div>
             <div class='tags'>
                 <div class='title'>
-                    Tags <a href='.'>(all)</a>
+                    Tags
                 </div>
                 <ul>
                     {% for tag in site.tags|sort %}
@@ -149,7 +155,7 @@
             <!-- Recent blog post list -->
             <div class='recent-posts'>
                 <div class='title'>
-                    Recent posts <a href='.'>(all)</a>
+                    Recent posts
                 </div>
                 <ul>
                     {% for post in site.categories['blog']|sort(attribute='datetime', reverse=True) %}
