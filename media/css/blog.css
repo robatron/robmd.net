@@ -62,3 +62,15 @@
     border-left: solid #CCC 1px;
     width: 200px;
 }
+#blog-wrap #sidebar .tags{
+    margin-bottom: 40px;
+}
+#blog-wrap #sidebar ul{
+    padding-left: 20px;
+    margin-top: 10px;
+}
+#blog-wrap #sidebar li{
+    margin-bottom: 10px;
+    list-style: none;
+    line-height: 1.25;
+}
