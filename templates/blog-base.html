@@ -67,7 +67,13 @@
         {% endif %}
 
         <div class='content'>
-            {{ page.content }}
+            {% if preview %}
+                {% if page.preview %}
+                    {{ page.preview }}
+                {% endif %}
+            {% else %}
+                {{ page.content }}
+            {% endif %}
         </div>
     </div>
 {%- endmacro %}

@@ -1,4 +1,4 @@
-type: blog-entry
+type: blog-article
 category: blog
 title: Tunneling with PuTTY
 date: 2012-01-18
