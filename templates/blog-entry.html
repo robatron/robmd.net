@@ -5,7 +5,7 @@
 {% block blog_content %}
 
     <div class='blog-item'>
-        {{ blog_entry( page.title, page.url, page.author, page.date, page.tags, page.content, page.title_img_full, page.title_img_resized ) }}
+        {{ build_article(page) }}
     </div>
 
     <!-- Disquis comment system -->

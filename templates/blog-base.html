@@ -30,23 +30,23 @@
 
 {# Blog entry macro #}
 {# Build a blog entry in a standard way #}
-{% macro blog_entry(title, url, author, datetime, tags, content, title_img_full=None, title_img_resized=None) -%}
-    <div class='{% for tag in tags %}{{ nospace(tag) }} {% endfor %}'>
+{% macro build_article(page, preview=False) -%}
+    <div class='{% for tag in page.tags %}{{ nospace(tag) }} {% endfor %}'>
         <div class='title-bar'>
             <h1 class='title'>
-                <a href='{{ url }}'>
-                    {{ title }}
+                <a href='{{ page.url }}'>
+                    {{ page.title }}
                 </a>
             </h1>
 
             <div class='subtitle'>
-                {# By {{ author }}| #}
-                {{ datetime }}
+                {# By {{ page.author }}| #}
+                {{ page.datetime }}
 
-                {% if tags %}
+                {% if page.tags %}
                     | in
-                    {% for tag in tags %}
-                        {% if loop.lenght == 1 %}
+                    {% for tag in page.tags %}
+                        {% if loop.length == 1 %}
                             {{ tag_link(tag) }}
                         {% elif not loop.last %}
                             {{ tag_link(tag) }},
@@ -58,16 +58,16 @@
             </div>
         </div>
 
-        {% if title_img_full %}
+        {% if page.title_img_full %}
             <div class='title-image'>
-                <a href='{{ title_img_full }}'>
-                    <img src='{{ title_img_resized }}'/>
+                <a href='{{ page.title_img_full }}'>
+                    <img src='{{ page.title_img_resized }}'/>
                 </a>
             </div>
         {% endif %}
 
         <div class='content'>
-            {{ content }}
+            {{ page.content }}
         </div>
     </div>
 {%- endmacro %}
