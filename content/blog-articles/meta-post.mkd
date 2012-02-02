@@ -1,5 +1,5 @@
 title: M-m-m-m-meta post
-type: blog-entry
+type: blog-article
 category: blog
 date: 2011-08-10
 tags: [web development, meta, projects]

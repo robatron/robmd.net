@@ -1,4 +1,4 @@
-type: blog-entry
+type: blog-article
 category: blog
 title: Xmonad + GNOME in Ubuntu
 date: 2011-05-02

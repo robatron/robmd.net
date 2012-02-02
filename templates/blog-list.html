@@ -9,7 +9,7 @@
         <div id='blog-list'>
             {% for entry in page.subpages|sort(attribute='datetime', reverse=True) %}
                 <div class='blog-item {% if loop.last %}last{% endif %}'>
-                    {{ build_article(entry) }}
+                    {{ build_article(entry, preview=True) }}
                 </div>
             {% endfor %}
         </div>
