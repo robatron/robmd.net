@@ -7,14 +7,55 @@
     <!-- blog list -->
     {% if page.subpages %}
         <div id='blog-list'>
-            {% for entry in page.subpages|sort(attribute='datetime', reverse=True) %}
+            {% for page in page.subpages|sort(attribute='datetime', reverse=True) %}
                 <div class='blog-item {% if loop.last %}last{% endif %}'>
-                    {{ build_article(entry, preview=True) }}
+                    <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
+                        <table>
+                            <tr>
+                                {% if page.title_img_thumb %}
+                                    <td>
+                                        <img src='{{page.title_img_thumb}}'>
+                                    </td>
+                                {% endif %}
+
+                                <td>
+                                    <div class='title-bar'>
+                                        <h1 class='title'>
+                                            <a href='{{page.url}}'>
+                                                {{page.title}}
+                                            </a>
+                                        </h1>
+
+                                        <div class='subtitle'>
+                                            {{page.datetime}}
+
+                                            {% if page.tags %}
+                                                | in
+                                                {% for tag in page.tags %}
+                                                    {% if loop.length == 1 %}
+                                                        {{tag_link(tag)}}
+                                                    {% elif not loop.last %}
+                                                        {{tag_link(tag)}},
+                                                    {% else %}
+                                                        and {{tag_link(tag)}}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+
+                                    <div class='snippet'>
+                                        {{page.original|truncate}}
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             {% endfor %}
         </div>
+        
     {% else %}
         <p> No blog entries to display :-(</p>
     {% endif %}
-
 {% endblock %}
