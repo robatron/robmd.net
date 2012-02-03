@@ -19,7 +19,7 @@
 }
 
 .blog-item .title-bar{
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
 }
 
 .blog-item .title{
@@ -53,6 +53,16 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+/* article list */
+#blog-wrap #blog-list .blog-item td.text{
+    vertical-align: top;
+}
+
+#blog-wrap #blog-list .blog-item table{
+    margin: 0px;
+    border-spacing: 0px;
 }
 
 /* Blog sidebar */
