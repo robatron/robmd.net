@@ -1,6 +1,6 @@
 output
 *.swp
-autopull.log
+*.swo
 *.log
 robots.txt
 *.pyc
