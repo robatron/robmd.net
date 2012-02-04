@@ -92,16 +92,18 @@
     // ------------------------
     function filter_by_tag(tag){
         /* Remove all blog posts that aren't tagged with `tag`, show
-         * all that are
+         * all that are. Ignore blank tag names.
          */
 
-        $(".blog-item").each(function(index){
-            if( !$(this).find("." + tag).length ){
-                $(this).hide("slow");
-            } else {
-                $(this).show("slow");
-            }
-        });
+        if(!tag == ""){
+            $(".blog-item").each(function(index){
+                if( !$(this).find("." + tag).length ){
+                    $(this).hide("slow");
+                } else {
+                    $(this).show("slow");
+                }
+            });
+        }
     }
 
     function show_all(){
