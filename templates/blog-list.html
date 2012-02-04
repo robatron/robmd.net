@@ -12,11 +12,13 @@
                     <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
                         <table>
                             <tr>
-                                {% if page.title_img_thumb %}
-                                    <td>
-                                        <img src='{{page.title_img_thumb}}'>
-                                    </td>
-                                {% endif %}
+                                <td class='title-img'>
+                                    {% if page.title_img_thumb %}
+                                        <a href='{{page.url}}'>
+                                            <img src='{{page.title_img_thumb}}'>
+                                        </a>
+                                    {% endif %}
+                                </td>
 
                                 <td class='text'>
                                     <div class='title-bar'>
@@ -41,6 +43,10 @@
                                                     {% endif %}
                                                 {% endfor %}
                                             {% endif %}
+                                        </div>
+
+                                        <div class='snippet'>
+                                            {{ lipsum(1, html=false)|truncate }}
                                         </div>
                                     </div>
 

@@ -56,8 +56,16 @@
 }
 
 /* article list */
+#blog-wrap #blog-list .blog-item td.title-img{
+    vertical-align: top;
+    padding-right: 20px;
+    width: 100px;
+}
 #blog-wrap #blog-list .blog-item td.text{
     vertical-align: top;
+}
+#blog-wrap #blog-list .blog-item h1.title{
+    font-size: 1.5em;
 }
 
 #blog-wrap #blog-list .blog-item table{
@@ -68,6 +76,7 @@
 /* Blog sidebar */
 #blog-wrap #sidebar{
     display: table-cell;
+    vertical-align: top;
     padding-left: 20px;
     border-left: solid #CCC 1px;
     width: 200px;
