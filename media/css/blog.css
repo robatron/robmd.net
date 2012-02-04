@@ -3,6 +3,7 @@
 
 #blog-wrap{
     display: table;
+    width: 100%;
 }
 
 #blog-wrap #blog-content{
