@@ -28,6 +28,20 @@
     </span>
 {%- endmacro %}
 
+{# Tag list macro #}
+{# Build a tag list from a set of tags #}
+{% macro tag_list(tags) -%}
+    {% for tag in tags %}
+        {% if loop.length == 1 %}
+            {{ tag_link(tag) }}
+        {% elif not loop.last %}
+            {{ tag_link(tag) }},
+        {% else %}
+            and {{ tag_link(tag) }}
+        {% endif %}
+    {% endfor %}
+{%- endmacro %}
+
 {# Import blog-specific CSS styles #}
 {% block head %}
     <link rel='stylesheet' type='text/css' href='/css/blog.css'/>

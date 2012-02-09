@@ -18,16 +18,7 @@
                     {{ page.datetime }}
 
                     {% if page.tags %}
-                        | in
-                        {% for tag in page.tags %}
-                            {% if loop.length == 1 %}
-                                {{ tag_link(tag) }}
-                            {% elif not loop.last %}
-                                {{ tag_link(tag) }},
-                            {% else %}
-                                and {{ tag_link(tag) }}
-                            {% endif %}
-                        {% endfor %}
+                        | in {{ tag_list(page.tags) }}
                     {% endif %}
                 </div>
             </div>
