@@ -4,41 +4,42 @@
 
 {% block blog_content %}
 
-    <div class='blog-item'>
-        <div class='{% for tag in page.tags %}{{ nospace(tag) }} {% endfor %}'>
-            <div class='title-bar'>
-                <h1 class='title'>
-                    <a href='{{ page.url }}'>
-                        {{ page.title }}
-                    </a>
-                </h1>
-
-                <div class='subtitle'>
-                    {# By {{ page.author }}| #}
-                    {{ page.datetime }}
-
-                    {% if page.tags %}
-                        | in {{ tag_list(page.tags) }}
-                    {% endif %}
-                </div>
-            </div>
-
-            {% if page.title_img_full %}
-                <div class='title-image'>
-                    <a href='{{ page.title_img_full }}'>
-                        <img src='{{ page.title_img_title }}'/>
-                    </a>
-                </div>
-            {% endif %}
-
-            <div class='content'>
-                {{ page.content }}
-            </div>
-        </div>
+    <div id='article-header'>
+        <a href='/blog'>&laquo; Back to blog list</a>
     </div>
 
-    <!-- Disquis comment system -->
-    <div id="disqus_thread"></div>
+    <div class='blog-item'>
+        <div class='title-bar'>
+            <h1 class='title'>
+                <a href='{{ page.url }}'>
+                    {{ page.title }}
+                </a>
+            </h1>
+
+            <div class='subtitle'>
+                {# By {{ page.author }}| #}
+                {{ page.datetime }}
+
+                {% if page.tags %}
+                    | in {{ tag_list(page.tags) }}
+                {% endif %}
+            </div>
+        </div>
+
+        {% if page.title_img_full %}
+            <div class='title-image'>
+                <a href='{{ page.title_img_full }}'>
+                    <img src='{{ page.title_img_title }}'/>
+                </a>
+            </div>
+        {% endif %}
+
+        <div class='content'>
+            {{ page.content }}
+        </div>
+
+        <!-- Disquis comment system -->
+        <div id="disqus_thread"></div>
         <script type="text/javascript">
             var disqus_shortname = 'robmd';
             (function() {
@@ -51,12 +52,16 @@
                                 .appendChild(dsq);
             })();
         </script>
-
         <noscript>
             Please enable JavaScript to view the 
             <a href="http://disqus.com/?ref_noscript">
                 comments powered by Disqus.<
             </a>
         </noscript>
+    </div>
+
+    <div id='article-footer'>
+        <a href='/blog'>&laquo; Back to blog list</a>
+    </div>
 
 {% endblock %}
