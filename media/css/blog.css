@@ -6,6 +6,13 @@
     width: 100%;
 }
 
+#blog-wrap #article-header{
+    margin-bottom: 20px;
+}
+
+#blog-wrap #article-footer{
+}
+
 #blog-wrap #blog-content{
     display: table-cell;
     padding-right: 20px;
