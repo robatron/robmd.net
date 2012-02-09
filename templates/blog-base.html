@@ -61,7 +61,7 @@
         {% if page.title_img_full %}
             <div class='title-image'>
                 <a href='{{ page.title_img_full }}'>
-                    <img src='{{ page.title_img_resized }}'/>
+                    <img src='{{ page.title_img_title }}'/>
                 </a>
             </div>
         {% endif %}
@@ -91,16 +91,26 @@
     // Tag filtering (pre-load)
     // ------------------------
     function filter_by_tag(tag){
-        // Remove all blog posts that aren't tagged with `tag`, show
-        // all that are
+        /* Remove all blog posts that aren't tagged with `tag`, show
+         * all that are. Ignore blank tag names.
+         */
 
-        $(".blog-item").each(function(index){
-            if( !$(this).find("." + tag).length ){
-                $(this).hide();
-            } else {
-                $(this).show();
-            }
-        });
+        if(!tag == ""){
+            $(".blog-item").each(function(index){
+                if( !$(this).find("." + tag).length ){
+                    $(this).hide("slow");
+                } else {
+                    $(this).show("slow");
+                }
+            });
+        }
+    }
+
+    function show_all(){
+        /* Show all blog posts
+         */
+
+        $(".blog-item").show("slow");
     }
 {% endblock %}
 
@@ -112,17 +122,19 @@
     // Tag filtering (post-load)
     // -------------------------
 
-    $(".tag-link").click(function(){
-        // Set up tag click handling
-
+    $("#blog-wrap #sidebar .tag-link").click(function(){
         filter_by_tag($(this).find("a").attr('class'));
+    });
+
+    $("#blog-wrap #sidebar .show-all").click(function(){
+        show_all();
     });
 
     var filter_on_hash = function(){
         // If there is a hash in the URL, filter immediately
 
-        if( window.location.hash ){
-            filter_by_tag(  window.location.hash.slice(1) );
+        if(window.location.hash){
+            filter_by_tag(window.location.hash.slice(1));
         }
     }(); 
 {% endblock %}
@@ -140,7 +152,7 @@
 
             <!-- Blog tag list -->
             <div class='show-all'>
-                <a href='.'>
+                <a href='/blog/#'>
                     Show all
                     ({{ site.categories['blog']|length }})
                 </a>
