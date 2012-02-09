@@ -28,56 +28,6 @@
     </span>
 {%- endmacro %}
 
-{# Blog entry macro #}
-{# Build a blog entry in a standard way #}
-{% macro build_article(page, preview=False) -%}
-    <div class='{% for tag in page.tags %}{{ nospace(tag) }} {% endfor %}'>
-        <div class='title-bar'>
-            <h1 class='title'>
-                <a href='{{ page.url }}'>
-                    {{ page.title }}
-                </a>
-            </h1>
-
-            <div class='subtitle'>
-                {# By {{ page.author }}| #}
-                {{ page.datetime }}
-
-                {% if page.tags %}
-                    | in
-                    {% for tag in page.tags %}
-                        {% if loop.length == 1 %}
-                            {{ tag_link(tag) }}
-                        {% elif not loop.last %}
-                            {{ tag_link(tag) }},
-                        {% else %}
-                            and {{ tag_link(tag) }}
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-            </div>
-        </div>
-
-        {% if page.title_img_full %}
-            <div class='title-image'>
-                <a href='{{ page.title_img_full }}'>
-                    <img src='{{ page.title_img_title }}'/>
-                </a>
-            </div>
-        {% endif %}
-
-        <div class='content'>
-            {% if preview %}
-                {% if page.preview %}
-                    {{ page.preview }}
-                {% endif %}
-            {% else %}
-                {{ page.content }}
-            {% endif %}
-        </div>
-    </div>
-{%- endmacro %}
-
 {# Import blog-specific CSS styles #}
 {% block head %}
     <link rel='stylesheet' type='text/css' href='/css/blog.css'/>
