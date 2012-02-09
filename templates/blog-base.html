@@ -98,9 +98,9 @@
         if(!tag == ""){
             $(".blog-item").each(function(index){
                 if( !$(this).find("." + tag).length ){
-                    $(this).hide("slow");
+                    $(this).slideUp("slow");
                 } else {
-                    $(this).show("slow");
+                    $(this).slideDown("slow");
                 }
             });
         }
@@ -110,7 +110,14 @@
         /* Show all blog posts
          */
 
-        $(".blog-item").show("slow");
+        $(".blog-item").slideDown("slow");
+    }
+
+    function show_none(){
+        /* Hide all blog posts. Primarily a debug function
+         */
+
+        $(".blog-item").slideUp("slow");
     }
 {% endblock %}
 
