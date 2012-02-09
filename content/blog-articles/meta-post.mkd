@@ -4,6 +4,10 @@ category: blog
 date: 2011-08-10
 tags: [webdev, meta, projects]
 title_img_src: https://lh6.googleusercontent.com/-I4HY5n4IR0w/ToZWu6jcVfI/AAAAAAAADHI/prnmyIiVqcw/s144/Capture.PNG 
+snippet: >
+    Finally, a simple blog system implemented using wok. There's 
+    not much to this yet, just a simple list of blog entries, but there are
+    more features to come soon including:
 ---
 Finally, a simple blog system implemented using [wok][]. There's 
 not much to this yet, just a simple list of blog entries, but there are more 

@@ -46,7 +46,13 @@
                                         </div>
 
                                         <div class='snippet'>
-                                            {{ lipsum(1, html=false)|truncate(200) }}
+                                            {% if page.snippet %}
+                                                {{ page.snippet|truncate(length=200) }}
+                                                <a href='{{page.url}}'>
+                                                    <!-- "Much greater than" symbol -->
+                                                    &raquo;
+                                                </a>
+                                            {% endif %}
                                         </div>
                                     </div>
 
