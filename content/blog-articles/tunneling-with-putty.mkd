@@ -4,6 +4,11 @@ title: Tunneling with PuTTY
 date: 2012-01-18
 tags: [netsec, software, linux, windows]
 title_img_src: https://lh5.googleusercontent.com/-TlA-iiZqN3c/TxiFNHFgYlI/AAAAAAAADU0/gvW_wv3gexo/s144/2012-01-19_10-20-54_403.jpg
+snippet: >
+    Tunneling is the process of encapsulating one kind of network 
+    traffic (the payload) inside of another kind of network traffic (the 
+    container). The resulting traffic would look just like the container 
+    traffic to an outside observer.
 ---
 
 _**Disclaimer:** This article is intended for informational/educational 

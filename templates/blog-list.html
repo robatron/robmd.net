@@ -29,7 +29,7 @@
                                         </h1>
 
                                         <div class='subtitle'>
-                                            {{page.datetime}}
+                                            {{page.date}}
 
                                             {% if page.tags %}
                                                 | in
@@ -46,7 +46,13 @@
                                         </div>
 
                                         <div class='snippet'>
-                                            {{ lipsum(1, html=false)|truncate }}
+                                            {% if page.snippet %}
+                                                {{ page.snippet|truncate(length=200) }}
+                                                <a href='{{page.url}}'>
+                                                    <!-- "Much greater than" symbol -->
+                                                    &raquo;
+                                                </a>
+                                            {% endif %}
                                         </div>
                                     </div>
 
