@@ -9,7 +9,7 @@
 
         <!-- font imports -->
         <link href='http://fonts.googleapis.com/css?family=Orbitron:700,900&v2'
-                rel='stylesheet' type='text/css'>
+            rel='stylesheet' type='text/css'>
 
         <!-- base CSS includes -->
         <link rel="stylesheet" type='text/css' href='/css/base.css'/>
@@ -18,10 +18,14 @@
         <link rel="stylesheet" type='text/css' href='/css/pygments.css'/>
 
         <!-- JavaScript -->
-        <script type="text/javascript" src="/js/jquery-1.6.1.min.js"></script>
+        <script type="text/javascript" 
+            src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+            </script>
         <script type="text/javascript">
             $(function(){
-                // Run when the document is loaded and ready
+                // (jQuery) Run when the document is loaded and ready
 
                 {# Allow adding JavaScript to the document ready #}
                 {% block js_doc_ready %}{% endblock %}
