@@ -59,9 +59,9 @@
 
 .blog-item #title-img, .title-img{
     border: 1px solid #CCC;
-    box-shadow: 5px 5px 20px 0px #888;
-    -moz-box-shadow: 5px 5px 20px 0px #888;
-    -webkit-box-shadow: 5px 5px 20px 0px #888;
+    box-shadow: 3px 4px 6px 1px #aaa; 
+    -moz-box-shadow: 3px 4px 6px 1px #aaa;
+    -webkit-box-shadow: 3px 4px 6px 1px #aaa;
 }
 
 .blog-item .article-image{
