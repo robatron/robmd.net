@@ -4,6 +4,11 @@ category: blog
 date: 2012-02-08
 tags: [meta]
 title_img_src: https://lh6.googleusercontent.com/-rjKzn_FKkyk/TzTn6Sd8AfI/AAAAAAAADXc/8VTAuLzjvJg/s144/Capture.jpg 
+snippet: >
+    A new addition to my little blog system: simple, JavaScript-based tag
+    filtering. It works like this: When the blog-list page is rendered, each
+    blog article snippet is wrapped in a div with class names equal to the
+    article's tags:
 ---
 
 A new addition to my little blog system: simple JavaScript-based tag filtering.
