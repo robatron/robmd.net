@@ -53,14 +53,24 @@
 
 .blog-item .title-image{
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border: 1px solid #CCC;
 }
 
 .blog-item .article-image{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+/* Disqus stuffs */
+#disqus_thread{
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+#dsq-footer{
+    margin: 0px;
 }
 
 /* article list */
