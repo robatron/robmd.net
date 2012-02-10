@@ -12,10 +12,10 @@
                     <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
                         <table>
                             <tr>
-                                <td class='title-img'>
+                                <td class='title-img-wrap'>
                                     {% if page.title_img_thumb %}
                                         <a href='{{page.url}}'>
-                                            <img src='{{page.title_img_thumb}}'>
+                                            <img class='title-img' src='{{page.title_img_thumb}}'>
                                         </a>
                                     {% endif %}
                                 </td>
