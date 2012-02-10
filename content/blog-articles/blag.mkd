@@ -1,4 +1,4 @@
-title: Blag!
+title: Blag
 type: blog-article
 category: blog
 date: 2011-08-10
