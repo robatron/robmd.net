@@ -3,21 +3,39 @@ type: home
 url: /index.html
 ---
 
-My name is Rob McGuire-Dale, and I recently graduated from [Oregon State University][osu] with a [B.S.][bs] in [computer science][compsci]. I am currently participating in the [Information Systems Career Foundation Program (ISCFP)][iscfp] at [The Boeing Company][boeing]. The ISCFP is a leadership roation program that will allow me to rotate through different roles within Boeing Information Systems. I am currently serving my first rotation as a software functional analyst.
+My name is Rob McGuire-Dale, and I recently graduated from 
+[Oregon State University][osu] with a [B.S.][bs] in 
+[computer science][compsci]. I am currently working as an Cyber Security
+Assessor (A.K.A. [penetration tester][pentest], or [white hat hacker][whitehat])
+for [Boeing Information Security][boeing].
 
-I have strong passion for **the more-social aspects of computer science**, e.g., [open source software and community][opensource] development, the [web][internet], [human-computer interaction][hci], and project management. I also love [old motorcycles][motoblog], tinkering with vehicles, and commuting on my bicycle. Most importantly, I have an immense interest and curiosity about the world, which drives me to learn.
+[osu]:http://oregonstate.edu
+[bs]:http://en.wikipedia.org/wiki/Bachelor_of_Science
+[compsci]:http://en.wikipedia.org/wiki/computer_science
+[pentest]:http://en.wikipedia.org/wiki/Penetration_test
+[whitehat]:http://en.wikipedia.org/wiki/White_hat_(computer_security)
+[boeing]: http://www.boeing.com/advertising/info_solution/_network/index.html
+
+I am interested in **the more-social aspects of computer science**, 
+e.g.,
+
+ - [Open source][opensource] software and community development 
+ - The [web][internet] as a computing platform
+ - [Human-computer interaction][hci]
+ - [Cyber security][cybsec]
+
+[opensource]:http://en.wikipedia.org/wiki/Open_source
+[internet]:/img/welcomeToTheInternet.jpg
+[hci]:http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction
+[cybsec]: http://en.wikipedia.org/wiki/Cyber_security 
+ 
+I also love [old motorcycles][motoblog], tinkering with vehicles, and riding my
+bicycle. Most importantly, I have an immense interest and curiosity about the 
+world, which drives me to learn.
 
  * [More about me](/about)
  * [R&eacute;sum&eacute;][resume]
  * [Contact me](/contact)
 
-[osu]:http://oregonstate.edu
-[compsci]:http://en.wikipedia.org/wiki/computer_science
-[bs]:http://en.wikipedia.org/wiki/Bachelor_of_Science
-[hci]:http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction
-[opensource]:http://en.wikipedia.org/wiki/Open_source
 [motoblog]:http://bmwr65.blogspot.com
-[internet]:/img/welcomeToTheInternet.jpg
-[resume]:/docs/McGuire-Dale,Rob_resume.pdf
-[iscfp]:http://www.boeing.com/careers/collegecareers/rotational_programs.html
-[boeing]:http://boeing.com
+[resume]:/docs/resume.pdf
