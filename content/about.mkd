@@ -2,31 +2,57 @@ title: About
 type: about
 url: /about/index.html
 ---
-My name is Rob McGuire-Dale, and I recently graduated from [Oregon State University][osu] with a [B.S.][bs] in [computer science][compsci]. I currently work for [The Boeing Company][boeing] as a software functional analyst. In the past, I have worked as a software developer for [The Open Source Lab][osl], and a film editor/animation instructor at [The NW Film Center][nwfc] of [the Portland Art Museum][artmuseum].
+My name is Rob McGuire-Dale, and I recently graduated from 
+[Oregon State University][osu] with a [B.S.][bs] in 
+[computer science][compsci]. I am currently working as an Cyber Security
+Assessor (A.K.A. [penetration tester][pentest], or 
+[white hat hacker][whitehat]) for [Boeing Information Security][boeing].
 
-I am interested in the **more-social aspects of computer science**, e.g., [Open source software and community][opensource] development, **the web** as a computing platform, [human-computer interaction][hci], and **project management**. I prefer working with **Linux**, and favorite languages are **Python** and **JavaScript**. I am also familiar with many other languages, frameworks, tools and technologies such as [Django][django], [jQuery][jquery], [Git][git], [AJAX][ajax], HTML, CSS, [Drupal][drupal], Java, C/C++, PHP, and [Subversion (SVN)][svn], among others.
-    
-Last summer, I gave a [talk][osbridge_talk] at [Open Source Bridge][osbridge] about a project I was heavily involved with called 'TouchScreen', an open source interactive kiosk framework.
-
-For more details, please see my [r&eacute;sum&eacute;][resume]. Please feel free to [contact me][contact] if you have any questions or comments.
+In the past, I have worked as a software developer for 
+[The Open Source Lab][osl], and a film editor/animation instructor at 
+[The NW Film Center][nwfc] of [the Portland Art Museum][artmuseum].
 
 [osu]:http://oregonstate.edu
 [bs]:http://en.wikipedia.org/wiki/Bachelor_of_Science
 [compsci]:http://en.wikipedia.org/wiki/computer_science
+[pentest]:http://en.wikipedia.org/wiki/Penetration_test
+[whitehat]:http://en.wikipedia.org/wiki/White_hat_(computer_security)
+[boeing]: http://www.boeing.com/advertising/info_solution/_network/index.html
 [osl]:http://osuosl.org
-[opensource]:http://en.wikipedia.org/wiki/open_source
-[mhcc]:http://mhcc.edu
-[boeing]:http://boeing.com
 [nwfc]:http://nwfilm.org
 [artmuseum]:http://portlandartmuseum.org
-[osbridge_talk]:http://opensourcebridge.org/sessions/404
-[osbridge]:http://opensourcebridge.org
-[jquery]:http://jquery.org
-[ajax]:http://en.wikipedia.org/wiki/Ajax_(programming)
-[django]:https://www.djangoproject.com
-[drupal]:http://drupal.org
-[git]:http://git-scm.com
-[svn]:http://subversion.tigris.org
-[resume]:/docs/McGuire-Dale,Rob_resume.pdf
-[contact]:/contact
+
+I am interested in **the more-social aspects of computer science**, 
+e.g., [open source][opensource] software and community development, the 
+[web][internet] as a computing platform, [human-computer interaction][hci] and 
+[cyber security][cybsec].
+
+[opensource]:http://en.wikipedia.org/wiki/Open_source
+[internet]:/img/welcomeToTheInternet.jpg
 [hci]:http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction
+[cybsec]: http://en.wikipedia.org/wiki/Cyber_security 
+
+I prefer working with **Linux**, and favorite languages are **Python** and
+**JavaScript**. I am also familiar with many other languages, frameworks, 
+tools, and technologies such as [Django][], [jQuery][], [Git][], [AJAX][], 
+HTML, CSS, [Drupal][], Java, C/C++, PHP, and [Subversion (SVN)][svn].
+    
+[django]:https://www.djangoproject.com
+[jquery]:http://jquery.org
+[git]:http://git-scm.com
+[ajax]:http://en.wikipedia.org/wiki/Ajax_(programming)
+[drupal]:http://drupal.org
+[svn]:http://subversion.tigris.org
+
+Summer of 2010, I gave a [talk][talk] at [Open Source Bridge][osbridge]
+about a project I was heavily involved with called '[TouchScreen][]', an open-
+source interactive kiosk framework.
+
+[talk]:http://opensourcebridge.org/sessions/404
+[osbridge]:http://opensourcebridge.org
+[touchscreen]:http://code.osuosl.org/projects/touchscreen
+
+For more details, **please see my [r&eacute;sum&eacute;][resume]**. Please feel free to [contact me][contact] if you have any questions or comments.
+
+[resume]:/docs/resume.pdf
+[contact]:/contact
