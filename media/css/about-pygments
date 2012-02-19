@@ -1,9 +1,0 @@
-Use the following command to make a new Pygments CSS file:
-
-    pygmentize -S default -f html > pygments.css
-
-`default` is the style which can be replaced with any other style listed with
- the command:
-
-    pygmentize -L
-

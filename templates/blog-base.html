@@ -44,7 +44,7 @@
 
 {# Import blog-specific CSS styles #}
 {% block head %}
-    <link rel='stylesheet' type='text/css' href='/css/blog.css'/>
+    <link rel='stylesheet/less' type='text/css' href='/less/blog.less'/>
 {% endblock %}
 
 {# JavaScript #}
@@ -111,24 +111,22 @@
 {% endblock %}
 
 {% block content %}
-    <div id="blog-wrap">
+    <div id="blog">
 
-        <!-- Blog content (e.g., list, post) -->
-        <div id="blog-content">
+        <div id="content">
             {% block blog_content %}{% endblock %}
         </div>
 
-        <!-- Blog sidebar -->
         <div id='sidebar'>
 
             <!-- Blog tag list -->
-            <div class='show-all'>
+            <div id='show-all' class='title'>
                 <a href='/blog/#'>
                     Show all
                     ({{ site.categories['blog']|length }})
                 </a>
             </div>
-            <div class='tags'>
+            <div id='tags'>
                 <div class='title'>
                     Tags
                 </div>
@@ -142,7 +140,7 @@
             </div>
 
             <!-- Recent blog post list -->
-            <div class='recent-posts'>
+            <div id='recent-posts'>
                 <div class='title'>
                     Recent posts
                 </div>
@@ -156,6 +154,7 @@
                     {% endfor %}
                 </ul>
             </div>
+
         </div>
     </div>
 {% endblock %}
