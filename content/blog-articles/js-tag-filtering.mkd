@@ -46,12 +46,11 @@ hide:
 Additionally, when a tag is clicked, it adds a hash of the tag to the URL. The
 blog system [checks for hashes][checks] on load of the blog list, and filters 
 the article snippets immediately if any are found. This makes a tag filter 
-bookmarkable.
-
-    robmd.net/blog/#tag-name
+bookmarkable, e.g., [http://robmd.net/blog/#meta](/blog/#meta)
 
 [checks]: https://github.com/robatron/robmd.net/blob/7a013ce1f0087e82419f1491ddf1db03faa645e9/templates/blog-base.html#L104
 
+<br>
 
 ## A wok-based solution to tag filtering?
 
