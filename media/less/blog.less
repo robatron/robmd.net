@@ -1,9 +1,43 @@
 /* Blog-specific CSS styles
  */
 
-#blog-wrap{
+@import "base.less";
+
+#blog{
     display: table;
     width: 100%;
+    
+    #content{
+        display: table-cell;
+        padding-right: @grid_gutter;
+    }
+    
+    #sidebar{
+        display: table-cell;
+        vertical-align: top;
+        padding-left: @grid_gutter;
+        border-left: solid #CCC 1px;
+        width: @grid_cols_3;
+
+        #show-all{
+            margin-bottom: @grid_gutter;
+        }
+
+        #tags{
+            margin-bottom: @grid_gutter;
+        }
+
+        ul{
+            padding-left: @grid_gutter;
+            margin-top: @grid_gutter / 2;
+        }
+
+        li{
+            margin-bottom: @grid_gutter / 2;
+            line-height: 1.25;
+            list-style: none;
+        }
+    }
 }
 
 #blog-wrap #article-header{
@@ -13,10 +47,6 @@
 #blog-wrap #article-footer{
 }
 
-#blog-wrap #blog-content{
-    display: table-cell;
-    padding-right: 20px;
-}
 
 .blog-item{
     margin-bottom: 40px;
@@ -97,26 +127,3 @@
     border-spacing: 0px;
 }
 
-/* Blog sidebar */
-#blog-wrap #sidebar{
-    display: table-cell;
-    vertical-align: top;
-    padding-left: 20px;
-    border-left: solid #CCC 1px;
-    width: 200px;
-}
-#blog-wrap #sidebar .show-all{
-    margin-bottom: 20px;
-}
-#blog-wrap #sidebar .tags{
-    margin-bottom: 20px;
-}
-#blog-wrap #sidebar ul{
-    padding-left: 20px;
-    margin-top: 10px;
-}
-#blog-wrap #sidebar li{
-    margin-bottom: 10px;
-    list-style: none;
-    line-height: 1.25;
-}

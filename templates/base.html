@@ -11,17 +11,23 @@
         <link href='http://fonts.googleapis.com/css?family=Orbitron:700,900&v2'
             rel='stylesheet' type='text/css'>
 
-        <!-- base CSS includes -->
-        <link rel="stylesheet" type='text/css' href='/css/base.css'/>
+        <!-- base LESS styles -->
+        <link rel="stylesheet/less" type='text/css' href='/less/base.less'/>
 
         <!-- Pygments CSS for syntax highlighting -->
         <link rel="stylesheet" type='text/css' href='/css/pygments.css'/>
+
+        {# head slot for templates that include this base template #}
+        {% block head %}{% endblock %}
 
         <!-- JavaScript -->
         <script type="text/javascript" 
             src="https://www.google.com/jsapi"></script>
         <script type="text/javascript" 
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+            </script>
+        <script type="text/javascript"
+            src="https://raw.github.com/cloudhead/less.js/master/dist/less-1.2.2.min.js">
             </script>
         <script type="text/javascript">
             $(function(){
@@ -34,7 +40,7 @@
             function menu_highlight(menu_id){
                 // Highlight the specified menu item
 
-                $("#menu #"+menu_id).addClass('selected');
+                $("#menu #"+menu_id).attr('id', 'selected');
             }
 
             {# Allow adding to the JavaScript initialization #}
@@ -59,11 +65,10 @@
             })()
         </script>
 
-        {% block head %}{% endblock %}
     </head>
 
     <body>
-        <div id='body_wrapper'>
+        <div id='body-wrap'>
 
             <!-- Header -->
             <div id="header">

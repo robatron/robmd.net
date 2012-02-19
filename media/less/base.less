@@ -4,13 +4,27 @@
  * http://colorschemedesigner.com/#3D21T7tE0w0w0
  */
 
+// default 940px grid (based on Twitter Bootstrap grid)
+@grid_nr_cols:      12;
+@grid_col:          60px;
+@grid_gutter:       20px;
+@grid_total_width:  (@grid_nr_cols * @grid_col) + (@grid_gutter * (@grid_nr_cols - 1));
+
+// grid span
+@grid_cols_2: (@grid_col * 2) + @grid_gutter;
+@grid_cols_3: @grid_cols_2 + @grid_gutter + @grid_col;
+@grid_cols_4: @grid_cols_3 + @grid_gutter + @grid_col;
+
+// colors
+@dark_grey: #4B4742;
+
 /* Main */
-#body_wrapper{
-    width:          960px;
+#body-wrap{
+    width:          @grid_total_width;
     margin:         25px auto;
 
     /* Main text styles */
-    color:          #4B4742;
+    color:          @dark_grey;
     font-size:      14px;
     font-family:    "Veranda", lucida, tahoma, helvetica, arial, sans-serif;
     line-height:    1.4em;
@@ -33,7 +47,7 @@ h1, h2, h3{
 h1{ font-size: 2em      }
 h2{ font-size: 1.5em    }
 h3{ 
-    font-size: 1em      
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -41,32 +55,40 @@ h3{
 #header{
     display:        table;
     width:          100%;
-    margin-bottom:  20px;
+
     font-family:    "Orbitron", sans-serif;
     border-bottom:  solid 1px #777;
+
     padding-bottom: 2px;
+    margin-bottom:  @grid_gutter;
+
+    #title{
+        a{
+            color: @dark_grey;
+        }
+    }
+
+    #menu{
+        display: table-cell;
+        font-size: 1.2em;
+        text-align: right;
+
+        a{
+            margin-left: @grid_gutter;
+        }
+
+        #selected{
+            border-top: solid 1px #777;
+            padding-top: 2px;
+        }
+
+    }
 }
 #header h1{
     display:    table-cell;
     font-size:  2.5em;
 }
 
-/* Menu */
-#menu{
-    display:    table-cell;
-    font-size:  1.2em;
-    text-align: right;
-}
-#menu a{
-    margin-left:    20px;
-}
-#menu .selected{
-    border-top:     solid 1px #777;
-    /* padding-top:    5px; */
-}
-#header #title a{
-    color:      #4B4742;
-}
 
 /* Content */
 #content{
