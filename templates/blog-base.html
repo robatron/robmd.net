@@ -60,11 +60,11 @@
          */
 
         if(!tag == ""){
-            $(".blog-item").each(function(index){
-                if( !$(this).find("." + tag).length ){
-                    $(this).slideUp("slow");
-                } else {
+            $(".article").each(function(index){
+                if( $(this).find("." + tag).length ){
                     $(this).slideDown("slow");
+                } else {
+                    $(this).slideUp("slow");
                 }
             });
         }
@@ -74,14 +74,7 @@
         /* Show all blog posts
          */
 
-        $(".blog-item").slideDown("slow");
-    }
-
-    function show_none(){
-        /* Hide all blog posts. Primarily a debug function
-         */
-
-        $(".blog-item").slideUp("slow");
+        $(".article").slideDown("slow");
     }
 {% endblock %}
 
@@ -93,11 +86,11 @@
     // Tag filtering (post-load)
     // -------------------------
 
-    $("#blog-wrap #sidebar .tag-link").click(function(){
+    $(".tag-link").click(function(){
         filter_by_tag($(this).find("a").attr('class'));
     });
 
-    $("#blog-wrap #sidebar .show-all").click(function(){
+    $("#sidebar #show-all").click(function(){
         show_all();
     });
 
