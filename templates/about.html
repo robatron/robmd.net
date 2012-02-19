@@ -4,7 +4,7 @@
 
 {% block head %}
     <style>
-        #img_wrap{
+        #img-wrap{
             float:          left;
             margin-right:   20px;
             margin-bottom:  20px;
@@ -17,8 +17,8 @@
 {% endblock %}
 
 {% block content %}
-    <div id='img_wrap'>
-        <img src='/img/PhiloAndI.jpg'/>
+    <div id='img-wrap'>
+        <img src='/img/philo.jpg'/>
         <p class='caption'>
             Photo by 
             <a href='http://www.facebook.com/profile.php?id=584737500'>
@@ -27,11 +27,9 @@
         </p>
     </div>
 
-    <!-- page title -->
-    <h1 id='page_title'>{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
 
-    <!-- main content title -->
-    <div id='home_content'>
+    <div>
         {{ page.content }}
     </div>
 

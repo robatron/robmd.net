@@ -25,7 +25,7 @@ e.g.,
  - [Cyber security][cybsec]
 
 [opensource]:http://en.wikipedia.org/wiki/Open_source
-[internet]:/img/welcomeToTheInternet.jpg
+[internet]:/img/internet.jpg
 [hci]:http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction
 [cybsec]: http://en.wikipedia.org/wiki/Cyber_security 
  
