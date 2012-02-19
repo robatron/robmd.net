@@ -1,5 +1,8 @@
-/* Base CSS styles for robmd.net 
+/* Base LESS styles for robmd.net 
  *
+ * More information about LESS styling at
+ * http://lesscss.org
+ * 
  * Color scheme based on main photo's average color: 
  * http://colorschemedesigner.com/#3D21T7tE0w0w0
  */
@@ -17,25 +20,27 @@
 
 // colors
 @dark_grey: #4B4742;
+@dark_blue: #31527D;
+@light_blue: #97A9C0;
 
 /* Main */
 #body-wrap{
     width:  @site_width;
     margin: 25px auto;
 
-    /* Main text styles */
+    /* main text styles */
     color:          @dark_grey;
     font-size:      14px;
     font-family:    "Veranda", lucida, tahoma, helvetica, arial, sans-serif;
     line-height:    1.4em;
 
-    /* Links */
+    /* links */
     a{
-        color: #31527D;
+        color: @dark_blue;
         text-decoration: none;
 
         &:hover{
-            color: #97A9C0;
+            color: @light_blue;
         }
     }
 
@@ -75,61 +80,64 @@
         }
     }
 
-    #content{
-        margin:     0px 0px;
+    .small-text{
+        font-size:  0.8em;
     }
 
-}
+    #content{
+        margin:     0px 0px;
 
+        h1, h2, h3{
+            font-weight: normal;
+            margin: 0px;
+        }
+        h1{ 
+            font-size: 2em;
+        }
+        h2{ 
+            font-size: 1.5em;
+        }
+        h3{ 
+            font-size: 1em;
+            font-weight: bold;
+        }
 
-/* Headings */
-h1, h2, h3{
-    font-weight: normal;
-    margin: 0px;
-}
-h1{ font-size: 2em      }
-h2{ font-size: 1.5em    }
-h3{ 
-    font-size: 1em;
-    font-weight: bold;
-}
-
-/* Syntax highlighting */
-.highlight{
-    background:     #EFEFEF;
-    margin-left:    40px;
-    margin-top:     40px;
-    margin-bottom:  40px;
-}
-
-/* Footer */
-#footer{
-    display:        table;
-    width:          100%;
-    border-top:     solid 1px #777;
-    margin-top:     20px;
-}
-#footer #about_site{
-    display:        table-cell;
-    text-align:     left;
-}
-#footer #copyright{
-    display:        table-cell;
-    text-align:     right;
-}
-
-/* Misc */
-.small_text{
-    font-size:  0.8em;
-}
-
-.light_text{
-    color:      #777;
-}
-
-.caption{
-    line-height:    0px;
-    text-align:     right;
-    margin-top:     5px;
+        .caption{
+            line-height:    0px;
+            text-align:     right;
+            margin-top:     5px;
+            color: #777;
+            
+            .small-text;
+        }
+        
+        /* syntax highlighting */
+        .highlight{
+            background:     #EFEFEF;
+            margin-left:    @grid_gutter * 2;
+            margin-top:     @grid_gutter * 2;
+            margin-bottom:  @grid_gutter * 2;
+        }
+    }
+    
+    /* Footer */
+    #footer{
+        display:        table;
+        width:          100%;
+        border-top:     solid 1px #777;
+        margin-top:     @grid_gutter;
+        
+        .small-text;
+        
+        #about{
+            display:        table-cell;
+            text-align:     left;
+        }
+        
+        #copyright{
+            display:        table-cell;
+            text-align:     right;
+        }
+    }
 }
 
