@@ -43,13 +43,16 @@
                 }
 
                 .text{
+                    @margin: 3px;
+
                     vertical-align: top;
 
                     .title-bar{
+                        margin-bottom: @margin;
+
                         .title{
                             font-size: 1.5em;
-                            margin-bottom: 5px;
-                            margin-top: 0px;
+                            margin-bottom: @margin;
                         }
 
                         .subtitle{
@@ -69,7 +72,7 @@
             }
 
             #title-bar{
-                margin-bottom: @grid_gutter;
+                margin-bottom: @grid_gutter / 2;
 
                 #title{
                     font-size: 2em;
@@ -84,6 +87,8 @@
             }
 
             #title-img-wrap{
+                margin-bottom: @grid_gutter * 2;
+
                 #title-img{
                     .shadow-border;
                 }
@@ -101,6 +106,7 @@
                 margin-bottom: 0px;
                 margin-top: 40px;
             }
+
             #dsq-footer{
                 margin: 0px;
             }
