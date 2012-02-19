@@ -3,20 +3,19 @@
 {% extends "blog-base.html" %}
 
 {% block blog_content %}
+    <div id='article'>
+        <div id='article-header'>
+            <a href='/blog'>&laquo; Back to blog list</a>
+        </div>
 
-    <div id='article-header'>
-        <a href='/blog'>&laquo; Back to blog list</a>
-    </div>
-
-    <div class='blog-item'>
-        <div class='title-bar'>
-            <h1 class='title'>
+        <div id='title-bar'>
+            <h1 id='title'>
                 <a href='{{ page.url }}'>
                     {{ page.title }}
                 </a>
             </h1>
 
-            <div class='subtitle'>
+            <div id='subtitle'>
                 {# By {{ page.author }}| #}
                 {{ page.date }}
 
@@ -58,10 +57,10 @@
                 comments powered by Disqus.<
             </a>
         </noscript>
-    </div>
 
-    <div id='article-footer'>
-        <a href='/blog'>&laquo; Back to blog list</a>
+        <div id='article-footer'>
+            <a href='/blog'>&laquo; Back to blog list</a>
+        </div>
+        
     </div>
-
 {% endblock %}
