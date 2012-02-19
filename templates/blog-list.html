@@ -6,16 +6,16 @@
 
     <!-- blog list -->
     {% if page.subpages %}
-        <div id='blog-list'>
+        <div id='list'>
             {% for page in page.subpages|sort(attribute='datetime', reverse=True) %}
-                <div class='blog-item {% if loop.last %}last{% endif %}'>
+                <div class='article {% if loop.last %}last{% endif %}'>
                     <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
                         <table>
                             <tr>
                                 <td class='title-img-wrap'>
                                     {% if page.title_img_thumb %}
                                         <a href='{{page.url}}'>
-                                            <img class='title-img' src='{{page.title_img_thumb}}'>
+                                            <img src='{{page.title_img_thumb}}'>
                                         </a>
                                     {% endif %}
                                 </td>
@@ -45,10 +45,6 @@
                                                 </a>
                                             {% endif %}
                                         </div>
-                                    </div>
-
-                                    <div class='snippet'>
-                                        {{page.original|truncate}}
                                     </div>
                                 </td>
                             </tr>

@@ -10,6 +10,86 @@
     #content{
         display: table-cell;
         padding-right: @grid_gutter;
+                
+        /* article list */
+        #list{
+            .article{
+                margin-bottom: @grid_gutter;
+
+                table{
+                    margin: 0px;
+                    border-spacing: 0px;
+
+                    .title-img-wrap{
+                        vertical-align: top;
+                        padding-right: @grid_gutter;
+
+                        img{
+                            border: 1px solid #CCC;
+                            box-shadow: 3px 4px 6px 1px #aaa; 
+                            -moz-box-shadow: 3px 4px 6px 1px #aaa;
+                            -webkit-box-shadow: 3px 4px 6px 1px #aaa;
+                        }
+                    }
+                }
+
+                .text{
+                    vertical-align: top;
+
+                    .title-bar{
+
+                        .title{
+                            font-size: 1.5em;
+                            margin-bottom: 5px;
+                            margin-top: 0px;
+                        }
+
+                        .subtitle{
+                            font-size: 0.9em;
+                            color: #888;
+                        }
+                        
+                    }
+                }
+            }
+        }
+       
+        /* single article */
+        #article{
+            .blog-item .content{
+                /* margin-left: 20px; */
+            }
+
+            .blog-item .content h1{
+                margin-top: 40px;
+                margin-bottom: 20px;
+                font-size: 1.9em;
+            }
+
+
+
+            .blog-item .article-image{
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #blog-wrap #article-header{
+                margin-bottom: 20px;
+            }
+
+            #blog-wrap #article-footer{
+            }
+
+            /* Disqus stuffs */
+            #disqus_thread{
+                margin-bottom: 0px;
+                margin-top: 40px;
+            }
+
+            #dsq-footer{
+                margin: 0px;
+            }
+        }
     }
     
     #sidebar{
@@ -38,92 +118,5 @@
             list-style: none;
         }
     }
-}
-
-#blog-wrap #article-header{
-    margin-bottom: 20px;
-}
-
-#blog-wrap #article-footer{
-}
-
-
-.blog-item{
-    margin-bottom: 40px;
-}
-
-.blog-item.last{
-    margin-bottom: 20px;
-}
-
-.blog-item .title-bar{
-    /* border-bottom: 1px solid #ccc; */
-}
-
-.blog-item .title{
-    font-size: 2em;
-    margin-bottom: 5px;
-    margin-top: 0px;
-}
-
-.blog-item .subtitle{
-    font-size: 0.9em;
-    color: #888;
-}
-
-.blog-item .content{
-    /* margin-left: 20px; */
-}
-
-.blog-item .content h1{
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 1.9em;
-}
-
-.blog-item #title-img-wrap{
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 40px;
-}
-
-.blog-item #title-img, .title-img{
-    border: 1px solid #CCC;
-    box-shadow: 3px 4px 6px 1px #aaa; 
-    -moz-box-shadow: 3px 4px 6px 1px #aaa;
-    -webkit-box-shadow: 3px 4px 6px 1px #aaa;
-}
-
-.blog-item .article-image{
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/* Disqus stuffs */
-#disqus_thread{
-    margin-bottom: 0px;
-    margin-top: 40px;
-}
-#dsq-footer{
-    margin: 0px;
-}
-
-/* article list */
-#blog-wrap #blog-list .blog-item td.title-img-wrap{
-    vertical-align: top;
-    padding-right: 20px;
-    width: 100px;
-}
-#blog-wrap #blog-list .blog-item td.text{
-    vertical-align: top;
-}
-#blog-wrap #blog-list .blog-item h1.title{
-    font-size: 1.5em;
-}
-
-#blog-wrap #blog-list .blog-item table{
-    margin: 0px;
-    border-spacing: 0px;
 }
 
