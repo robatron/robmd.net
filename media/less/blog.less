@@ -14,7 +14,11 @@
         /* article list */
         #list{
             .article{
-                margin-bottom: @grid_gutter;
+                margin-bottom: @grid_gutter * 2;
+
+                &.last{
+                    margin-bottom: 0px;
+                }
 
                 table{
                     margin: 0px;
