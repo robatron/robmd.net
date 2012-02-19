@@ -8,6 +8,15 @@
             <a href='/blog'>&laquo; Back to blog list</a>
         </div>
 
+        {% if page.title_img_full %}
+            <div id='title-img-wrap'>
+                <a href='{{ page.title_img_full }}'>
+                    <img id='title-img'
+                        src='{{ page.title_img_title }}'/>
+                </a>
+            </div>
+        {% endif %}
+
         <div id='title-bar'>
             <h1 id='title'>
                 <a href='{{ page.url }}'>
@@ -24,14 +33,6 @@
                 {% endif %}
             </div>
         </div>
-
-        {% if page.title_img_full %}
-            <div id='title-img-wrap'>
-                <a href='{{ page.title_img_full }}'>
-                    <img id='title-img' src='{{ page.title_img_title }}'/>
-                </a>
-            </div>
-        {% endif %}
 
         <div class='content'>
             {{ page.content }}
