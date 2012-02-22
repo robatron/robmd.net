@@ -41,6 +41,28 @@
     font-family: "Veranda", lucida, tahoma, helvetica, arial, sans-serif;
     line-height: 1.4em;
 
+    /* indentation */
+    .offset_com{
+        float: left;
+        position: relative;
+    }
+    .offset1{
+        .offset_com;
+        left: 0px;
+    }
+    .offset2{
+        .offset_com;
+        left: @grid_col + @grid_gutter;
+    }
+    .offset3{
+        .offset_com;
+        left: 2 * (@grid_col + @grid_gutter);
+    }
+    .offset4{
+        .offset_com;
+        left: 3 * (@grid_col + @grid_gutter);
+    }
+
     /* links */
     a{
         color: @dark_blue;
@@ -132,20 +154,13 @@
     
     /* Footer */
     #footer{
-        display: table;
         width: 100%;
         border-top: @dark_border;
         margin-top: @grid_gutter;
         
         .small-text;
-        
-        #about{
-            display: table-cell;
-            text-align: left;
-        }
-        
-        #copyright{
-            display: table-cell;
+
+        #right{
             text-align: right;
         }
     }

@@ -93,20 +93,32 @@
             </div>
 
             <!-- Footer -->
-            <div id="footer">
-                <div id="about">
-                    Site code available on 
-                    <a href="http://github.com/robatron/robmd.net">
-                        GitHub
-                    </a>.
-                    
-                    Powered by  
-                    <a href="https://github.com/mythmon/wok">wok</a>. 
-                </div>
-                
-                <div id="copyright">
-                    &copy; Copyright <a href="http://robmd.net/">Rob McGuire-Dale</a>
-                </div>
+            <table id="footer">
+                <tr>
+                    <td id='left'>
+                        <div>
+                            Powered by  
+                            <a href="https://github.com/mythmon/wok">wok</a>
+                        </div>
+
+                        <div>
+                        Fork me on 
+                            <a href="http://github.com/robatron/robmd.net">
+                                GitHub
+                            </a>
+                        </div>
+                    </td>
+
+                    <td id='right'>
+                        <div>
+                            &copy; Copyright <a href="http://robmd.net/">Rob McGuire-Dale</a>
+                        </div>
+
+                        <div>
+                            Last generated {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}
+                        </div>
+                    </td>
+                </tr>
             </div>
 
         </div>
