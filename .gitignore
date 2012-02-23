@@ -4,4 +4,4 @@ output
 *.log
 robots.txt
 *.pyc
-
+.sass-cache
