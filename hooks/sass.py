@@ -18,7 +18,6 @@ def compile_css(output_dir):
     same directory as the Sass file with the same name and an extension of 
     .css. For example, foo.scss -> foo.css.
     '''
-    print "--"
     for root, dirs, files in os.walk(output_dir):
         for f in files:
             fname, fext = os.path.splitext(f)
