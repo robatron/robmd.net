@@ -1,15 +1,7 @@
-'''
-Plugin for compiling Sass files -> CSS
-
-Dependencies:
-
-    - Ruby
-    - Sass (http://sass-lang.com)
-'''
 import os
 import subprocess
 
-def compile_css(output_dir):
+def compile_sass(output_dir):
     '''
     Compile Sass files -> CSS in the output directory.
 
@@ -17,6 +9,15 @@ def compile_css(output_dir):
     to CSS using Sass. The compiled version of the file will be created in the 
     same directory as the Sass file with the same name and an extension of 
     .css. For example, foo.scss -> foo.css.
+
+    Hook:
+
+        site.output.post
+
+    Dependencies:
+
+        - Ruby
+        - Sass (http://sass-lang.com)
     '''
     for root, dirs, files in os.walk(output_dir):
         for f in files:
