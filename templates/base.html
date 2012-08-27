@@ -9,38 +9,19 @@
 
         <!-- CSS imports -->
         <link href='http://fonts.googleapis.com/css?family=Orbitron:700,900&v2'
-            rel='stylesheet' type='text/css'>
+                rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type='text/css' href='/css/pygments.css'/>
         <link rel="stylesheet" type='text/css' href='/sass/base.css'/>
 
         {# head slot for templates that include this base template #}
         {% block head %}{% endblock %}
 
-        <!-- JavaScript -->
-        <script type="text/javascript" 
-                src="https://www.google.com/jsapi">
-        </script>
-        <script type="text/javascript" 
-                src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
-        </script>
-        <script type="text/javascript">
-            $(function(){
-                // (jQuery) Run when the document is loaded and ready
-
-                {# Allow adding JavaScript to the document ready #}
-                {% block js_doc_ready %}{% endblock %}
-            });
-
-            function menu_highlight(menu_id){
-                // Highlight the specified menu item
-
-                $("#menu #"+menu_id).attr('id', 'selected');
-            }
-
-            {# Allow adding to the JavaScript initialization #}
-            {% block js_init %}{% endblock %}
-
-            // Google Analytics stuffs
+        <!-- Google Analytics -->   
+        <script>
+            /* Google Analytics tracking code. Official docs recommend placing
+            at the bottom of </head> instead of at the bottom of the body with
+            the rest of the JavaScript.
+            */
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-17987944-2']);
             _gaq.push(['_setDomainName', '.robmd.net']);
@@ -58,7 +39,6 @@
                 s.parentNode.insertBefore(ga, s);
             })()
         </script>
-
     </head>
 
     <body>
@@ -122,7 +102,30 @@
                     </td>
                 </tr>
             </div>
-
         </div>
+
+        <!-- JavaScript -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script>
+            {# Allow adding to the JavaScript initialization #}
+            {% block js_init %}{% endblock %}
+
+            $(function(){
+                /* Run when the document is ready
+                */
+
+                {# Allow adding JavaScript to the document ready #}
+                {% block js_doc_ready %}{% endblock %}
+            });
+
+            function menu_highlight(menu_id){
+                /* Highlight specified menu item
+                */
+
+                $("#menu #"+menu_id).attr('id', 'selected');
+            }
+        </script>
     </body>
 </html>
