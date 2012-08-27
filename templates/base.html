@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
-        <title>{{ page.title }} | {{ site.title }}</title>
+        <title>{{ page.title }} &raquo; {{ site.title }}</title>
 
         <!-- CSS imports -->
         <link href='http://fonts.googleapis.com/css?family=Orbitron:700,900&v2'
@@ -18,10 +18,11 @@
 
         <!-- JavaScript -->
         <script type="text/javascript" 
-            src="https://www.google.com/jsapi"></script>
+                src="https://www.google.com/jsapi">
+        </script>
         <script type="text/javascript" 
-            src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
-            </script>
+                src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
         <script type="text/javascript">
             $(function(){
                 // (jQuery) Run when the document is loaded and ready
@@ -72,10 +73,18 @@
                 </h1>
 
                 <div id='menu'>
-                    <a id='home'    href='/'>home</a>
-                    <a id='blog'    href='/blog'>blog</a>
-                    <a id='about'   href='/about'>about</a>
-                    <a id='contact' href='/contact'>contact</a>
+                    <a id='home' href='/'>
+                        home
+                    </a>
+                    <a id='blog' href='/blog'>
+                        blog
+                    </a>
+                    <a id='resume' href='/docs/resume.pdf'>
+                        r&eacute;sum&eacute;
+                    </a>
+                    <a id='contact' href='/contact'>
+                        contact
+                    </a>
                 </div>
             </div>
 
