@@ -139,8 +139,7 @@ $light_border:  solid 1px $light_grey;
         // syntax highlighting
         .highlight{
             background: $lighter_grey;
-            margin-left: $grid_gutter;
-            padding-left: $grid_gutter;
+            padding-left: $grid_gutter * 2;
             margin-top: $grid_gutter * 2;
             margin-bottom: $grid_gutter * 2;
         }
