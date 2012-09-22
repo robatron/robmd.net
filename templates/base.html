@@ -91,24 +91,29 @@
         <footer class='footer'>
             <div class='footer-inner container'>
                 <div class='row-fluid'>
-                    <div class='pull-right'>
+                    <p class='pull-right'>
                         Fork me on 
                         <a href="http://github.com/robatron/robmd.net">
-                        GitHub</a>. 
+                        GitHub</a>
+                    </p>
 
+                    <p>
+                        Powered by
+                        <a href="https://github.com/mythmon/wok">
+                        wok</a>
+                    </p>
+
+                    <p class='pull-right'>
                         &copy; Copyright
                         <a href="http://robmd.net/">
                             Rob McGuire-Dale
                         </a>
-                    </div>
+                    </p>
 
-                    <div>
+                    <p>
                         Last generated at
-                        {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}.
-                        Powered by
-                        <a href="https://github.com/mythmon/wok">
-                        wok</a>.
-                    </div>
+                        {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}
+                    </p>
                 </div>
             </div>
         </footer>
