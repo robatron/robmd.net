@@ -10,11 +10,16 @@
 
 #navbar {
     font-family: "Orbitron", sans-serif;
-    border-bottom: solid 1px #888;
+    box-shadow: 0 1px 10px #888;
+}
+
+#navbar .navbar-inner {
+	background-image: none;
 }
 
 #navbar .brand{
 	font-size: 2.5em;
+	padding-left: 18px;
 }
 
 #navbar .container {
@@ -23,4 +28,15 @@
 
 #navbar .container .nav {
 	margin-right: 0px;
+}
+
+.footer {
+	padding: 70px 0;
+	margin-top: 70px;
+	border-top: 1px solid #E5E5E5;
+	background-color: whiteSmoke;
+}
+
+.footer .footer-inner {
+	max-width: 940px;
 }

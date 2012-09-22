@@ -7,25 +7,29 @@
 {% endblock %}
 
 {% block content %}
-    <div>
-        <a href="#" rel="tooltip" data-original-title="Another one here too">
+    <div class='row-fluid'>
+        <div class='span12'>
             <img src='/img/death-valley.jpg'/>
-        </a>
 
-        <div>
-            Photo by 
-            <a href='http://www.flickr.com/people/daisychaining/'>
-                Elizabeth Trautman
-            </a>
+            <div class='hidden'>
+                Photo by 
+                <a href='http://www.flickr.com/people/daisychaining/'>
+                    Elizabeth Trautman
+                </a>
+            </div>
         </div>
     </div>
 
-    <!-- page title -->
-    <h1>{{ page.title }}</h1>
+    <div class='row-fluid'>
+        <div>
+            <!-- page title -->
+            <h1>{{ page.title }}</h1>
+        </div>
 
-    <!-- main content title -->
-    <div>
-        {{ page.content }}
+        <!-- main content title -->
+        <div>
+            {{ page.content }}
+        </div>
     </div>
 
 {% endblock %}

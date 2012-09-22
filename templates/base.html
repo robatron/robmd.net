@@ -83,41 +83,35 @@
 
         <!-- Content -->
         <div id='content' class='container'>
-            <div class='row-fluid'>
-                {% block content %}
-                {% endblock %}
-            </div>
+            {% block content %}
+            {% endblock %}
         </div>
-
-        <hr>
 
         <!-- Footer -->
-        <div id='footer'>
-            <div>
-                Powered by <a href="https://github.com/mythmon/wok">
-                wok</a>. 
-            </div>
+        <footer class='footer'>
+            <div class='footer-inner container'>
+                <div class='row-fluid'>
+                    <div class='pull-right'>
+                        Fork me on 
+                        <a href="http://github.com/robatron/robmd.net">
+                        GitHub</a>. 
 
-            <div class='float-right'>
-                &copy; Copyright
-                <a href="http://robmd.net/">
-                    Rob McGuire-Dale
-                </a>
-            </div>
+                        &copy; Copyright
+                        <a href="http://robmd.net/">
+                            Rob McGuire-Dale
+                        </a>
+                    </div>
 
-            <br>
-
-            <div>
-                Fork me on 
-                <a href="http://github.com/robatron/robmd.net">
-                GitHub</a>.
+                    <div>
+                        Last generated at
+                        {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}.
+                        Powered by
+                        <a href="https://github.com/mythmon/wok">
+                        wok</a>.
+                    </div>
+                </div>
             </div>
-
-            <div>
-                Last generated
-                {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}
-            </div>
-        </div>
+        </footer>
 
         <!-- JavaScript -->
         <script src="https://www.google.com/jsapi"></script>
