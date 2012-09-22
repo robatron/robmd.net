@@ -12,7 +12,7 @@ MODULES = [
 ]
 
 for module in MODULES:
-	sys.path.append(os.path.join(os.getcwd(), PYMOD_DIR, module))
+    sys.path.append(os.path.join(os.getcwd(), PYMOD_DIR, module))
 
 from wok.engine import Engine
 Engine()

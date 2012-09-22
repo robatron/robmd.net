@@ -1,17 +1,21 @@
 {# Base template #}
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html lang="en">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
     <head>
+        <meta charset="utf-8">
         <title>{{ page.title }} &laquo; {{ site.title }}</title>
 
         <!-- CSS imports -->
-        <link rel="stylesheet" type='text/css' href='/css/bootstrap.min.css'/>
         <link href='http://fonts.googleapis.com/css?family=Orbitron:700,900&v2'
                 rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type='text/css' href='/css/pygments.css'/>
+        <link rel="stylesheet" type='text/css' 
+                href='/css/pygments.css'/>
+
+        <link rel="stylesheet" type='text/css'
+                href='/css/bootstrap.min.css'/>
+        <link rel="stylesheet" type='text/css'
+                href='/css/base.css'/>
         <link rel="stylesheet" type='text/css'
                 href='/css/bootstrap-responsive.min.css'/>
 
@@ -20,9 +24,9 @@
 
         <!-- Google Analytics -->   
         <script>
-            /* Google Analytics tracking code. Official docs recommend placing
-            at the bottom of </head> instead of at the bottom of the body with
-            the rest of the JavaScript.
+            /* Google Analytics tracking code. Official docs recommend
+            placing at the bottom of </head> instead of at the bottom
+            of the body with the rest of the JavaScript.
             */
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-17987944-2']);
@@ -44,65 +48,74 @@
     </head>
 
     <body>
-        <div id='body-wrap'>
-
-            <!-- Header -->
-            <div id="header">
-                <h1 id='title'>
-                    <a href='/'>
+        <!-- Navbar -->
+        <div id='navbar' class='navbar navbar-fixed-top'>
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="/">
                         Rob McGuire-Dale
                     </a>
-                </h1>
-
-                <div id='menu'>
-                    <a id='home' href='/'>
-                        home
-                    </a>
-                    <a id='blog' href='/blog'>
-                        blog
-                    </a>
-                    <a id='resume' href='/docs/resume.pdf'>
-                        r&eacute;sum&eacute;
-                    </a>
-                    <a id='contact' href='/contact'>
-                        contact
-                    </a>
+                    <ul class="nav pull-right">
+                        <li>
+                            <a id='home' href='/'>
+                                home
+                            </a>
+                        </li>
+                        <li>
+                            <a id='blog' href='/blog'>
+                                blog
+                            </a>
+                        </li>
+                        <li>
+                            <a id='resume' href='/docs/resume.pdf'>
+                                r&eacute;sum&eacute;
+                            </a>
+                        </li>
+                        <li>
+                            <a id='contact' href='/contact'>
+                                contact
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </div>
 
-            <!-- Content -->
-            <div id="content">
+        <!-- Content -->
+        <div id='content' class='container'>
+            <div class='row-fluid'>
                 {% block content %}
                 {% endblock %}
             </div>
+        </div>
 
-            <!-- Footer -->
-            <table id="footer">
-                <tr>
-                    <td id='left'>
-                        <div>
-                            Powered by  
-                            <a href="https://github.com/mythmon/wok">wok</a>
-                        </div>
+        <hr>
 
-                        <div>
-                        Fork me on 
-                            <a href="http://github.com/robatron/robmd.net">
-                                GitHub
-                            </a>
-                        </div>
-                    </td>
+        <!-- Footer -->
+        <div id='footer'>
+            <div>
+                Powered by <a href="https://github.com/mythmon/wok">
+                wok</a>. 
+            </div>
 
-                    <td id='right'>
-                        <div>
-                            &copy; Copyright <a href="http://robmd.net/">Rob McGuire-Dale</a>
-                        </div>
+            <div class='float-right'>
+                &copy; Copyright
+                <a href="http://robmd.net/">
+                    Rob McGuire-Dale
+                </a>
+            </div>
 
-                        <div>
-                            Last generated {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}
-                        </div>
-                    </td>
-                </tr>
+            <br>
+
+            <div>
+                Fork me on 
+                <a href="http://github.com/robatron/robmd.net">
+                GitHub</a>.
+            </div>
+
+            <div>
+                Last generated
+                {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}
             </div>
         </div>
 
@@ -127,7 +140,8 @@
                 /* Highlight specified menu item
                 */
 
-                $("#menu #"+menu_id).attr('id', 'selected');
+                $('#navbar .nav li a#'+menu_id).parent('li')
+                        .attr('class', 'active');
             }
         </script>
     </body>
