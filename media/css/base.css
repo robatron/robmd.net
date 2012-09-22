@@ -1,0 +1,26 @@
+/* Base CSS styles 
+*/
+
+#content {
+    /* 60px to make the container go all the way to the 
+     * bottom of the topbar */
+    padding-top: 40px;
+    max-width: 940px;
+}
+
+#navbar {
+    font-family: "Orbitron", sans-serif;
+    border-bottom: solid 1px #888;
+}
+
+#navbar .brand{
+	font-size: 2.5em;
+}
+
+#navbar .container {
+	max-width: 940px;
+}
+
+#navbar .container .nav {
+	margin-right: 0px;
+}
