@@ -6,55 +6,72 @@
 
     <!-- blog list -->
     {% if page.subpages %}
-        <div id='list'>
-            {% for page in page.subpages|sort(attribute='datetime', reverse=True) %}
-                <div class='article {% if loop.last %}last{% endif %}'>
-                    <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
-                        <table>
-                            <tr>
-                                <td class='title-img-wrap'>
-                                    {% if page.title_img_thumb %}
+        {% for page in page.subpages|sort(attribute='datetime', reverse=True) %}
+            {% if page.title_img_thumb %}
+                <a href='{{page.url}}'>
+                    <img class='title-img' 
+                        src='{{page.title_img_thumb}}'
+                        alt='Thumnail for "{{page.title}}"'>
+                </a>
+            {% endif %}
+            <p class='pull-right'>
+                <h3>{{page.title}}</h3>
+                <div class='snippet'>
+                    {% if page.snippet %}
+                        {{ page.snippet|truncate(length=200) }}
+                        <a href='{{page.url}}'>
+                            <!-- "Much greater than" symbol -->
+                            &raquo;
+                        </a>
+                    {% endif %}
+                </div>
+            </p>
+
+            <!-- div class='article {% if loop.last %}last{% endif %}'>
+                <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
+                    <table>
+                        <tr>
+                            <td class='title-img-wrap'>
+                                {% if page.title_img_thumb %}
+                                    <a href='{{page.url}}'>
+                                        <img class='title-img' 
+                                            src='{{page.title_img_thumb}}'>
+                                    </a>
+                                {% endif %}
+                            </td>
+
+                            <td class='text'>
+                                <div class='title-bar'>
+                                    <h1 class='title'>
                                         <a href='{{page.url}}'>
-                                            <img class='title-img' 
-                                                src='{{page.title_img_thumb}}'>
+                                            {{page.title}}
                                         </a>
-                                    {% endif %}
-                                </td>
+                                    </h1>
 
-                                <td class='text'>
-                                    <div class='title-bar'>
-                                        <h1 class='title'>
-                                            <a href='{{page.url}}'>
-                                                {{page.title}}
-                                            </a>
-                                        </h1>
+                                    <div class='subtitle'>
+                                        {{page.date}}
 
-                                        <div class='subtitle'>
-                                            {{page.date}}
-
-                                            {% if page.tags %}
-                                                | in {{ tag_list(page.tags) }}
-                                            {% endif %}
-                                        </div>
-                                    </div>
-
-                                    <div class='snippet'>
-                                        {% if page.snippet %}
-                                            {{ page.snippet|truncate(length=200) }}
-                                            <a href='{{page.url}}'>
-                                                <!-- "Much greater than" symbol -->
-                                                &raquo;
-                                            </a>
+                                        {% if page.tags %}
+                                            | in {{ tag_list(page.tags) }}
                                         {% endif %}
                                     </div>
+                                </div>
 
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                                <div class='snippet'>
+                                    {% if page.snippet %}
+                                        {{ page.snippet|truncate(length=200) }}
+                                        <a href='{{page.url}}'>
+                                            &raquo;
+                                        </a>
+                                    {% endif %}
+                                </div>
+
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-            {% endfor %}
-        </div>
+            </div -->
+        {% endfor %}
         
     {% else %}
         <p> No blog entries to display :-(</p>
