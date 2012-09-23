@@ -29,18 +29,6 @@ My **past gigs** include:
 [nwfc]:http://nwfilm.org
 [pam]:http://portlandartmuseum.org
 
-My **primary interests** include:
-
- - [Open source][opensource] software and community development
- - Software development and [engineering][swe]
- - Software and programming [usability][]
- - The [web][internet] as a computing platform
-
-[opensource]:http://en.wikipedia.org/wiki/Open_source
-[swe]:http://en.wikipedia.org/wiki/software_engineering
-[usability]:http://en.wikipedia.org/wiki/usability
-[internet]:/img/internet.jpg
-
 I prefer working with **Linux**, and my favorite languages are **JavaScript**
 and **Python**. I also have experience working with many other
 languages, libraries, frameworks, tools, and technologies including [jQuery][],
@@ -56,6 +44,18 @@ languages, libraries, frameworks, tools, and technologies including [jQuery][],
 [json]:http://json.org
 [sqlite]:http://sqlite.org
 [drupal]:http://drupal.org
+
+My **primary interests** include:
+
+ - [Open source][opensource] software and community development
+ - Software development and [engineering][swe]
+ - Software and programming [usability][]
+ - The [web][internet] as a computing platform
+
+[opensource]:http://en.wikipedia.org/wiki/Open_source
+[swe]:http://en.wikipedia.org/wiki/software_engineering
+[usability]:http://en.wikipedia.org/wiki/usability
+[internet]:/img/internet.jpg
 
 I also love running, rock climbing, mountaineering, tinkering with vehicles,
 and riding my bicycle. Most imporantly, I have an immense interest and
