@@ -24,15 +24,9 @@
 
         <!-- Google Analytics -->   
         <script>
-<<<<<<< HEAD
-            /* Google Analytics tracking code. Official docs recommend placing
-            at the bottom of </head> instead of at the bottom of the body with
-            the rest of the JavaScript.
-=======
             /* Google Analytics tracking code. Official docs recommend
             placing at the bottom of </head> instead of at the bottom
             of the body with the rest of the JavaScript.
->>>>>>> 8366138a63c578fc99179103177e00095ec24ef2
             */
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-17987944-2']);
@@ -54,69 +48,6 @@
     </head>
 
     <body>
-<<<<<<< HEAD
-        <div id='body-wrap'>
-
-            <!-- Header -->
-            <div id="header">
-                <h1 id='title'>
-                    <a href='/'>
-                        Rob McGuire-Dale
-                    </a>
-                </h1>
-
-                <div id='menu'>
-                    <a id='home' href='/'>
-                        home
-                    </a>
-                    <a id='blog' href='/blog'>
-                        blog
-                    </a>
-                    <a id='resume' href='/docs/resume.pdf'>
-                        r&eacute;sum&eacute;
-                    </a>
-                    <a id='contact' href='/contact'>
-                        contact
-                    </a>
-                </div>
-            </div>
-
-            <!-- Content -->
-            <div id="content">
-                {% block content %}
-                {% endblock %}
-            </div>
-
-            <!-- Footer -->
-            <table id="footer">
-                <tr>
-                    <td id='left'>
-                        <div>
-                            Powered by  
-                            <a href="https://github.com/mythmon/wok">wok</a>
-                        </div>
-
-                        <div>
-                        Fork me on 
-                            <a href="http://github.com/robatron/robmd.net">
-                                GitHub
-                            </a>
-                        </div>
-                    </td>
-
-                    <td id='right'>
-                        <div>
-                            &copy; Copyright <a href="http://robmd.net/">Rob McGuire-Dale</a>
-                        </div>
-
-                        <div>
-                            Last generated {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}
-                        </div>
-                    </td>
-                </tr>
-            </div>
-        </div>
-=======
         <!-- Navbar -->
         <div id='navbar' class='navbar navbar-fixed-top'>
             <div class="navbar-inner">
@@ -186,7 +117,6 @@
                 </div>
             </div>
         </footer>
->>>>>>> 8366138a63c578fc99179103177e00095ec24ef2
 
         <!-- JavaScript -->
         <script src="https://www.google.com/jsapi"></script>
@@ -209,12 +139,8 @@
                 /* Highlight specified menu item
                 */
 
-<<<<<<< HEAD
-                $("#menu #"+menu_id).attr('id', 'selected');
-=======
                 $('#navbar .nav li a#'+menu_id).parent('li')
                         .attr('class', 'active');
->>>>>>> 8366138a63c578fc99179103177e00095ec24ef2
             }
         </script>
     </body>
