@@ -7,22 +7,30 @@
 {% endblock %}
 
 {% block content %}
-    <div>
-        <img src='/img/death-valley.jpg'/>
-        <p class='caption'>
-            Photo by 
-            <a href='http://www.flickr.com/people/daisychaining/'>
-                Elizabeth Trautman
-            </a>
-        </p>
+
+    <div class='row-fluid'>
+        <div class='span12'>
+            <img src='/img/death-valley.jpg'/>
+
+            <div class='hidden'>
+                Photo by 
+                <a href='http://www.flickr.com/people/daisychaining/'>
+                    Elizabeth Trautman
+                </a>
+            </div>
+        </div>
     </div>
 
-    <!-- page title -->
-    <h1>{{ page.title }}</h1>
+    <div class='row-fluid'>
+        <div>
+            <!-- page title -->
+            <h1>{{ page.title }}</h1>
+        </div>
 
-    <!-- main content title -->
-    <div>
-        {{ page.content }}
+        <!-- main content title -->
+        <div>
+            {{ page.content }}
+        </div>
     </div>
 
 {% endblock %}

@@ -1,17 +1,21 @@
 {# Base template #}
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html lang="en">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
     <head>
+        <meta charset="utf-8">
         <title>{{ page.title }} &laquo; {{ site.title }}</title>
 
         <!-- CSS imports -->
-        <link rel="stylesheet" type='text/css' href='/css/bootstrap.min.css'/>
         <link href='http://fonts.googleapis.com/css?family=Orbitron:700,900&v2'
                 rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type='text/css' href='/css/pygments.css'/>
+        <link rel="stylesheet" type='text/css' 
+                href='/css/pygments.css'/>
+
+        <link rel="stylesheet" type='text/css'
+                href='/css/bootstrap.min.css'/>
+        <link rel="stylesheet" type='text/css'
+                href='/css/base.css'/>
         <link rel="stylesheet" type='text/css'
                 href='/css/bootstrap-responsive.min.css'/>
 
@@ -20,9 +24,15 @@
 
         <!-- Google Analytics -->   
         <script>
+<<<<<<< HEAD
             /* Google Analytics tracking code. Official docs recommend placing
             at the bottom of </head> instead of at the bottom of the body with
             the rest of the JavaScript.
+=======
+            /* Google Analytics tracking code. Official docs recommend
+            placing at the bottom of </head> instead of at the bottom
+            of the body with the rest of the JavaScript.
+>>>>>>> 8366138a63c578fc99179103177e00095ec24ef2
             */
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-17987944-2']);
@@ -44,6 +54,7 @@
     </head>
 
     <body>
+<<<<<<< HEAD
         <div id='body-wrap'>
 
             <!-- Header -->
@@ -105,6 +116,77 @@
                 </tr>
             </div>
         </div>
+=======
+        <!-- Navbar -->
+        <div id='navbar' class='navbar navbar-fixed-top'>
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="/">
+                        Rob McGuire-Dale
+                    </a>
+                    <ul class="nav pull-right">
+                        <li>
+                            <a id='home' href='/'>
+                                home
+                            </a>
+                        </li>
+                        <li>
+                            <a id='blog' href='/blog'>
+                                blog
+                            </a>
+                        </li>
+                        <li>
+                            <a id='resume' href='/docs/resume.pdf'>
+                                r&eacute;sum&eacute;
+                            </a>
+                        </li>
+                        <li>
+                            <a id='contact' href='/contact'>
+                                contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div id='content' class='container'>
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <!-- Footer -->
+        <footer class='footer'>
+            <div class='footer-inner container'>
+                <div class='row-fluid'>
+                    <p class='pull-right'>
+                        Fork me on 
+                        <a href="http://github.com/robatron/robmd.net">
+                        GitHub</a>
+                    </p>
+
+                    <p>
+                        Powered by
+                        <a href="https://github.com/mythmon/wok">
+                        wok</a>
+                    </p>
+
+                    <p class='pull-right'>
+                        &copy; Copyright
+                        <a href="http://robmd.net/">
+                            Rob McGuire-Dale
+                        </a>
+                    </p>
+
+                    <p>
+                        Last generated at
+                        {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}
+                    </p>
+                </div>
+            </div>
+        </footer>
+>>>>>>> 8366138a63c578fc99179103177e00095ec24ef2
 
         <!-- JavaScript -->
         <script src="https://www.google.com/jsapi"></script>
@@ -127,7 +209,12 @@
                 /* Highlight specified menu item
                 */
 
+<<<<<<< HEAD
                 $("#menu #"+menu_id).attr('id', 'selected');
+=======
+                $('#navbar .nav li a#'+menu_id).parent('li')
+                        .attr('class', 'active');
+>>>>>>> 8366138a63c578fc99179103177e00095ec24ef2
             }
         </script>
     </body>
