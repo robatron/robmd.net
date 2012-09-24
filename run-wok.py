@@ -1,19 +1,23 @@
 #!/usr/bin/env python
+
+'''
+Run Wok from the pymods directory for portability purposes
+'''
+
 import sys
 import os
 
 PYMOD_DIR = 'pymods'
 MODULES = [
-    'wok',
+    'wok-0.9.0',
     os.path.join('PyYAML-3.10', 'lib'),
     'Markdown-2.2.0',
     'Jinja2-2.6',
-
 ]
 
 for module in MODULES:
-    sys.path.append(os.path.join(os.getcwd(), PYMOD_DIR, module))
+    mod_dir = os.path.join(os.getcwd(), PYMOD_DIR, module)
+    sys.path.append(mod_dir)
 
 from wok.engine import Engine
 Engine()
-
