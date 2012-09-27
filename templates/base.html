@@ -56,10 +56,12 @@
                 rel='stylesheet' type='text/css'>
         <link href="/css/prettify-r187.min.css" type="text/css" 
                 rel="stylesheet" />
+
         <link href='/css/bootstrap-2.1.1.min.css' type='text/css'
                 rel="stylesheet" />
         <link href='/less/base.less' type='text/css'
                 rel="stylesheet/less"/>
+        {% block css %}{% endblock %}
         <link href='/css/bootstrap-responsive-2.1.1.min.css' 
                 type='text/css' rel="stylesheet"/>
 
@@ -93,7 +95,7 @@
                     s.parentNode.insertBefore(ga, s);
                 })()
             }
-    </script>
+        </script>
     </head>
 
     <body>
@@ -137,33 +139,33 @@
         </div>
 
         <!-- Footer -->
-        <footer class='footer'>
-            <div class='footer-inner container'>
-                <div class='row-fluid'>
+        <footer>
+            <div class='container'>
+                <div class='row'>
+                    <p class='span6'>
+                        Powered by
+                        <a href="https://github.com/mythmon/wok">
+                        wok</a>
+                    </p>
                     <p class='pull-right'>
                         Fork me on 
                         <a href="http://github.com/robatron/robmd.net">
                         GitHub</a>
                     </p>
+                </div>
 
-                    <p>
-                        Powered by
-                        <a href="https://github.com/mythmon/wok">
-                        wok</a>
+                <div class='row'>
+                    <p class='span6'>
+                        Last generated at
+                        {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}
                     </p>
-
                     <p class='pull-right'>
                         &copy; Copyright
                         <a href="http://robmd.net/">
                             Rob McGuire-Dale
                         </a>
                     </p>
-
-                    <p>
-                        Last generated at
-                        {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}
-                    </p>
-                </div>
+                </div>                
             </div>
         </footer>
 

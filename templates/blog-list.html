@@ -4,28 +4,33 @@
 
 {% block blog_content %}
 
-    <!-- blog list -->
     {% if page.subpages %}
         {% for page in page.subpages|sort(attribute='datetime', reverse=True) %}
-            {% if page.title_img_thumb %}
-                <a href='{{page.url}}'>
-                    <img class='title-img' 
-                        src='{{page.title_img_thumb}}'
-                        alt='Thumnail for "{{page.title}}"'>
-                </a>
-            {% endif %}
-            <p class='pull-right'>
-                <h3>{{page.title}}</h3>
-                <div class='snippet'>
+            
+            <div class='row'>
+                <div class='span3'>
+                    <div class='thumbnail'>
+                        {% if page.title_img_thumb %}
+                            <a href='{{page.url}}'>
+                                <img src="http://placehold.it/300x200"
+                                        alt='Thumbnail for "{{page.title}}"'>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class='span5'>
+                    <a href='{{page.url}}'>
+                        <h3>{{page.title}}</h3>
+                    </a>
+                    
                     {% if page.snippet %}
                         {{ page.snippet|truncate(length=200) }}
                         <a href='{{page.url}}'>
-                            <!-- "Much greater than" symbol -->
-                            &raquo;
+                            More &raquo;
                         </a>
                     {% endif %}
                 </div>
-            </p>
+            </div>
 
             <!-- div class='article {% if loop.last %}last{% endif %}'>
                 <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
@@ -76,4 +81,5 @@
     {% else %}
         <p> No blog entries to display :-(</p>
     {% endif %}
+
 {% endblock %}

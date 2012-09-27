@@ -42,8 +42,9 @@
 {%- endmacro %}
 
 {# Import blog-specific CSS styles #}
-{% block head %}
-    <!-- link rel='stylesheet' type='text/css' href='/sass/blog.css'/ -->
+{% block css %}
+    <link href='/less/blog.less' type='text/css' 
+            rel="stylesheet/less"/>
 {% endblock %}
 
 {# JavaScript #}
@@ -103,8 +104,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class='row-fluid'>
-        <div class='span4 pull-right'>
+    <div class='row'>
+        <div class='span4'>
 
             <!-- Blog filtering -->
             <ul class='nav nav-list'>
@@ -143,7 +144,7 @@
             </ul>
         </div>
 
-        <div id="content" class='span8'>
+        <div id='blog-content' class='span8'>
             {% block blog_content %}{% endblock %}
         </div>
     </div>

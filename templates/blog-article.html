@@ -4,10 +4,6 @@
 
 {% block blog_content %}
     <div id='article'>
-        <div id='article-header'>
-            <a href='/blog'>&laquo; Back to blog list</a>
-        </div>
-
         {% if page.title_img_full %}
             <div id='title-img-wrap'>
                 <a href='{{ page.title_img_full }}'>
@@ -16,6 +12,10 @@
                 </a>
             </div>
         {% endif %}
+
+        <div id='article-header'>
+            <a href='/blog'>&laquo; Back to blog list</a>
+        </div>
 
         <div id='title-bar'>
             <h1 id='title'>
@@ -57,7 +57,7 @@
         <noscript>
             Please enable JavaScript to view the 
             <a href="http://disqus.com/?ref_noscript">
-                comments powered by Disqus.<
+                comments powered by Disqus.
             </a>
         </noscript>
 

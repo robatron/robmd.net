@@ -2,7 +2,20 @@
 */
 
 @bodypad: 40px;
-@maxwidth: 940px;
+@maxwidth: 960px;
+
+#navbar {
+    margin-bottom: 0px;
+}
+
+@media (max-width: 979px) {
+    /* See media queries at
+    http://twitter.github.com/bootstrap/scaffolding.html#responsive
+    */
+    #content {
+        padding-top: 0px !important;
+    }
+}
 
 #content {
     padding-top: @bodypad;
@@ -32,14 +45,14 @@
     }
 }
 
-.footer {
+footer {
     margin-top: 50px;
     padding-top: 20px;
     padding-bottom: 10px;
     border-top: 1px solid #E5E5E5;
     background-color: whiteSmoke;
 
-    .footer-inner {
+    .container {
         max-width: @maxwidth;
     }
 }
