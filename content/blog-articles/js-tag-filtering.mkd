@@ -16,10 +16,11 @@ It works like this: When the [blog-list page][blog-list-page] is rendered,
 each blog article snippet is wrapped in a `div` with class names equal to the 
 article's tags:
 
-    ::HTML
+<pre class='prettyprint lang-html'>
     <div class='tag1 tag2 tag3'>
         <!-- article snippet -->
     </div>
+</pre>
 
 [blog-list-page]: https://github.com/robatron/robmd.net/blob/f33250244660ba25f05c291352f6f901dee9af1f/templates/blog-list.html
 
@@ -29,7 +30,7 @@ tag is clicked, the associated click event is fired which hides all of the
 article snippets not belonging to that tag using a simple [jQuery][] select and 
 hide:
 
-    ::JavaScript
+<pre class='prettyprint'>
     $(".blog-item").each(function(index){
         if( $(this).find("." + tag).length ){
             // show the snippets that are tagged with `tag`
@@ -38,7 +39,7 @@ hide:
             // hide all the ones that aren't
             $(this).slideUp("slow");
         }
-    });
+</pre>
 
 [click-events]: https://github.com/robatron/robmd.net/blob/7a013ce1f0087e82419f1491ddf1db03faa645e9/templates/blog-base.html#L96
 [jquery]: http://jquery.com

@@ -1,0 +1,45 @@
+/* Base LESS CSS styles 
+*/
+
+@bodypad: 40px;
+@maxwidth: 940px;
+
+#content {
+    padding-top: @bodypad;
+    max-width: @maxwidth;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#navbar {
+    font-family: "Orbitron", sans-serif;
+    box-shadow: 0 1px 10px #888;
+
+    .navbar-inner {
+        background-image: none;
+
+        .brand{
+            font-size: 2.5em;
+            padding-left: 18px;
+        }
+
+        .container {
+            max-width: @maxwidth;
+
+            .nav {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-top: 1px solid #E5E5E5;
+    background-color: whiteSmoke;
+
+    .footer-inner {
+        max-width: @maxwidth;
+    }
+}

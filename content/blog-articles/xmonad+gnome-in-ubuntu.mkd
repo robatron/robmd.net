@@ -31,8 +31,9 @@ sometimes be quite a bit of stuff, i.e., 60-300 MiB.)
 [APT]:http://en.wikipedia.org/wiki/Advanced_Packaging_Tool
 [Haskell]:http://en.wikipedia.org/wiki/Haskell_%28programming_language%29
 
-    ::
+<pre class='prettyprint'>
     sudo apt-get install xmonad
+</pre>
 
 # Edit the default Xmonad GNOME session
 
@@ -43,7 +44,7 @@ this:
 
 [nautilus]:http://live.gnome.org/Nautilus
 
-    ::
+<pre class='prettyprint'>
     [GNOME Session]
     Name=Xmonad
     Required=windowmanager;panel;filemanager;
@@ -51,6 +52,7 @@ this:
     Required-panel=gnome-panel
     Required-filemanager=nautilus
     DefaultApps=gnome-settings-daemon;
+</pre>
 
 # Create a new X session
 
@@ -59,7 +61,7 @@ Now let's add a new X session entry for our GNOME/Xmonad hybrid. Copy
 `/usr/share/xsessions/xmonad-gnome.desktop` and make it look something like
 this:
 
-    ::
+<pre class='prettyprint'>
     [Desktop Entry]
     Encoding=UTF-8
     Name=GNOME/xmonad hybrid of amazingness
@@ -67,17 +69,19 @@ this:
     Exec=gnome-session --session=xmonad
     Icon=xmonad.png
     Type=XSession
+</pre>
 
 # Configure Xmonad
 
 Lastly, we'll need to configure Xmonad itself to work with GNOME. Create a
 configuration file at `~/.xmonad/xmonad.hs` and make it look like this: 
 
-    ::haskell
+<pre class='prettyprint lang-hs'>
     import XMonad
     import XMonad.Config.Gnome
 
     main = xmonad gnomeConfig
+</pre>
 
 *Note:* If you want to customize your config file, you'll need to extend the
 gnomeConfig structure. If you've never programmed in Haskell before, I suggest
@@ -86,7 +90,7 @@ looks:
 
 [hintro]:http://www.haskell.org/haskellwiki/Xmonad/Config_archive#Quick_Introductions_to_Haskell
 
-    ::haskell
+<pre class='prettyprint lang-hs'>
     import XMonad
     import XMonad.Config.Gnome
      
@@ -103,6 +107,7 @@ looks:
         terminal = config_terminal,
         focusFollowsMouse = config_focusFollowsMouse
     }
+</pre>
 
 # References
 
