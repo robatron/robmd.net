@@ -3,29 +3,22 @@ type: home
 url: /index.html
 ---
 
-<div class='row-fluid'>
-
+My name is Rob McGuire-Dale, and I am a graduate of 
 [Oregon State University][osu] with a Bachelor's Degree in
-[Computer Science][compsci]. I am currently working as a web developer and 
-Linux [system administrator][sysadmin] for [Boeing][] Web Collaboration
-Services.
+[Computer Science][compsci]. I am currently working as a web developer
+and Linux [system administrator][sysadmin] for [Boeing][] Web
+Technologies and Collaboration Services.
 
 [osu]:http://oregonstate.edu
 [compsci]:http://en.wikipedia.org/wiki/computer_science
-[boeing]: http://boeing.com	My name is Rob McGuire-Dale, and I am a graduate of 
-
+[boeing]: http://boeing.com
 [sysadmin]:http://en.wikipedia.org/wiki/system_administrator
 
-</div>
-
-<div class='row-fluid'>
-<div class='span6'>
-
-I prefer working with **Linux**, and my favorite languages are **JavaScript**
-and **Python**. I also have experience working with many other
-languages, libraries, frameworks, tools, and technologies including [jQuery][],
-[Backbone.js][], [Django][], [Git][], [HTML5][], [AJAX][], [JSON][],
-[SQLite][], Java, PHP, [Drupal][], and many more.
+I prefer working with **Linux**, and my favorite languages are 
+**JavaScript** and **Python**. I also have experience working with
+many other languages, libraries, frameworks, tools, and technologies
+including [jQuery][], [Backbone.js][], [Django][], [Git][], [HTML5][],
+[AJAX][], [JSON][], [SQLite][], Java, PHP, [Drupal][], and many more.
 
 [jquery]:http://jquery.org
 [backbone.js]:http://backbonejs.org
@@ -37,29 +30,20 @@ languages, libraries, frameworks, tools, and technologies including [jQuery][],
 [sqlite]:http://sqlite.org
 [drupal]:http://drupal.org
 
-</div>
-
-<div class='span6'>
-
 My **past gigs** include:
 
-- Computer security assessor ([pentester][], [white-hat hacker][whitehat]) for
-  Boeing Information Security
+- Computer security assessor ([pentester][], 
+  [white-hat hacker][whitehat]) for Boeing Information Security
 - Software developer for Boeing Manufacturing and Engineering
 - Software developer for the [Open Source Lab][osl]
-- Film editor and animation instructor at the [NW Film Center][nwfc] of the 
-  [Portlant Art Museum][pam]
+- Film editor and animation instructor at the [NW Film Center][nwfc]
+  of the [Portlant Art Museum][pam]
 
 [pentester]:http://en.wikipedia.org/wiki/Penetration_test
 [whitehat]:http://en.wikipedia.org/wiki/White_hat_(computer_security)
 [osl]:http://osuosl.org
 [nwfc]:http://nwfilm.org
 [pam]:http://portlandartmuseum.org
-
-</div>
-</div>
-
-<div class='row-fluid'>
 
 My **primary interests** include:
 
@@ -73,8 +57,6 @@ My **primary interests** include:
 [usability]:http://en.wikipedia.org/wiki/usability
 [internet]:/img/internet.jpg
 
-I also love running, rock climbing, mountaineering, tinkering with vehicles,
-and riding my bicycle. Most imporantly, I have an immense interest and
-curiosity about the world, which drives me to learn.
-
-</div>
+I also love running, rock climbing, mountaineering, tinkering with
+vehicles, and riding my bicycle. Most imporantly, I have an immense
+interest and curiosity about the world, which drives me to learn.
