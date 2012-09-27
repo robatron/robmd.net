@@ -1,0 +1,206 @@
+Version 0.10 (In development)
+----------------------------
+In which contributors rock.
+
+### Features
+-   The built in development server now auto reloads when files changes.
+    [robatron].
+-   A new contributed hook, `wok.contrib.hooks.compile_sass`, that does exactly
+    what it says on the tin [robatron].
+
+### Fixes
+-   The hook `site.output.post` is now only run once, not once per file.
+
+Version 0.9
+-----------
+In which things get interesting.
+
+### Features
+-   Site hooks, for arbitrary inserting python code into the rendering process.
+-   Add a documentation wok site.
+-   New template variable, `site.slugs`, to access pages in a url-agnostic way.
+-   Date, datetime, and time url variables.
+
+Version 0.8.2
+-------------
+In which we leave 1970.
+
+### Fixes
+-   Fix Github issue 62, in which the next page object was not set on the first
+    page of a two page group.
+-   Dates, datetimes, and times now have a default value of `None` instead of
+    the epoch time.
+
+Version 0.8.1
+-------------
+In which I document things.
+
+### Features
+-   New template variable, `site.slugs`, which is a dictionary from slugs to
+    pages.
+-   New variables for url generation: date, time, and datetime, which can be
+    used to make urls like "/blog/2012/01/26/new-wok-version"
+-   There is now a doc site, which is a simple wok site that explains how to
+    use wok, and serves as a simple example.
+
+Version 0.8
+-----------
+In which URLs get cleaner.
+
+### Features
+-   Pagination now has saner sorting defaults.
+-   Raw author objects will now print out nicely in templates.
+-   Added `make_file` metadata option.
+-   Previews can be specified, both as part of content, or metadata headers.
+-   Add option to not put "index.html" on the end of URLs, for prettification.
+
+### Fixes
+-   The `published` metadata option will now prevent pages from showing up in
+    any page's metadata, as intended.
+
+### Deprecated
+-   URL patterns should use {ext} instead of {type} to specify the extension
+    that was used on the template, because type is confusing, being the same
+    name as the metadata option that specifies the template to choose.
+
+Version 0.7
+-----------
+In which I deprecate my first featured.
+
+### Features
+-   Define tags and authors as YAML lists, instead of CSV.
+-   File format independence. Non-html files can now be generated.
+-   The options menu is a little more user friendly now. [robatron]
+
+### Fixes
+-   Pages without a YAML header won't break things now.
+-   Fixed date/time handling.
+
+### Deprecated
+-   The old way of doing comma separated tags and authors will continue to
+    work, but will be removed in 0.8.
+
+Version 0.6.3
+-------------
+In which git bisect is invaluable.
+
+### Fixes
+-   Somehow date handling got broken. Make it better.
+
+Version 0.6.2
+-------------
+In which wok stops stomping around.
+
+### Features
+-   Authors can now be a list of users.
+-   If the current directory doesn't appear to be a wok site, wok will refuse
+    to run.
+-   Change some logging message.
+
+### Fixes
+-   A pagination page that only has one page won't crash anymore.
+
+Version 0.6.1
+-------------
+In which wok gets a watch.
+### Features
+-   Added `page.date` and `page.time` template variables.
+
+### Fixes
+-   Make custom variables in pages not propagate to later pages.
+-   Make orphan pages only print an error, not throw an exception.
+
+Version 0.6
+-----------
+In which I tear out my hair.
+
+### Features
+-   Pagination
+
+### Other
+-   Now using Python's built in logging module.
+
+Version 0.5.1
+-------------
+In which pygments isn't required anymore.
+
+### Fixes
+-   Fix a bug related to optionally depending on pygments.
+-   Fix some output formatting.
+
+Version 0.5
+-----------
+In which the MIT license is applied.
+
+### Features
+-   The structure of the generated files is now user configurable.
+-   New configuration option: `author`. See docs for more info.
+-   Markdown, Pygments, and Docutils dependencies are now optional.
+-   Output from wok will now wrap to terminal windows.
+
+### Other
+-   The README now references some sample sites.
+-   Added a license. Wok is now officially open source!
+-   Tweaked output formats.
+-   Page metadata is now stored in a more consistent way.
+
+Version 0.4
+-----------
+In which things get more flexible.
+
+### Features
+-   Added a built in testing server, to easily test absolute links on the site.
+-   Add `--version` option.
+-   Added `site.pages`, a flat list of the pages of the site.
+-   Added `site.categories`, a dictionary:
+    `{top level categories : immediate children of that category}`.
+-   Added page.url field, settable in a page's header and accessible from
+    templates.
+-   Started adding unit tests.
+
+### Fixes
+-   Fix `Page.author` to actually parse author strings right.
+
+
+Version 0.3
+-----------
+In which things get brighter.
+
+-   Add optional syntax highlighting using [Pygments][pyg].
+-   Add tags for pages.
+-   Add `--verbose` (`-v`) and `--quiet` (`-q`) options to the script.
+
+[pyg]: http://pygments.org
+
+Version 0.2.2
+-------------
+In which I try to teach better.
+
+-   Improve the sample site.
+-   Enable syntax highlighting for Markdown.
+-   Fix requirements for PyPI/pip
+
+Version 0.2.1
+-------------
+In which I release what should have been v0.2.
+
+-   Add a sample site.
+-   Actually enable reStructuredText support.
+-   Don't try to parse hidden files.
+-   Fix datetime handling.
+-   Media directory is now optional.
+-   Make output files in a tree structure based on category.
+
+Version 0.2
+-----------
+In which MostAwesomeDude convinces me to add reStructured Text.
+
+-   Initial support for reStructuredText.
+-   Installable package.
+-   Bug fixes based on user feedback.
+
+Version 0.1
+-----------
+In which things start.
+
+-   First release.

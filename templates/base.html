@@ -7,17 +7,17 @@
         <title>{{ page.title }} &laquo; {{ site.title }}</title>
 
         <!-- CSS imports -->
-        <link href='http://fonts.googleapis.com/css?family=Orbitron:700,900&v2'
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans|Orbitron'
                 rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type='text/css' 
                 href='/css/pygments.css'/>
 
         <link rel="stylesheet" type='text/css'
-                href='/css/bootstrap.min.css'/>
+                href='/css/bootstrap-2.1.1.min.css'/>
         <link rel="stylesheet" type='text/css'
                 href='/css/base.css'/>
         <link rel="stylesheet" type='text/css'
-                href='/css/bootstrap-responsive.min.css'/>
+                href='/css/bootstrap-responsive-2.1.1.min.css'/>
 
         {# head slot for templates that include this base template #}
         {% block head %}{% endblock %}
@@ -120,9 +120,9 @@
 
         <!-- JavaScript -->
         <script src="https://www.google.com/jsapi"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        <script src="/js/lib/jquery-1.8.2.min.js">
         </script>
-        <script src='/js/bootstrap.min.js'></script>
+        <script src='/js/lib/bootstrap-2.1.1.min.js'></script>
         <script>
             {# Allow adding to the JavaScript initialization #}
             {% block js_init %}{% endblock %}

@@ -3,7 +3,8 @@ type: home
 url: /index.html
 ---
 
-My name is Rob McGuire-Dale, and I am a graduate of 
+<div class='row-fluid'>
+
 [Oregon State University][osu] with a Bachelor's Degree in
 [Computer Science][compsci]. I am currently working as a web developer and 
 Linux [system administrator][sysadmin] for [Boeing][] Web Collaboration
@@ -11,23 +12,14 @@ Services.
 
 [osu]:http://oregonstate.edu
 [compsci]:http://en.wikipedia.org/wiki/computer_science
-[boeing]: http://boeing.com
+[boeing]: http://boeing.com	My name is Rob McGuire-Dale, and I am a graduate of 
+
 [sysadmin]:http://en.wikipedia.org/wiki/system_administrator
 
-My **past gigs** include:
+</div>
 
-- Computer security assessor ([pentester][], [white-hat hacker][whitehat]) for
-  Boeing Information Security
-- Software developer for Boeing Manufacturing and Engineering
-- Software developer for the [Open Source Lab][osl]
-- Film editor and animation instructor at the [NW Film Center][nwfc] of the 
-  [Portlant Art Museum][pam]
-
-[pentester]:http://en.wikipedia.org/wiki/Penetration_test
-[whitehat]:http://en.wikipedia.org/wiki/White_hat_(computer_security)
-[osl]:http://osuosl.org
-[nwfc]:http://nwfilm.org
-[pam]:http://portlandartmuseum.org
+<div class='row-fluid'>
+<div class='span6'>
 
 I prefer working with **Linux**, and my favorite languages are **JavaScript**
 and **Python**. I also have experience working with many other
@@ -45,6 +37,30 @@ languages, libraries, frameworks, tools, and technologies including [jQuery][],
 [sqlite]:http://sqlite.org
 [drupal]:http://drupal.org
 
+</div>
+
+<div class='span6'>
+
+My **past gigs** include:
+
+- Computer security assessor ([pentester][], [white-hat hacker][whitehat]) for
+  Boeing Information Security
+- Software developer for Boeing Manufacturing and Engineering
+- Software developer for the [Open Source Lab][osl]
+- Film editor and animation instructor at the [NW Film Center][nwfc] of the 
+  [Portlant Art Museum][pam]
+
+[pentester]:http://en.wikipedia.org/wiki/Penetration_test
+[whitehat]:http://en.wikipedia.org/wiki/White_hat_(computer_security)
+[osl]:http://osuosl.org
+[nwfc]:http://nwfilm.org
+[pam]:http://portlandartmuseum.org
+
+</div>
+</div>
+
+<div class='row-fluid'>
+
 My **primary interests** include:
 
  - [Open source][opensource] software and community development
@@ -61,4 +77,4 @@ I also love running, rock climbing, mountaineering, tinkering with vehicles,
 and riding my bicycle. Most imporantly, I have an immense interest and
 curiosity about the world, which drives me to learn.
 
-[resume]:/docs/resume.pdf
+</div>

@@ -1,4 +1,0 @@
-#!/usr/bin/python2
-from wok.engine import Engine
-
-Engine()

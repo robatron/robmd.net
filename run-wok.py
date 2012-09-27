@@ -9,7 +9,7 @@ import os
 
 PYMOD_DIR = 'pymods'
 MODULES = [
-    'wok-0.9.0',
+    'wok-master',
     os.path.join('PyYAML-3.10', 'lib'),
     'Markdown-2.2.0',
     'Jinja2-2.6',
