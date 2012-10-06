@@ -35,14 +35,14 @@
         '   '  `
 
     Handcrafted by
-       ___         __ 
-      / _ \ ___   / / 
+       ___         __
+      / _ \ ___   / /
      / , _// _ \ / _ \
-    /_/|_| \___//_.__/                  
-       __  ___      _____       _                 ___         __    
-      /  |/  /____ / ___/__ __ (_)____ ___  ____ / _ \ ___ _ / /___ 
+    /_/|_| \___//_.__/
+       __  ___      _____       _                 ___         __
+      /  |/  /____ / ___/__ __ (_)____ ___  ____ / _ \ ___ _ / /___
      / /|_/ // __// (_ // // // // __// -_)/___// // // _ `// // -_)
-    /_/  /_/ \__/ \___/ \_,_//_//_/   \__/     /____/ \_,_//_/ \__/ 
+    /_/  /_/ \__/ \___/ \_,_//_//_/   \__/     /____/ \_,_//_/ \__/
 
          Providing a tiny dent in the fabric of spacetime since 1986
     -->
@@ -54,48 +54,20 @@
         <!-- CSS -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans|Orbitron'
                 rel='stylesheet' type='text/css'>
-        <link href="/css/prettify-r187.min.css" type="text/css" 
+        <link href="/css/prettify-r187.min.css" type="text/css"
                 rel="stylesheet" />
 
         <link href='/css/bootstrap-2.1.1.min.css' type='text/css'
                 rel="stylesheet" />
-        <link href='/less/base.less' type='text/css'
-                rel="stylesheet/less"/>
-        {% block css %}{% endblock %}
-        <link href='/css/bootstrap-responsive-2.1.1.min.css' 
-                type='text/css' rel="stylesheet"/>
+        <link href='/css/bootstrap-responsive-2.1.1.min.css' type='text/css'
+                rel="stylesheet"/>
+        <link href='/less/base.less' type='text/css' rel="stylesheet/less"/>
 
-        {# head slot for templates that include this base template #}
+        {# Style block for templates to include their own styles #}
+        {% block style %}{% endblock %}
+
+        {# Head slot for templates that include this base template #}
         {% block head %}{% endblock %}
-
-        <!-- Google Analytics -->   
-        <script>
-            // JavaScript settings
-            var PROD = false
-
-            if(PROD){
-                /* Google Analytics tracking code. Official docs recommend
-                placing at the bottom of </head> instead of at the bottom
-                of the body with the rest of the JavaScript.
-                */
-                var _gaq = _gaq || [];
-                _gaq.push(['_setAccount', 'UA-17987944-2']);
-                _gaq.push(['_setDomainName', '.robmd.net']);
-                _gaq.push(['_setAllowHash', 'false']);
-                _gaq.push(['_trackPageview']);
-                (function() {
-                    var ga = document.createElement('script');
-                    ga.type = 'text/javascript'; ga.async = true;
-                    if(document.location.protocol == 'https:'){
-                        ga.src = 'https://ssl.google-analytics.com/ga.js';
-                    } else {
-                        ga.src = 'http://www.google-analytics.com/ga.js';
-                    }
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(ga, s);
-                })()
-            }
-        </script>
     </head>
 
     <body>
@@ -148,7 +120,7 @@
                         wok</a>
                     </p>
                     <p class='pull-right'>
-                        Fork me on 
+                        Fork me on
                         <a href="http://github.com/robatron/robmd.net">
                         GitHub</a>
                     </p>
@@ -165,7 +137,7 @@
                             Rob McGuire-Dale
                         </a>
                     </p>
-                </div>                
+                </div>
             </div>
         </footer>
 
@@ -177,18 +149,32 @@
         <script src="/js/lib/jquery-1.8.2.min.js"></script>
         <script src='/js/lib/bootstrap-2.1.1.min.js'></script>
         <script>
+            // Settings
+            // ========
+            var PROD = false
 
+            // Init
+            // ====
             function highlight_syntax(){
-                /* Highlight syntax with Google Prettify, and excape
-                   any HTML classed with 'lang-html'
+                /* Highlight syntax with Google Prettify, and excape any HTML
+                classed with 'lang-html'
                 */
                 $('.lang-html').text($('.lang-html').html())
                 prettyPrint()
             }
 
-            {# Allow adding to the JavaScript initialization #}
+            function menu_highlight(menu_id){
+                /* Highlight specified menu item
+                */
+                $('#navbar .nav li a#'+menu_id).parent('li')
+                        .attr('class', 'active')
+            }
+
+            {# JavaScript init block for templates to include thier own JS #}
             {% block js_init %}{% endblock %}
 
+            // Doc ready
+            // =========
             $(function(){
                 /* Run when the document is ready
                 */
@@ -199,12 +185,30 @@
                 {% block js_doc_ready %}{% endblock %}
             });
 
-            function menu_highlight(menu_id){
-                /* Highlight specified menu item
+            // Google Analytics
+            // ================
+            if(PROD){
+                /* Google Analytics tracking code. Official docs recommend
+                placing at the bottom of </head>, but practice calls for
+                placing the JS at the bottom of the body.
                 */
+                var _gaq = _gaq || []
+                _gaq.push(['_setAccount', 'UA-17987944-2'])
+                _gaq.push(['_setDomainName', '.robmd.net'])
+                _gaq.push(['_setAllowHash', 'false'])
+                _gaq.push(['_trackPageview'])
 
-                $('#navbar .nav li a#'+menu_id).parent('li')
-                        .attr('class', 'active');
+                (function(){
+                    var ga = document.createElement('script')
+                    ga.type = 'text/javascript'; ga.async = true
+                    if(document.location.protocol == 'https:'){
+                        ga.src = 'https://ssl.google-analytics.com/ga.js'
+                    } else {
+                        ga.src = 'http://www.google-analytics.com/ga.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(ga, s)
+                })()
             }
         </script>
     </body>

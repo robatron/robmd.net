@@ -17,7 +17,7 @@
 {# Tag link macro #}
 {# Build a link for a tag, link to its hashed name #}
 {% macro tag_link(tag, label=None) -%}
-    <a href='/blog/#{{ nospace(tag) }}' class='tag-link' 
+    <a href='/blog/#{{ nospace(tag) }}' class='tag-link'
             data-tags='{{ nospace(tag) }}'>
         {% if label %}
             {{ label }}
@@ -42,9 +42,8 @@
 {%- endmacro %}
 
 {# Import blog-specific CSS styles #}
-{% block css %}
-    <link href='/less/blog.less' type='text/css' 
-            rel="stylesheet/less"/>
+{% block style %}
+    <link href='/less/blog.less' type='text/css' rel="stylesheet/less"/>
 {% endblock %}
 
 {# JavaScript #}
@@ -100,52 +99,54 @@
         if(window.location.hash){
             filter_by_tag(window.location.hash.slice(1));
         }
-    }(); 
+    }();
 {% endblock %}
 
 {% block content %}
-    <div class='row'>
-        <div class='span4'>
+    <div id='blog-base'>
+        <div class='row'>
+            <div class='span4'>
 
-            <!-- Blog filtering -->
-            <ul class='nav nav-list'>
+                <!-- Blog filtering -->
+                <ul id='filter-list' class='nav nav-list'>
 
-                <!-- Show all -->
-                <li id='show-all'>
-                    <a href='/blog/#'>
-                        Show all
-                        ({{ site.categories['blog']|length }})
-                    </a>
-                </li>
-
-                <!-- Tags -->
-                <li class='nav-header'>
-                    Tags
-                </li>
-
-                {% for tag in site.tags|sort %}
-                    <li>
-                        {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")") }} 
-                    </li>
-                {% endfor %}
-
-                <!-- Recent posts -->
-                <li class='nav-header'>
-                    Recent posts
-                </li>
-
-                {% for post in site.categories['blog']|sort(attribute='datetime', reverse=True) %}
-                    <li>
-                        <a href='{{ post.url }}'>
-                            {{ post.title }}
+                    <!-- Show all -->
+                    <li id='show-all'>
+                        <a href='/blog/#'>
+                            Show all
+                            ({{ site.categories['blog']|length }})
                         </a>
                     </li>
-                {% endfor %}
-            </ul>
-        </div>
 
-        <div id='blog-content' class='span8'>
-            {% block blog_content %}{% endblock %}
+                    <!-- Tags -->
+                    <li class='nav-header'>
+                        Tags
+                    </li>
+
+                    {% for tag in site.tags|sort %}
+                        <li>
+                            {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")") }}
+                        </li>
+                    {% endfor %}
+
+                    <!-- Recent posts -->
+                    <li class='nav-header'>
+                        Recent posts
+                    </li>
+
+                    {% for post in site.categories['blog']|sort(attribute='datetime', reverse=True) %}
+                        <li>
+                            <a href='{{ post.url }}'>
+                                {{ post.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div id='blog-content' class='span8'>
+                {% block blog_content %}{% endblock %}
+            </div>
         </div>
     </div>
 {% endblock %}
