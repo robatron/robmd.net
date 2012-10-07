@@ -1,7 +1,10 @@
 /* Blog-specific LESS CSS
 */
 
+@gutter: 20px;
+
 #blog-base {
+    padding-top: @gutter * 2;
 
     #filter-list {
         padding-left:0px;
@@ -9,5 +12,23 @@
 
     #blog-content {
         margin-left: 0px;
+    }
+}
+
+#blog-list {
+    .blog-post {
+        margin-bottom: @gutter;
+    }
+
+    .summary {
+        a:hover {
+            text-decoration: none;
+        }
+
+        .title {
+            margin-top: 0px;
+            padding-top: 0px;
+            line-height: 20px;
+        }
     }
 }
