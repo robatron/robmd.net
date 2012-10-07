@@ -55,8 +55,8 @@
     // ==================
 
     function filter_by_tag(tag){
-        /* Remove all blog posts that aren't tagged with `tag`, show
-        all that are. Ignore blank tag names.
+        /* Remove all blog posts that aren't tagged with `tag`, show all that
+        are. Ignore blank tag names.
         */
 
         if(tag){
@@ -79,6 +79,15 @@
             });
         }
     }
+
+    function highlight_filter_link(tag){
+        /* Activate the current filter link, deactivate all others in the
+        filter list.
+        */
+        var $link = $('#filter-list .filter-link[tag="' + tag + '"]')
+        $('#filter-list li').removeClass('active')
+        $link.addClass('active')
+    }
 {% endblock %}
 
 {# JavaScript to run when document is ready #}
@@ -91,7 +100,9 @@
     // =============
 
     $('.tag-link').click(function(){
-        filter_by_tag($(this).attr('tag'))
+        var tag = $(this).attr('tag')
+        filter_by_tag(tag)
+        highlight_filter_link(tag)
     });
 
     var filter_on_hash = function(){
@@ -117,7 +128,7 @@
                 <ul id='filter-list' class='nav nav-list'>
 
                     <!-- Show all -->
-                    <li id='show-all'>
+                    <li id='show-all' class='active'>
                         <a href='/blog'>
                             Show all
                             ({{ site.categories['blog']|length }})
@@ -132,7 +143,7 @@
                     </li>
 
                     {% for tag in site.tags|sort %}
-                        <li>
+                        <li class='filter-link' tag='{{tag}}'>
                             {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")") }}
                         </li>
                     {% endfor %}
