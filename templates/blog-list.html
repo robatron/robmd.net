@@ -8,36 +8,45 @@
             {% for page in page.subpages|sort(attribute='datetime', reverse=True) %}
 
                 <div class='blog-post row'
-                        data-tags='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
+                        tags='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
+
                     <div class='span3'>
-                        <div class='thumbnail'>
-                            {% if page.title_img_thumb %}
+                        {% if page.title_img_thumb %}
+                            <div class='thumbnail'>
                                 <a href='{{page.url}}'>
                                     <!-- img src="http://placehold.it/300x200"
                                     -->
                                     <img src='{{page.title_img_thumb}}'
                                             alt='Thumbnail for "{{page.title}}"'>
                                 </a>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class='summary span6'>
+
+                        <div class='title'>
+                            <a href='{{page.url}}'>
+                                <h3>{{page.title}}</h3>
+                            </a>
+                        </div>
+
+                        <div class='subtitle muted'>
+                            {{page.date}}
+
+                            {% if page.tags %}
+                                | in {{ tag_list(page.tags) }}
                             {% endif %}
                         </div>
-                    </div>
-                    <div class='summary span6'>
-                        <a href='{{page.url}}'>
-                            <h3 class='title'>{{page.title}}</h3>
-                        </a>
 
                         {% if page.snippet %}
                             {{ page.snippet|truncate(length=200) }}
                             <a href='{{page.url}}'>
-                                More &raquo;
+                                more &raquo;
                             </a>
                         {% endif %}
                     </div>
                 </div>
-
-                {% if not loop.last %}
-                    <hr>
-                {% endif %}
 
                 <!-- div class='article {% if loop.last %}last{% endif %}'>
                     <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>

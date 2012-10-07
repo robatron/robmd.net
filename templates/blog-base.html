@@ -17,12 +17,11 @@
 {# Tag link macro #}
 {# Build a link for a tag, link to its hashed name #}
 {% macro tag_link(tag, label=None) -%}
-    <a href='/blog/#{{ nospace(tag) }}' class='tag-link'
-            data-tags='{{ nospace(tag) }}'>
+    <a href='/blog/#{{nospace(tag)}}' class='tag-link' tag='{{nospace(tag)}}'>
         {% if label %}
-            {{ label }}
+            {{label}}
         {% else %}
-            {{ tag }}
+            {{tag}}
         {% endif %}
     </a>
 {%- endmacro %}
@@ -32,11 +31,11 @@
 {% macro tag_list(tags) -%}
     {% for tag in tags %}
         {% if loop.length == 1 %}
-            {{ tag_link(tag) }}
+            {{tag_link(tag)}}
         {% elif not loop.last %}
-            {{ tag_link(tag) }},
+            {{tag_link(tag)}},
         {% else %}
-            and {{ tag_link(tag) }}
+            and {{tag_link(tag)}}
         {% endif %}
     {% endfor %}
 {%- endmacro %}
@@ -51,46 +50,48 @@
 
 {# JavaScript to run before document loads #}
 {% block js_init %}
-    // Tag filtering (pre-load)
-    // ------------------------
+
+    // Tag filtering init
+    // ==================
+
     function filter_by_tag(tag){
         /* Remove all blog posts that aren't tagged with `tag`, show
-         * all that are. Ignore blank tag names.
-         */
+        all that are. Ignore blank tag names.
+        */
 
-        if(!tag == ""){
-            $(".article").each(function(index){
-                if( $(this).find("." + tag).length ){
-                    $(this).slideDown("slow");
+        if(tag){
+            $('.blog-post').each(function(index){
+                var tags = $(this).attr('tags').split(' ')
+                var has_tag = false
+
+                for(var i in tags){
+                    if(tags[i] === tag){
+                        has_tag = true
+                        break
+                    }
+                }
+
+                if(has_tag) {
+                    $(this).slideDown("slow")
                 } else {
-                    $(this).slideUp("slow");
+                    $(this).slideUp("slow")
                 }
             });
         }
-    }
-
-    function show_all(){
-        /* Show all blog posts
-         */
-
-        $(".article").slideDown("slow");
     }
 {% endblock %}
 
 {# JavaScript to run when document is ready #}
 {% block js_doc_ready %}
+
     // Highlight the 'blog' menu item
     menu_highlight('blog');
 
-    // Tag filtering (post-load)
-    // -------------------------
+    // Tag filtering
+    // =============
 
-    $(".tag-link").click(function(){
-        filter_by_tag($(this).find("a").attr('class'));
-    });
-
-    $("#sidebar #show-all").click(function(){
-        show_all();
+    $('.tag-link').click(function(){
+        filter_by_tag($(this).attr('tag'))
     });
 
     var filter_on_hash = function(){
@@ -105,18 +106,25 @@
 {% block content %}
     <div id='blog-base'>
         <div class='row'>
-            <div class='span3'>
 
-                <!-- Blog filtering -->
+            <!-- Blog content -->
+            <div id='blog-content' class='span9'>
+                {% block blog_content %}{% endblock %}
+            </div>
+
+            <!-- Blog filtering -->
+            <div class='span3'>
                 <ul id='filter-list' class='nav nav-list'>
 
                     <!-- Show all -->
                     <li id='show-all'>
-                        <a href='/blog/#'>
+                        <a href='/blog'>
                             Show all
                             ({{ site.categories['blog']|length }})
                         </a>
                     </li>
+
+                    <li class="divider"></li>
 
                     <!-- Tags -->
                     <li class='nav-header'>
@@ -128,6 +136,8 @@
                             {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")") }}
                         </li>
                     {% endfor %}
+
+                    <li class="divider"></li>
 
                     <!-- Recent posts -->
                     <li class='nav-header'>
@@ -142,10 +152,6 @@
                         </li>
                     {% endfor %}
                 </ul>
-            </div>
-
-            <div id='blog-content' class='span9'>
-                {% block blog_content %}{% endblock %}
             </div>
         </div>
     </div>

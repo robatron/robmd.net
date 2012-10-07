@@ -5,30 +5,34 @@
 
 #blog-base {
     padding-top: @gutter * 2;
-
-    #filter-list {
-        padding-left:0px;
-    }
-
-    #blog-content {
-        margin-left: 0px;
-    }
 }
 
 #blog-list {
-    .blog-post {
-        margin-bottom: @gutter;
-    }
 
-    .summary {
-        a:hover {
-            text-decoration: none;
+    .blog-post {
+        margin-bottom: @gutter * 2;
+
+        .thumbnail {
+            box-shadow: 3px 4px 6px 1px #AAA;
         }
 
-        .title {
-            margin-top: 0px;
-            padding-top: 0px;
-            line-height: 20px;
+        .summary {
+            .title {
+                a:hover {
+                    text-decoration: none;
+                }
+
+                h3 {
+                    margin-top: 0px;
+                    padding-top: 0px;
+                    line-height: 20px;
+                }
+            }
+
+            .subtitle {
+                font-size: 0.9em;
+                margin-bottom: 5px;
+            }
         }
     }
 }
