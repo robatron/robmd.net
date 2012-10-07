@@ -1,26 +1,16 @@
 /* Base LESS CSS styles
 */
 
-@bodypad: 40px;
+@bodypad: 0px;
+
+@light_brown: #798390;
 
 #navbar {
     margin-bottom: 0px;
     box-shadow: none;
 
-    .navbar-inner {
-        box-shadow: none;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-    }
-}
-
-@media (max-width: 979px) {
-    /* See media queries at
-    http://twitter.github.com/bootstrap/scaffolding.html#responsive
-    */
-    #content {
-        padding-top: 0px !important;
-    }
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 255)), to(rgba(255, 255, 255, 250)));
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 255), rgba(255, 255, 255, 0));
 }
 
 #content {
@@ -29,12 +19,16 @@
 }
 
 #navbar {
-    /*opacity: 0.8; */
+    opacity: 0.9;
+    margin-bottom: 0px;
+
     font-family: "Orbitron", sans-serif;
-    /* box-shadow: 0 1px 10px #888; */
 
     .navbar-inner {
         background-image: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
 
         .brand{
             font-size: 2.5em;
