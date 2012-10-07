@@ -1,17 +1,8 @@
 /* Base LESS CSS styles
 */
 
-@bodypad: 0px;
-
+@bodypad: 40px;
 @light_brown: #798390;
-
-#navbar {
-    margin-bottom: 0px;
-    box-shadow: none;
-
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 255)), to(rgba(255, 255, 255, 250)));
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 255), rgba(255, 255, 255, 0));
-}
 
 #content {
     padding-top: @bodypad;
@@ -19,13 +10,16 @@
 }
 
 #navbar {
-    opacity: 0.9;
+    /* opacity: 0.8; */
     margin-bottom: 0px;
+    box-shadow: none;
 
     font-family: "Orbitron", sans-serif;
 
     .navbar-inner {
+        /* background-color: transparent; */
         background-image: none;
+
         box-shadow: none;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
