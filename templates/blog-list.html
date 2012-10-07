@@ -2,19 +2,20 @@
 
 {% extends "blog-base.html" %}
 
-
-
 {% block blog_content %}
     <div id='blog-list'>
         {% if page.subpages %}
             {% for page in page.subpages|sort(attribute='datetime', reverse=True) %}
 
-                <div class='blog-post row'>
+                <div class='blog-post row'
+                        data-tags='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
                     <div class='span3'>
                         <div class='thumbnail'>
                             {% if page.title_img_thumb %}
                                 <a href='{{page.url}}'>
-                                    <img src="http://placehold.it/300x200"
+                                    <!-- img src="http://placehold.it/300x200"
+                                    -->
+                                    <img src='{{page.title_img_thumb}}'
                                             alt='Thumbnail for "{{page.title}}"'>
                                 </a>
                             {% endif %}
@@ -26,13 +27,17 @@
                         </a>
 
                         {% if page.snippet %}
-                            {{ page.snippet|truncate(length=300) }}
+                            {{ page.snippet|truncate(length=200) }}
                             <a href='{{page.url}}'>
                                 More &raquo;
                             </a>
                         {% endif %}
                     </div>
                 </div>
+
+                {% if not loop.last %}
+                    <hr>
+                {% endif %}
 
                 <!-- div class='article {% if loop.last %}last{% endif %}'>
                     <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>

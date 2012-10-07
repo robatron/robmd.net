@@ -5,7 +5,7 @@ import re
 
 # default image sizes
 TITLE_IMG_SIZE = 719        # Size of the title image
-THUMBNAIL_IMG_SIZE = 100    # Size of thumbnails
+THUMBNAIL_IMG_SIZE = 300    # Size of thumbnails
 ARTICLE_IMG_SIZE = 480      # Size of article images
 
 def process_picasaweb_images(pages):
@@ -22,18 +22,18 @@ def process_picasaweb_images(pages):
 
 
     def process_title_image(page, title_size, thumbnail_size):
-        ''' For a single blog article in `page`, process the `title_img_src` 
-        meta variable from Picasa Web Albums, if it exists, and create three 
+        ''' For a single blog article in `page`, process the `title_img_src`
+        meta variable from Picasa Web Albums, if it exists, and create three
         new meta variables for use in the templates:
 
-            `title_img_full`:   Full-sized version of the image 
+            `title_img_full`:   Full-sized version of the image
             `title_img_title`:  Title image-size version
             `title_img_thumb`:  Tiny version for use with thumbnails
         '''
 
         try:
             src = page.meta['title_img_src']
-            src_full, src_title = split_picasaweb_src(src, title_size) 
+            src_full, src_title = split_picasaweb_src(src, title_size)
             src_full, src_thumb = split_picasaweb_src(src, thumbnail_size)
 
             # insert the new variables for the template
@@ -52,8 +52,8 @@ def process_picasaweb_images(pages):
         of the image.
 
         Picasa Web Album image source URLs should be denoted by 'picasa-img:'
-        followed by the URL on their own line in the content file of the blog 
-        article, e.g., 
+        followed by the URL on their own line in the content file of the blog
+        article, e.g.,
 
             picasaweb-img: https://googleusercontent.com/foo/s144/bar.png
 
@@ -81,7 +81,7 @@ def process_picasaweb_images(pages):
             find = PICASAWEB_IMG_FIND%(match)
             replace = PICASAWEB_IMG_REPL%(src_full, src_resized)
 
-            content = re.sub(find, replace, content, flags=re.MULTILINE) 
+            content = re.sub(find, replace, content, flags=re.MULTILINE)
 
         # write the modified content back to the page
         page.meta['content'] = content
@@ -89,10 +89,10 @@ def process_picasaweb_images(pages):
 
     def split_picasaweb_src(src, size):
         ''' Split a Picasa Web Album's image URL source into two sizes: full,
-        and the specified `size`. 
-        
+        and the specified `size`.
+
         The source URL should look something like:
-            
+
             https://googleusercontent.com/foo/s144/bar.png
 
         A tuple will be returned with the full and resized versions, e.g.,
@@ -103,7 +103,7 @@ def process_picasaweb_images(pages):
 
         src_split = src.split('/')
 
-        # get the URL portion before and after the 'size' property 
+        # get the URL portion before and after the 'size' property
         # denoted by /s<number>/ in the source URL
         src_before_size = '/'.join(src_split[:-2])
         src_after_size = src_split[-1]
@@ -112,7 +112,7 @@ def process_picasaweb_images(pages):
         src_full= "%s/s%s/%s"%(src_before_size, 0, src_after_size)
         src_resized = "%s/s%s/%s"%(src_before_size, size, src_after_size)
 
-        # return the full and resized versions of the source URL 
+        # return the full and resized versions of the source URL
         return (src_full, src_resized)
 
 
