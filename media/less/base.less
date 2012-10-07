@@ -2,10 +2,16 @@
 */
 
 @bodypad: 40px;
-/* @maxwidth: 960px; */
 
 #navbar {
     margin-bottom: 0px;
+    box-shadow: none;
+
+    .navbar-inner {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+    }
 }
 
 @media (max-width: 979px) {
@@ -19,13 +25,12 @@
 
 #content {
     padding-top: @bodypad;
-    /* max-width: @maxwidth; */
     font-family: 'Open Sans', sans-serif;
 }
 
 #navbar {
     font-family: "Orbitron", sans-serif;
-    box-shadow: 0 1px 10px #888;
+    /* box-shadow: 0 1px 10px #888; */
 
     .navbar-inner {
         background-image: none;
@@ -36,8 +41,6 @@
         }
 
         .container {
-            /* max-width: @maxwidth; */
-
             .nav {
                 margin-right: 0px;
             }
@@ -51,8 +54,4 @@ footer {
     padding-bottom: 10px;
     border-top: 1px solid #E5E5E5;
     background-color: whiteSmoke;
-
-    .container {
-        /* max-width: @maxwidth; */
-    }
 }
