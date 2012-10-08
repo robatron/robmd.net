@@ -49,6 +49,8 @@
 
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>{{ page.title }} &raquo; {{ site.title }}</title>
 
         <!-- CSS -->
@@ -75,10 +77,17 @@
         <div id='navbar' class='navbar navbar-fixed-top'>
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand" href="/">
-                        Rob McGuire-Dale
+
+                    <a class='brand' href='/'>
+                        <div class='hidden-phone'>
+                            Rob McGuire-Dale
+                        </div>
+                        <div class='visible-phone'>
+                            Rob M.-D.
+                        </div>
                     </a>
-                    <ul class="nav pull-right">
+
+                    <ul class='nav pull-right'>
                         <li>
                             <a id='home' href='/'>
                                 home

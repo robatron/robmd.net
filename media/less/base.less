@@ -1,8 +1,35 @@
 /* Base LESS CSS styles
 */
 
+/* Bootstrap media queries
+   =======================
+*/
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}
+
+
 #content {
-    padding-top: 40px;
+
+    /* Add a padding to push below the sticky navbar */
+    @media (min-width: 980px) {
+        padding-top: 40px;
+    }
+
     font-family: 'Open Sans', sans-serif;
 }
 
