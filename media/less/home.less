@@ -2,28 +2,27 @@
 */
 
 #home {
-    h1, h2, h3, h4, h5 {
-        margin-top: 0px;
-        -webkit-margin-before: 0px;
-        line-height: 25px;
-    }
 
     #hero {
         background: url('/img/death-valley-1170.jpg') center top no-repeat;
         height: 475px;
 
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+
         .text {
-            max-width: 600px;
-            margin-top: 250px;
+            margin-top: 220px;
 
-            padding-top: 20px;
             padding-left: 40px;
-            padding-right: 20px;
             padding-bottom: 10px;
+            padding-top: 5px;
 
-            color: white;
+            color: lightgrey;
             background-color: black;
-            opacity: 0.7;
+            opacity: 0.8;
+
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
 
             h1, p {
                 opacity: 100%;
@@ -33,12 +32,17 @@
             p {
                 font-size: 16px;
                 line-height: 1.5em;
-                font-weight: 400;
             }
         }
     }
 
     #summary {
         margin-top: 40px;
+
+        h2 {
+            margin-top: 0px;
+            -webkit-margin-before: 0px;
+            line-height: 25px;
+        }
     }
 }
