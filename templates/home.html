@@ -6,18 +6,93 @@
     menu_highlight('home');
 {% endblock %}
 
+{% block style %}
+    <link href='/less/home.less' type='text/css' rel="stylesheet/less"/>
+{% endblock %}
+
 {% block content %}
+<div id='home'>
 
-    <img src='/img/death-valley-1170.jpg'/>
+    <div id='hero'>
+        <div class='row'>
+            <div class='text'>
+                <h1>{{ page.title }}</h1>
+                <p>
+                    My name is Rob McGuire-Dale, I currently work as a web
+                    developer and Linux system administrator for Boeing Web
+                    Technologies and Collaboration Services.
+                </p>
+                <p>
+                    I am passionate about open source software and community
+                    development, and the technologies that run our Internet.
+                </p>
+            </div>
+        </div>
+    </div>
 
-    <!-- div>
-        Photo by
-        <a href='http://www.flickr.com/people/daisychaining/'>
-            Elizabeth Trautman
-        </a>
-    </div -->
+    <div class='row'>
+        <p class='muted pull-right'>
+            Photo by
+            <a href='http://www.flickr.com/people/daisychaining/'
+                    alt='Badwater Salt Flats, Death Valley, CA. Photo by
+                         Elizabeth Trautman, May 2011'>
+                Elizabeth Trautman
+            </a>
+        </p>
+    </div>
 
-    <h1>{{ page.title }}</h1>
-    {{ page.content }}
+    <div class='row'>
+        <div class='span3'>
+            <h3>Mad skills</h3>
+        </div>
+        <div class='span9'>
+            <p>
+                I love working with <strong>Linux</strong>, and my favorite
+                languages are <strong>JavaScript</strong> and <strong>Python</strong>. I also have experience working with
+                many other languages, libraries, frameworks, tools, and technologies
+                including [jQuery][], [Backbone.js][], [Django][], [Git][], [HTML5][],
+                [AJAX][], [JSON][], [SQLite][], Java, PHP, [Drupal][], and many more.
+            </p>
+            <p>
+                <a href='{{page.url}}'>
+                    More &raquo;
+                </a>
+            </p>
+        </div>
+    </div>
 
+    <hr>
+
+    <div class='row'>
+        <div class='span3'>
+            <h3>Past gigs</h3>
+        </div>
+        <div class='span9'>
+            <ul>
+                <li>
+                    Computer security assessor ([pentester][],
+                    [white-hat hacker][whitehat]) for Boeing Information Security
+                </li>
+                <li>
+                    Software developer for Boeing Manufacturing and Engineering
+                </li>
+                <li>
+                    Software developer for the [Open Source Lab][osl]
+                </li>
+                <li>
+                    Film editor and animation instructor at the [NW Film Center][nwfc]
+                    of the [Portlant Art Museum][pam]
+                </li>
+            </ul>
+            <p>
+                <a href='{{page.url}}'>
+                    More &raquo;
+                </a>
+            </p>
+        </div>
+    </div>
+
+    {# page.content #}
+
+</div>
 {% endblock %}
