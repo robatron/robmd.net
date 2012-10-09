@@ -1,6 +1,11 @@
 /* Base LESS CSS styles
 */
 
+/* Settings
+   ========
+*/
+@darkgrey: #777;
+
 /* Bootstrap media queries
    =======================
 */
@@ -23,7 +28,6 @@
 
 
 #content {
-
     /* Add a padding to push below the sticky navbar */
     @media (min-width: 980px) {
         padding-top: 40px;
@@ -37,38 +41,48 @@
         border-top: solid 1px red;
     }
 
-
-    /* opacity: 0.8; */
     margin-bottom: 0px;
     box-shadow: none;
+    opacity: 0.8;
 
     font-family: "Orbitron", sans-serif;
 
     .navbar-inner {
-        /* background-color: transparent; */
         background-image: none;
+        background-color: whitesmoke;
+        border-bottom: 1px solid @darkgrey;
 
         box-shadow: none;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
 
-        .brand{
+        text-shadow: none;
+
+        .brand {
             font-size: 2.5em;
             padding-left: 18px;
+
+            color: #444;
         }
 
-        .container {
-            .nav {
-                margin-right: 0px;
-            }
+        .active * {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+
+            background-color: white;
+            border-left: 1px solid @darkgrey;
+            border-right: 1px solid @darkgrey;
+            font-weight: bold;
         }
     }
 }
 
 footer {
     margin-top: 50px;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 10px;
-    border-top: 1px solid #E5E5E5;
-    background-color: whiteSmoke;
+    border-top: 1px solid @darkgrey;
+    background-color: whitesmoke;
+    height: 250px;
 }
