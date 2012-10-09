@@ -13,44 +13,52 @@
 {% block content %}
 <div id='home'>
 
-    <div id='hero'>
-        <div class='row'>
-            <div class='text span7 pull-right'>
-                <h1>{{ page.title }}</h1>
-                <p>
-                    My name is Rob McGuire-Dale, I currently work as a
-                    <strong>web developer</strong> and
-                    <strong>Linux system administrator</strong> for
-                    <a href='http://boeing.com'>Boeing</a> Web
-                    Technologies and Collaboration Services.
-                </p>
-                <p>
-                    I am passionate about
-                    <a href='http://en.wikipedia.org/wiki/Open-source_software'>open
-                    source</a> software and community development, and the
-                    technologies that run our <a href='/img/internet.jpg'>
-                    Internet</a>.
-                </p>
-            </div>
+    <div class='row'>
+        <div class='span12'>
+            <img src='/img/death-valley-1170.jpg'
+                    alt='Badwater Salt Flats, Death Valley, CA. Photo by
+                         Elizabeth Trautman, May 2011'>
         </div>
     </div>
 
-    <div class='row'>
+    <div id='photo-cap' class='row'>
         <p class='muted pull-right'>
-            Photo by
-            <a href='http://www.flickr.com/people/daisychaining/'
-                    alt='Badwater Salt Flats, Death Valley, CA. Photo by
-                         Elizabeth Trautman, May 2011'>
-                Elizabeth Trautman
-            </a>
+            <a href='http://en.wikipedia.org/wiki/Badwater_Basin'>
+            Badwater Basin</a>, Death Valley. By
+            <a href='http://www.flickr.com/people/daisychaining/'>
+            Elizabeth Trautman</a>, May 2011
         </p>
     </div>
 
-    <div id='summary' class='row'>
-        <div class='span2'>
-            <h2>Skills</h2>
-        </div>
+    <div id='welcome-text' class='row'>
         <div class='span4'>
+            <h1>{{ page.title }}</h1>
+        </div>
+        <div class='span8'>
+            <p>
+                My name is Rob McGuire-Dale, I currently work as a
+                <strong>web developer</strong> and
+                <strong>Linux system administrator</strong> for
+                <a href='http://boeing.com'>Boeing</a> Web
+                Technologies and Collaboration Services.
+            </p>
+            <p>
+                I am passionate about
+                <a href='http://en.wikipedia.org/wiki/Open-source_software'>open
+                source</a> software and community development, and the
+                technologies that run our <a href='/img/internet.jpg'>
+                Internet</a>.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class='row'>
+        <div class='span4'>
+            <h3>Skills</h3>
+        </div>
+        <div class='span8'>
             <p>
                 I love <strong>Linux</strong>, and my favorite
                 languages are <strong>JavaScript</strong> and
@@ -64,16 +72,20 @@
                 and <a href='http://http://www.html5rocks.com/en/'>HTML5</a>.
             </p>
             <p>
-                <a href='/docs/resume.pdf' class='btn'>
+                <a href='/docs/resume.pdf' class='pull-right'>
                     More &raquo;
                 </a>
             </p>
         </div>
+    </div>
 
-        <div class='span2'>
-            <h2>Past gigs</h2>
-        </div>
+    <hr>
+
+    <div class='row'>
         <div class='span4'>
+            <h3>Past gigs</h3>
+        </div>
+        <div class='span8'>
             <ul>
                 <li>
                     <strong>Software developer</strong> for the
@@ -92,7 +104,7 @@
                 </li>
             </ul>
             <p>
-                <a href='/docs/resume.pdf' class='btn'>
+                <a href='/docs/resume.pdf' class='pull-right'>
                     More &raquo;
                 </a>
             </p>
