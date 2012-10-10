@@ -16,8 +16,9 @@
 
 {# Tag link macro #}
 {# Build a link for a tag, link to its hashed name #}
-{% macro tag_link(tag, label=None) -%}
-    <a href='/blog/#{{nospace(tag)}}' class='tag-link' tag='{{nospace(tag)}}'>
+{% macro tag_link(tag, label=None, btn=False) -%}
+    <a href='/blog/#{{nospace(tag)}}'
+            class='tag-link {% if btn %}btn btn-large{% endif %}' tag='{{nospace(tag)}}'>
         {% if label %}
             {{label}}
         {% else %}
@@ -44,6 +45,73 @@
 {% block style %}
     <link href='/less/blog.less' type='text/css' rel="stylesheet/less"/>
 {% endblock %}
+
+{% block content %}
+    <div id='blog-base'>
+        <div class='row'>
+
+            <!-- Blog filtering -->
+            <div class='span3 pull-right'>
+                <ul id='filter-list' class='nav nav-list'>
+
+                    <!-- Show all -->
+                    <li id='show-all' class='active'>
+                        <a href='/blog'>
+                            Show all
+                            ({{ site.categories['blog']|length }})
+                        </a>
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <!-- Tags -->
+                    <li class='nav-header'>
+                        Tags
+                    </li>
+
+                    {% for tag in site.tags|sort %}
+                        <li class='filter-link hidden-phone' tag='{{tag}}'>
+                                {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")") }}
+                        </li>
+                    {% endfor %}
+
+                    <li class='visible-phone'>
+                        {% for tag in site.tags|sort %}
+                            <span>
+                                {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")", True) }}
+                            </span>
+                        {% endfor %}
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <!-- Recent posts -->
+                    <div id='recent-posts' class='hidden-phone'>
+                        <li class='nav-header'>
+                            Recent posts
+                        </li>
+
+                        {% for post in site.categories['blog']|sort(attribute='datetime', reverse=True) %}
+                            <li>
+                                <a href='{{ post.url }}'>
+                                    {{ post.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Blog content -->
+            <div id='blog-content' class='span9'>
+                {% block blog_content %}{% endblock %}
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}
+
 
 {# JavaScript #}
 {# ---------- #}
@@ -112,58 +180,4 @@
             filter_by_tag(window.location.hash.slice(1));
         }
     }();
-{% endblock %}
-
-{% block content %}
-    <div id='blog-base'>
-        <div class='row'>
-
-            <!-- Blog content -->
-            <div id='blog-content' class='span9'>
-                {% block blog_content %}{% endblock %}
-            </div>
-
-            <!-- Blog filtering -->
-            <div class='span3'>
-                <ul id='filter-list' class='nav nav-list'>
-
-                    <!-- Show all -->
-                    <li id='show-all' class='active'>
-                        <a href='/blog'>
-                            Show all
-                            ({{ site.categories['blog']|length }})
-                        </a>
-                    </li>
-
-                    <li class="divider"></li>
-
-                    <!-- Tags -->
-                    <li class='nav-header'>
-                        Tags
-                    </li>
-
-                    {% for tag in site.tags|sort %}
-                        <li class='filter-link' tag='{{tag}}'>
-                            {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")") }}
-                        </li>
-                    {% endfor %}
-
-                    <li class="divider"></li>
-
-                    <!-- Recent posts -->
-                    <li class='nav-header'>
-                        Recent posts
-                    </li>
-
-                    {% for post in site.categories['blog']|sort(attribute='datetime', reverse=True) %}
-                        <li>
-                            <a href='{{ post.url }}'>
-                                {{ post.title }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
 {% endblock %}
