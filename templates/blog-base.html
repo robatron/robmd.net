@@ -18,7 +18,8 @@
 {# Build a link for a tag, link to its hashed name #}
 {% macro tag_link(tag, label=None, btn=False) -%}
     <a href='/blog/#{{nospace(tag)}}'
-            class='tag-link {% if btn %}btn btn-large{% endif %}' tag='{{nospace(tag)}}'>
+            class='tag-link {% if btn %}btn btn-large{% endif %}'
+            tag='{{nospace(tag)}}'>
         {% if label %}
             {{label}}
         {% else %}

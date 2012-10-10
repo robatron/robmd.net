@@ -10,7 +10,7 @@
                 <div class='blog-post row'
                         tags='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
 
-                    <div class='span3'>
+                    <div class='span3 hidden-phone'>
                         {% if page.title_img_thumb %}
                             <div class='thumbnail'>
                                 <a href='{{page.url}}'>
