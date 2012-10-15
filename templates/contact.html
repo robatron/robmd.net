@@ -6,10 +6,22 @@
     menu_highlight('contact');
 {% endblock %}
 
+{% block style %}
+    <link href='/less/contact.less' type='text/css' rel="stylesheet/less"/>
+{% endblock %}
+
 {% block content %}
-    <div>
-        <img src='/img/grand-canyon-1170.jpg'/>
-        <p class='caption'>
+<div id='contact'>
+
+    <div class='row'>
+        <div class='span12'>
+            <img src='/img/grand-canyon-1170.jpg'
+                    title='South Rim at Sunset, Grand Canyon National Park, AZ'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <p class='photo-cap muted pull-right'>
             Photo by
             <a href='https://picasaweb.google.com/alex.weeks'>
                 Alex Weeks
@@ -17,12 +29,46 @@
         </p>
     </div>
 
-    <!-- page title -->
-    <h1>{{ page.title }}</h1>
+    <div class='row'>
+        <div class='span4'>
+            <h1>{{ page.title }}</h1>
+        </div>
 
-    <!-- main content title -->
-    <div>
-        {{ page.content }}
+        <div class='span4'>
+                <p>
+                    <a href='https://plus.google.com/u/0/109797083968948280207/'>
+                        Google+
+                    </a>
+                </p>
+                <p>
+                    <a href='http://facebook.com/robmd'>
+                        Facebook
+                    </a>
+                </p>
+                <p>
+                    <a href='http://twitter.com/robatron'>
+                        Twitter
+                    </a>
+                </p>
+        </div>
+
+        <div class='span4'>
+                <p>
+                    <a href='http://github.com/robatron'>
+                        GitHub
+                    </a>
+                </p>
+                <p>
+                    <a href='http://www.linkedin.com/profile/view?id=204746828'>
+                        LinkedIn
+                    </a>
+                </p>
+                <p>
+                    <a href='http://www.google.com/recaptcha/mailhide/d?k=018-TtgvnUHlo0F2ELgmo_HQ==&c=Arl6VP2X9B6mUtYlkipefebrCjMJw5D-8GkDH93uOhw='>
+                        Email
+                    </a>
+                </p>
+        </div>
     </div>
-
+</div>
 {% endblock %}
