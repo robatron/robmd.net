@@ -126,32 +126,28 @@
 
         <!-- Footer -->
         <footer>
-            <div class='container'>
-                <div class='row'>
-                    <p class='span6'>
-                        Powered by
-                        <a href="https://github.com/mythmon/wok">
-                        wok</a>
-                    </p>
-                    <p class='pull-right'>
-                        Fork me on
-                        <a href="http://github.com/robatron/robmd.net">
-                        GitHub</a>
+            <div class='container muted'>
+                <p class='pull-right hidden-phone'>
+                    <a href='#'>Back to top ^</a>
+                </p>
+                <div class='visible-phone'>
+                    <p>
+                        <a href='#' class='btn'>Back to top</a>
                     </p>
                 </div>
-
-                <div class='row'>
-                    <p class='span6'>
-                        Last generated at
-                        {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }}
-                    </p>
-                    <p class='pull-right'>
-                        &copy; Copyright
-                        <a href="http://robmd.net/">
-                            Rob McGuire-Dale
-                        </a>
-                    </p>
-                </div>
+                <p>
+                    Last generated at
+                    {{ site.datetime.strftime('%Y/%m/%d %H:%M:%S') }} by
+                    <a href="https://github.com/mythmon/wok">Wok</a>.
+                </p>
+                <p>
+                    Site source code availible on
+                    <a href="http://github.com/robatron/robmd.net">GitHub</a>.
+                </p>
+                <p>
+                    &copy; Copyright
+                    <a href="http://robmd.net/">Rob McGuire-Dale</a>.
+                </p>
             </div>
         </footer>
 
