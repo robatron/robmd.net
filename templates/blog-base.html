@@ -52,7 +52,7 @@
         <div class='row'>
 
             <!-- Blog filtering -->
-            <div class='span3 pull-right'>
+            <div class='span3 pull-right hidden-phone'>
                 <ul id='filter-list' class='nav nav-list'>
 
                     <!-- Show all -->
@@ -71,23 +71,15 @@
                     </li>
 
                     {% for tag in site.tags|sort %}
-                        <li class='filter-link hidden-phone' tag='{{tag}}'>
+                        <li class='filter-link' tag='{{tag}}'>
                                 {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")") }}
                         </li>
                     {% endfor %}
 
-                    <li class='visible-phone'>
-                        {% for tag in site.tags|sort %}
-                            <span>
-                                {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")", True) }}
-                            </span>
-                        {% endfor %}
-                    </li>
-
                     <li class="divider"></li>
 
                     <!-- Recent posts -->
-                    <div id='recent-posts' class='hidden-phone'>
+                    <div id='recent-posts'>
                         <li class='nav-header'>
                             Recent posts
                         </li>
