@@ -46,7 +46,6 @@
 
     margin-bottom: 0px;
     box-shadow: none;
-    opacity: 0.8;
 
     font-family: "Orbitron", sans-serif;
 
@@ -76,9 +75,14 @@
             -moz-box-shadow: none;
 
             background-color: white;
-            border-left: 1px solid @darkgrey;
-            border-right: 1px solid @darkgrey;
+            border-left: 2px solid @darkgrey;
+            border-right: 2px solid @darkgrey;
             font-weight: bold;
+
+            @media (max-width: 979px) {
+                border-bottom: 2px solid @darkgrey;
+                border-top: 2px solid @darkgrey;
+            }
         }
     }
 }
