@@ -1,0 +1,4 @@
+title: Resume
+type: resume
+url: /resume/index.html
+---
