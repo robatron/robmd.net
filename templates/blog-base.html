@@ -87,6 +87,11 @@
 
         <!-- Blog content -->
         <div id='blog-content' class='span9'>
+            <div id='filter-status' class='well'>
+                Viewing articles tagged with "<span class='tag-label'></span>".
+                <a class='clear-filter btn btn-small pull-right'>View all</a>
+            </div>
+
             {% block blog_content %}{% endblock %}
         </div>
 
@@ -102,8 +107,8 @@
 {# JavaScript to run before document loads #}
 {% block js_init %}
 
-    // Tag filtering init
-    // ==================
+    // Tag filtering
+    // -------------
 
     function filter_by_tag(tag){
         /* Remove all blog posts that aren't tagged with `tag`, show all that
@@ -129,15 +134,49 @@
                 }
             });
         }
+
+        activate_filter_link(tag)
+        show_filter_status(tag)
     }
 
-    function highlight_filter_link(tag){
-        /* Activate the current filter link, deactivate all others in the
-        filter list.
+    function show_all(){
+        /* Show all blog articles
+        */
+
+        $('.blog-post').slideDown('slow')
+    }
+
+    // Tag link de/activate
+    // --------------------
+
+    function activate_filter_link(tag){
+        /* Radio-activate the specified tag link's list-item
         */
         var $link = $('#filter-list .filter-link[tag="' + tag + '"]')
-        $('#filter-list li').removeClass('active')
+        deactivate_all_filter_links()
         $link.addClass('active')
+    }
+
+    function deactivate_all_filter_links(){
+        /* Deactivate all tag links' list items
+        */
+        $('#filter-list li').removeClass('active')
+    }
+
+    // Filter status box
+    // -----------------
+
+    function init_filter_status(){
+        $('#filter-status').hide()
+    }
+
+    function show_filter_status(tag){
+        $('#filter-status').slideDown()
+        $('#filter-status .tag-label').text(tag)
+    }
+
+    function hide_filter_status(){
+        $('#filter-status').slideUp()
     }
 {% endblock %}
 
@@ -147,20 +186,32 @@
     // Highlight the 'blog' menu item
     menu_highlight('blog');
 
-    // Tag filtering
-    // =============
+    // Initialize filter status box (hide it)
+    init_filter_status()
 
-    $('.tag-link').click(function(){
-        var tag = $(this).attr('tag')
-        filter_by_tag(tag)
-        highlight_filter_link(tag)
-    });
-
+    // Filter by tag on load if necessary
     var filter_on_hash = function(){
-        // If there is a hash in the URL, filter immediately
-
         if(window.location.hash){
             filter_by_tag(window.location.hash.slice(1));
         }
     }();
+
+    // When a tag link is clicked...
+    $('.tag-link').click(function(){
+        /* When the user clicks on a tag link, filter blog articles by the
+        specified tag and activate the link's list item.
+        */
+        filter_by_tag($(this).attr('tag'))
+    });
+
+    // When a 'clear filter' link is clicked...
+    $('a.clear-filter').click(function(){
+        /* When the user clicks on a 'clear filter' link, show all blog
+        articles, and deactivate any filter links.
+        */
+
+        show_all();
+        deactivate_all_filter_links();
+        hide_filter_status();
+    })
 {% endblock %}

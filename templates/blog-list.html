@@ -4,6 +4,11 @@
 
 {% block blog_content %}
 <div id='blog-list'>
+    <div id='filter-status' class='well hidden'>
+        Viewing articles tagged with "<span></span>"
+        <a class='btn btn-small pull-right'>Clears</a>
+    </div>
+
     {% if page.subpages %}
         {% for page in page.subpages|sort(attribute='datetime', reverse=True) %}
 
