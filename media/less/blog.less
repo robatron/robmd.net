@@ -6,6 +6,10 @@
 #blog-base {
     padding-top: @gutter * 2;
 
+    .img-polaroid {
+        box-shadow: 3px 4px 6px 1px #AAA;
+    }
+
     #filter-list li {
         margin-bottom: 5px;
     }
@@ -15,10 +19,6 @@
 
     .blog-post {
         margin-bottom: @gutter * 2;
-
-        .thumbnail {
-            box-shadow: 3px 4px 6px 1px #AAA;
-        }
 
         .summary {
             .title {
@@ -38,5 +38,45 @@
                 margin-bottom: 5px;
             }
         }
+    }
+}
+
+#blog-article {
+    #title-bar {
+        margin-bottom: 20px;
+
+        #blog-back {
+            font-size: 1.25em;
+            margin-top: 0;
+            line-height: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    #article-body {
+        margin-top: 40px;
+
+        h1 {
+            margin-top: 40px;
+            border-bottom: 1px solid lightgrey;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-size: 1.25em;
+        }
+
+        h3 {
+            font-size: 1em;
+        }
+
+        .article-image {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    #article-footer {
+        margin-top: 40px;
     }
 }

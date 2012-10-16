@@ -48,61 +48,51 @@
 {% endblock %}
 
 {% block content %}
-    <div id='blog-base'>
-        <div class='row'>
+<div id='blog-base'>
+    <div class='row'>
 
-            <!-- Blog filtering -->
-            <div class='span3 pull-right hidden-phone'>
-                <ul id='filter-list' class='nav nav-list'>
+        <!-- Blog filtering -->
+        <div class='span3 pull-right hidden-phone'>
+            <ul id='filter-list' class='nav nav-list'>
 
-                    <!-- Show all -->
-                    <li id='show-all' class='active'>
-                        <a href='/blog'>
-                            Show all
-                            ({{ site.categories['blog']|length }})
-                        </a>
+                <!-- Tags -->
+                <li class='nav-header'>
+                    Tags
+                </li>
+
+                {% for tag in site.tags|sort %}
+                    <li class='filter-link' tag='{{tag}}'>
+                            {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")") }}
                     </li>
+                {% endfor %}
 
-                    <li class="divider"></li>
+                <li class="divider"></li>
 
-                    <!-- Tags -->
+                <!-- Recent posts -->
+                <div id='recent-posts'>
                     <li class='nav-header'>
-                        Tags
+                        Recent posts
                     </li>
 
-                    {% for tag in site.tags|sort %}
-                        <li class='filter-link' tag='{{tag}}'>
-                                {{ tag_link(tag, tag + " (" + site.tags[tag]|length|string() +")") }}
+                    {% for post in site.categories['blog']|sort(attribute='datetime', reverse=True) %}
+                        <li>
+                            <a href='{{ post.url }}'>
+                                {{ post.title }}
+                            </a>
                         </li>
                     {% endfor %}
-
-                    <li class="divider"></li>
-
-                    <!-- Recent posts -->
-                    <div id='recent-posts'>
-                        <li class='nav-header'>
-                            Recent posts
-                        </li>
-
-                        {% for post in site.categories['blog']|sort(attribute='datetime', reverse=True) %}
-                            <li>
-                                <a href='{{ post.url }}'>
-                                    {{ post.title }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </div>
-                </ul>
-            </div>
-
-            <!-- Blog content -->
-            <div id='blog-content' class='span9'>
-                {% block blog_content %}{% endblock %}
-            </div>
-
-
+                </div>
+            </ul>
         </div>
+
+        <!-- Blog content -->
+        <div id='blog-content' class='span9'>
+            {% block blog_content %}{% endblock %}
+        </div>
+
+
     </div>
+</div>
 {% endblock %}
 
 

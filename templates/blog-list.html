@@ -3,100 +3,100 @@
 {% extends "blog-base.html" %}
 
 {% block blog_content %}
-    <div id='blog-list'>
-        {% if page.subpages %}
-            {% for page in page.subpages|sort(attribute='datetime', reverse=True) %}
+<div id='blog-list'>
+    {% if page.subpages %}
+        {% for page in page.subpages|sort(attribute='datetime', reverse=True) %}
 
-                <div class='blog-post row'
-                        tags='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
+            <div class='blog-post row'
+                    tags='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
 
-                    <div class='span3 hidden-phone'>
-                        {% if page.title_img_thumb %}
-                            <div class='thumbnail'>
-                                <a href='{{page.url}}'>
-                                    <!-- img src="http://placehold.it/300x200"
-                                    -->
-                                    <img src='{{page.title_img_thumb}}'
-                                            title='Thumbnail for "{{page.title}}"'>
-                                </a>
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class='summary span6'>
-
-                        <div class='title'>
+                <div class='span3 hidden-phone'>
+                    {% if page.title_img_thumb %}
+                        <div class='img-polaroid'>
                             <a href='{{page.url}}'>
-                                <h3>{{page.title}}</h3>
+                                <!-- img src="http://placehold.it/300x200"
+                                -->
+                                <img src='{{page.title_img_thumb}}'
+                                        title='Thumbnail for "{{page.title}}"'>
                             </a>
                         </div>
-
-                        <div class='subtitle muted'>
-                            {{page.date}}
-
-                            {% if page.tags %}
-                                | in {{ tag_list(page.tags) }}
-                            {% endif %}
-                        </div>
-
-                        {% if page.snippet %}
-                            {{ page.snippet|truncate(length=200) }}
-                            <a href='{{page.url}}'>
-                                more &raquo;
-                            </a>
-                        {% endif %}
-                    </div>
+                    {% endif %}
                 </div>
 
-                <!-- div class='article {% if loop.last %}last{% endif %}'>
-                    <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
-                        <table>
-                            <tr>
-                                <td class='title-img-wrap'>
-                                    {% if page.title_img_thumb %}
+                <div class='summary span6'>
+
+                    <div class='title'>
+                        <a href='{{page.url}}'>
+                            <h3>{{page.title}}</h3>
+                        </a>
+                    </div>
+
+                    <div class='subtitle muted'>
+                        {{page.date}}
+
+                        {% if page.tags %}
+                            | in {{ tag_list(page.tags) }}
+                        {% endif %}
+                    </div>
+
+                    {% if page.snippet %}
+                        {{ page.snippet|truncate(length=200) }}
+                        <a href='{{page.url}}'>
+                            more &raquo;
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- div class='article {% if loop.last %}last{% endif %}'>
+                <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
+                    <table>
+                        <tr>
+                            <td class='title-img-wrap'>
+                                {% if page.title_img_thumb %}
+                                    <a href='{{page.url}}'>
+                                        <img class='title-img'
+                                            src='{{page.title_img_thumb}}'>
+                                    </a>
+                                {% endif %}
+                            </td>
+
+                            <td class='text'>
+                                <div class='title-bar'>
+                                    <h1 class='title'>
                                         <a href='{{page.url}}'>
-                                            <img class='title-img'
-                                                src='{{page.title_img_thumb}}'>
+                                            {{page.title}}
                                         </a>
-                                    {% endif %}
-                                </td>
+                                    </h1>
 
-                                <td class='text'>
-                                    <div class='title-bar'>
-                                        <h1 class='title'>
-                                            <a href='{{page.url}}'>
-                                                {{page.title}}
-                                            </a>
-                                        </h1>
+                                    <div class='subtitle'>
+                                        {{page.date}}
 
-                                        <div class='subtitle'>
-                                            {{page.date}}
-
-                                            {% if page.tags %}
-                                                | in {{ tag_list(page.tags) }}
-                                            {% endif %}
-                                        </div>
-                                    </div>
-
-                                    <div class='snippet'>
-                                        {% if page.snippet %}
-                                            {{ page.snippet|truncate(length=200) }}
-                                            <a href='{{page.url}}'>
-                                                &raquo;
-                                            </a>
+                                        {% if page.tags %}
+                                            | in {{ tag_list(page.tags) }}
                                         {% endif %}
                                     </div>
+                                </div>
 
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div -->
-            {% endfor %}
+                                <div class='snippet'>
+                                    {% if page.snippet %}
+                                        {{ page.snippet|truncate(length=200) }}
+                                        <a href='{{page.url}}'>
+                                            &raquo;
+                                        </a>
+                                    {% endif %}
+                                </div>
 
-        {% else %}
-            <p> No blog entries to display :-(</p>
-        {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div -->
+        {% endfor %}
 
-    </div>
+    {% else %}
+        <p> No blog entries to display :-(</p>
+    {% endif %}
+
+</div>
 {% endblock %}
