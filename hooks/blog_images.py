@@ -4,7 +4,7 @@
 import re
 
 # default image sizes
-TITLE_IMG_SIZE = 719        # Size of the title image
+TITLE_IMG_SIZE = 870        # Size of the title image
 THUMBNAIL_IMG_SIZE = 300    # Size of thumbnails
 ARTICLE_IMG_SIZE = 480      # Size of article images
 
