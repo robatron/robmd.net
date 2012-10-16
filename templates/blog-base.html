@@ -87,9 +87,12 @@
 
         <!-- Blog content -->
         <div id='blog-content' class='span9'>
-            <div id='filter-status' class='well'>
-                Viewing articles tagged with "<span class='tag-label'></span>".
-                <a class='clear-filter btn btn-small pull-right'>View all</a>
+            <div id='filter-status' class='text-info well'>
+                <strong>
+                    Viewing articles tagged with
+                    "<span class='tag-label'></span>"
+                </strong>
+                <a href='#' class='clear-filter btn btn-mini pull-right'>View all</a>
             </div>
 
             {% block blog_content %}{% endblock %}
