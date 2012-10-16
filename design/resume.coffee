@@ -2,21 +2,11 @@
 # Modeled after LinkedIn's data structures
 
 resume =
-    education: [
-            "school-name": "Oregon State University"
-            degree: "B.S."
-            field: "Computer Science"
-            "date-from": "Sept. 2008"
-            "date-to": "June 2011"
-            notes: ""
-        ,
-            "school-name": "Mt. Hood Community College"
-            degree: "A.S."
-            field: "Computer Science"
-            "date-from": "Sept. 2004"
-            "date-to": "June 2008"
-            notes: ''
+    skills: [
+        'JavaScript', 'Python', 'jQuery', 'HTML5', 'CSS3', 'Django',
+        'Backbone.js', 'Java', 'JSON', 'Git'
     ]
+
     experience: [
             "company-name": "The Boeing Company"
             "company-website": "http://boeing.com"
@@ -56,4 +46,20 @@ resume =
                 - Key developer of Touchscreen, an interactive kiosk display
                   framework (http://code.osuosl.org/projects/touchscreen)
             '
+    ]
+
+    education: [
+            "school-name": "Oregon State University"
+            degree: "B.S."
+            field: "Computer Science"
+            "date-from": "Sept. 2008"
+            "date-to": "June 2011"
+            notes: ""
+        ,
+            "school-name": "Mt. Hood Community College"
+            degree: "A.S."
+            field: "Computer Science"
+            "date-from": "Sept. 2004"
+            "date-to": "June 2008"
+            notes: ''
     ]
