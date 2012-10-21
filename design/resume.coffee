@@ -19,7 +19,7 @@ resume =
             date-from: 'June 2011'
             date-to: 'Present'
             currently-employed: true
-            description:  '
+            description: '
                 - Currently leading a team of 15 people to create and manage a
                   GitHub-like collaborative coding environment project using
                   Git and GitLab for a growing list of pilot users

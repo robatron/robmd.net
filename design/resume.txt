@@ -1,0 +1,130 @@
+       ___     _       __  __     ___      _             ___       _
+      | _ \___| |__   |  \/  |__ / __|_  _(_)_ _ ___ ___|   \ __ _| |___
+      |   / _ \ '_ \  | |\/| / _| (_ | || | | '_/ -_)___| |) / _` | / -_)
+      |_|_\___/_.__/  |_|  |_\__|\___|\_,_|_|_| \___|   |___/\__,_|_\___|
+
+      Open source enthusiast          Web Developer          Humanitarian
+
+
+>>> Skills
+===============================================================================
+
+    Technical:
+
+        - JavaScript, jQuery, Backbone.js, JSON
+        - Python, Django, Bottle, CherryPy
+        - HTML 5, CSS 3, Bootstrap, LESS
+        - Java, PHP, Drupal
+        - Linux, Git, Bash, ViM
+
+
+    Social:
+
+        - Leadership: Lead for an enterprise-wide collaborative coding project
+        - Coordination: Event coordinator for OSU's Linux User Group
+        - Adaptation: Studied abroad in San Miguel de Allende, GTO, Mexico
+        - Communication: Several years of Internet technical support experience
+
+
+>>> Key Interests
+===============================================================================
+
+    - Open source software and community development
+
+    - Web application development and design
+
+    - The Internet as a computing platform
+
+    - End-user software engineering
+
+
+>>> Work Experience
+===============================================================================
+
+    >>> The Boeing Company
+    ---------------------------------------------------------------------------
+    Developer, Linux Sysadmin, Project Manager | June 2010 - Current
+
+
+        GitLab Exploration Project:
+
+            - Led a team of 15 people to create and manage a GitHub-like,
+              collaborative coding service for 100+ users.
+
+
+        Web Analytics Service:
+
+            - Managed web analytics system for several enterprise-wide web
+              applications handling up to > 1.1 million hits/day
+
+
+        Application Security Analysis:
+
+            - Analyzed web and thick-client applications for information and
+              computer security vulnerabilities.
+
+
+        Mainframe Java API:
+
+            - Designed and developed a Java programmable interface library to
+              an electrical-engineering IBM 3270 mainframe application
+
+
+        Data Migration Bridge:
+
+            - Designed and developed a multi-threaded Java application
+              interfacing two major manufacturing/production engineering
+              applications
+
+            - Achieved a speedup of 6.5x over legacy system
+
+
+    >>> The Open Source Lab
+    ---------------------------------------------------------------------------
+    Software Developer | Dec. 2008 - June 2011
+
+
+        Ganeti Web Manager:
+
+            - Key developer of Ganeti Web Manager, a web-based application for
+              managing Google's Ganeti cluster virtual machines.
+              <https://code.osuosl.org/projects/ganeti-webmgr>
+
+
+        Touchscreen:
+
+            - Key developer and designer of Touchscreen, an interactive kiosk
+              framework written in Python, JavaScript, HTML, and CSS
+
+
+        Drupal Websites:
+
+            - Collaborated on the design, development, installation, and
+              configuration of http://osuosl.org, http://goscon.org,
+              http://www.co.polk.or.us based on the Drupal CMS
+
+
+    >>> Portland Art Museum, NW Film Center
+    --------------------------------------------------------------------------
+    Assistant Instructor, Digital Film Editor | July 2003 - July 2007
+
+        - Taught students how to animate and edit their own films
+
+        - Edited digital film for the final class presentations at the Guild
+          Theater in downtown Portland
+
+
+>>> Conferences
+===============================================================================
+
+    Speaker:
+
+        - Open Source Bridge, June 2010 in Portland, OR:
+          "Building Interactive Displays with Touchscreen 2.0"
+          <http://opensourcebridge.org/sessions/404>
+
+
+    Attendee:
+
+        - GOSCON (Government Open Source Converence), Oct. 2010 in Portland, OR
+        - Google I/O, June 2011 in San Francisco, CA

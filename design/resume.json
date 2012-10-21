@@ -1,0 +1,70 @@
+{
+    'gigs': [
+        {
+            'company-name': 'The Boeing Company',
+            'company-website': 'http://boeing.com',
+            'locations': ['Bellevue, WA', 'Everett, WA']
+            'primary-titles': [
+                'Software Developer',
+                'Linux System Administrator',
+                'Project Manager',
+            ] ,
+            'dates': {
+                'from': 'June 2010',
+                'to': 'Current',
+            },
+            'projects': [
+                {
+                    'name': 'GitLab Exploration Project',
+                    'titles': [
+                        'Project Lead',
+                        'Linux System Administrator',
+                        'Developer'
+                    ],
+                    'dates': {
+                        'from': 'May 2012',
+                        'to': 'Current',
+                    },
+                    'description':
+                        'Led a team of 15 people to create and manage a GitHub-like collaborative coding service for 100+ users.',
+                },
+                {
+                    name: 'Application Security Vulnerability Analysis',
+                    titles: [
+                        'Penetration Tester',
+                        'White-hat Hacker'
+                        'Security Analyst'
+                    ],
+                    dates_from: 'January 2012',
+                    dates_to: 'June 2012',
+                    description: '''
+                        Analyzed web and thick-client applications for
+                        information and computer security vulnerabilities.
+                    '''
+                },
+                {
+                    name: 'Mainframe Java API',
+                    titles: ['Software Developer'],
+                    dates_from: 'June 2011',
+                    dates_to: 'December 2011',
+                    description: '''
+                       Designed and developed a programmable Java interface
+                       library to an electrical-engineering IBM mainframe
+                       application
+                    '''
+                },
+                {
+                    name: 'Mainframe Java API',
+                    titles: ['Software Developer'],
+                    dates_from: 'June 2011',
+                    dates_to: 'December 2011',
+                    description: '''
+                       Designed and developed a programmable Java interface
+                       library to an electrical-engineering IBM mainframe
+                       application
+                    '''
+                },
+            ]
+        }
+    ]
+}

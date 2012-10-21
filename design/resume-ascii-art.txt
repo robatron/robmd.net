@@ -1,0 +1,41 @@
+ ___     _      __  __     ___      _             ___       _
+| _ \___| |__  |  \/  |__ / __|_  _(_)_ _ ___ ___|   \ __ _| |___
+|   / _ \ '_ \ | |\/| / _| (_ | || | | '_/ -_)___| |) / _` | / -_)
+|_|_\___/_.__/ |_|  |_\__|\___|\_,_|_|_| \___|   |___/\__,_|_\___|
+
+Rob McGuire-Dale  |  rob.mcguire.dale@gmail.com  |  (541) 250-0762
+
+
+==[ Skills ]===================================================================
+
+    Technical
+    ---------
+
+    - JavaScript, jQuery, Backbone.js, JSON, JSONP
+    - Python, Django, Bottle, CherryPy
+    - HTML 5, CSS 3, Bootstrap, LESS
+    - Java, PHP, Drupal
+    - Linux, Bash, ViM, Git, SVN
+
+    Social
+    ------
+
+    - Event coordinator for Oregon State University's Linux User's Group
+    - Lead for an enterprise-wide collaborative coding project at Boeing
+    - Studied abroad in San Miguel de Allende, GTO, Mexico
+
+
+==[ Experience ]===============================================================
+
+    --[ The Boeing Company ]---------------------------------------------------
+
+    Developer / Linux Sys. Admin. / Project Manager, June 2010 - Current
+
+
+        GitLab Exploration Project
+        --------------------------
+
+        Project Lead / Linux Sys. Admin. / Web Developer, May 2012 - Current
+
+        - Led a team of 15 people to create and manage a GitHub-like,
+          collaborative coding environment
