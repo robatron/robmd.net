@@ -61,7 +61,7 @@
         Application Security Analysis:
 
             - Analyzed web and thick-client applications for information and
-              computer security vulnerabilities.
+              computer security vulnerabilities
 
 
         Mainframe Java API:
