@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
 '''
-Run Wok from the pymods directory for portability purposes
+Run Wok from the vendor directory for portability purposes
 '''
 
 import sys
 import os
 
-PYMOD_DIR = 'pymods'
+PYMOD_DIR = 'vendor'
 MODULES = [
     'wok-master',
     os.path.join('PyYAML-3.10', 'lib'),
