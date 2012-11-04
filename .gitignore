@@ -6,3 +6,4 @@ robots.txt
 *.pyc
 .sass-cache
 media/sass/*.css
+*.less.css
