@@ -12,11 +12,27 @@
 
 {% block content %}
 <div id='home'>
-
     <div class='row'>
-        <div class='span12'>
-            <img src='/img/death-valley-1170.jpg'
-                    title='Badwater Salt Flats, Death Valley, CA'>
+        <div id='hero-wrap' class='span12'>
+            <div class='hero-unit span5 pull-right'>
+                <h1>Hello.</h1>
+
+                <br>
+
+                <p>
+                    My name is <strong>Rob McGuire-Dale</strong>, and I love
+                    <strong>open source</strong> and <strong>Internet
+                    technologies</strong>.
+                </p>
+
+                <p>
+                    I currently work as a <strong>web developer</strong> and
+                    <strong>Linux system administrator</strong> for Boeing.
+                    <a href='/resume'>
+                        Learn more &raquo;
+                    </a>
+                </p>
+            </div>
         </div>
     </div>
 
@@ -25,30 +41,6 @@
             Photo by <a href='http://www.flickr.com/people/daisychaining/'>
             Elizabeth Trautman</a>, May 2011
         </p>
-    </div>
-
-    <div id='welcome-text' class='row'>
-        <div class='span4'>
-            <h1>{{ page.title }}</h1>
-        </div>
-        <div class='span8'>
-            <p>
-                My name is <strong>Rob McGuire-Dale</strong>, and I am
-                passionate about <strong>open source</strong> and
-                <strong>Internet technologies</strong>.
-            </p>
-            <p>
-                I currently work as a <strong>web developer</strong> and
-                <strong>Linux system administrator</strong> for
-                <strong><a href='http://boeing.com'>Boeing</a> Web
-                Technologies</strong>.
-            </p>
-            <p>
-                <a href='/resume' class='pull-right'>
-                    More &raquo;
-                </a>
-            </p>
-        </div>
     </div>
 </div>
 {% endblock %}
