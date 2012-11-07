@@ -1,7 +1,8 @@
-''' Process Picasa Web Albums images in blog articles
-'''
-
 import re
+
+'''
+Process Picasa Web Albums images in blog articles
+'''
 
 # default image sizes
 TITLE_IMG_SIZE = 870        # Size of the title image
