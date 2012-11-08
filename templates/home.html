@@ -17,17 +17,9 @@
             <img src='/img/death-valley-1170.jpg'/>
 
             <div class='hero-unit span5 hidden-phone'>
-                <h1>Hello.</h1>
+                <h1>{{ page.title }}</h1>
                 <br>
-                <p>
-                    My name is <strong>Rob McGuire-Dale</strong>, and I love
-                    <strong>open source</strong> and <strong>Internet
-                    technologies</strong>.
-                </p>
-                <p>
-                    I currently work as a <strong>web developer</strong> and
-                    <strong>Linux system administrator</strong> for Boeing.
-                </p>
+                {{ page.content }}
                 <p>
                     <a href='/resume'>
                         More &raquo;
@@ -44,16 +36,8 @@
         </div>
 
         <div class='span12 visible-phone'>
-            <h1>Hello.</h1>
-            <p>
-                My name is <strong>Rob McGuire-Dale</strong>, and I love
-                <strong>open source</strong> and <strong>Internet
-                technologies</strong>.
-            </p>
-            <p>
-                I currently work as a <strong>web developer</strong> and
-                <strong>Linux system administrator</strong> for Boeing.
-            </p>
+            <h1>{{ page.title }}</h1>
+            {{ page.content }}
             <p>
                 <a href='/resume'>
                     More &raquo;

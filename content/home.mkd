@@ -1,62 +1,10 @@
-title: Welcome
+title: Hello.
 type: home
 url: /index.html
 ---
 
-My name is Rob McGuire-Dale, and I am a graduate of 
-[Oregon State University][osu] with a Bachelor's Degree in
-[Computer Science][compsci]. I am currently working as a web developer
-and Linux [system administrator][sysadmin] for [Boeing][] Web
-Technologies and Collaboration Services.
+My name is **Rob McGuire-Dale**, and I love
+**open source** and **web technologies**.
 
-[osu]:http://oregonstate.edu
-[compsci]:http://en.wikipedia.org/wiki/computer_science
-[boeing]: http://boeing.com
-[sysadmin]:http://en.wikipedia.org/wiki/system_administrator
-
-I prefer working with **Linux**, and my favorite languages are 
-**JavaScript** and **Python**. I also have experience working with
-many other languages, libraries, frameworks, tools, and technologies
-including [jQuery][], [Backbone.js][], [Django][], [Git][], [HTML5][],
-[AJAX][], [JSON][], [SQLite][], Java, PHP, [Drupal][], and many more.
-
-[jquery]:http://jquery.org
-[backbone.js]:http://backbonejs.org
-[django]:http://djangoproject.com
-[git]:http://git-scm.com
-[html5]:http://html5.org
-[ajax]:http://en.wikipedia.com/Ajax_(programming)
-[json]:http://json.org
-[sqlite]:http://sqlite.org
-[drupal]:http://drupal.org
-
-My **past gigs** include:
-
-- Computer security assessor ([pentester][], 
-  [white-hat hacker][whitehat]) for Boeing Information Security
-- Software developer for Boeing Manufacturing and Engineering
-- Software developer for the [Open Source Lab][osl]
-- Film editor and animation instructor at the [NW Film Center][nwfc]
-  of the [Portlant Art Museum][pam]
-
-[pentester]:http://en.wikipedia.org/wiki/Penetration_test
-[whitehat]:http://en.wikipedia.org/wiki/White_hat_(computer_security)
-[osl]:http://osuosl.org
-[nwfc]:http://nwfilm.org
-[pam]:http://portlandartmuseum.org
-
-My **primary interests** include:
-
- - [Open source][opensource] software and community development
- - Software development and [engineering][swe]
- - Software and programming [usability][]
- - The [web][internet] as a computing platform
-
-[opensource]:http://en.wikipedia.org/wiki/Open_source
-[swe]:http://en.wikipedia.org/wiki/software_engineering
-[usability]:http://en.wikipedia.org/wiki/usability
-[internet]:/img/internet.jpg
-
-I also love running, rock climbing, mountaineering, tinkering with
-vehicles, and riding my bicycle. Most imporantly, I have an immense
-interest and curiosity about the world, which drives me to learn.
+I currently work as a **web developer** and
+**Linux system administrator** for Boeing.
