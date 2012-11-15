@@ -3,128 +3,153 @@
       |   / _ \ '_ \  | |\/| / _| (_ | || | | '_/ -_)___| |) / _` | / -_)
       |_|_\___/_.__/  |_|  |_\__|\___|\_,_|_|_| \___|   |___/\__,_|_\___|
 
-      Open source enthusiast          Web Developer          Humanitarian
+      Rob McGuire-Dale  |  rob.mcguiredale@gmail.com  |  (541) 250 - 0762
+
+
+>>> Summary
+===============================================================================
+
+  My primary interests are open source, and web development.
+
+  My favorite technologies are JavaScript, Python, HTML 5, Linux, and Git.
+
+  I've worked for Boeing, the Open Source Lab, and the Portland Art Museum.
+
+  I have a bachelor's degree in Computer Science from Oregon State University.
 
 
 >>> Skills
 ===============================================================================
 
-    Technical:
+  Technical:
 
-        - JavaScript, jQuery, Backbone.js, JSON
-        - Python, Django, Bottle, CherryPy
-        - HTML 5, CSS 3, Bootstrap, LESS
-        - Java, PHP, Drupal
-        - Linux, Git, Bash, ViM
-
-
-    Social:
-
-        - Leadership: Lead for an enterprise-wide collaborative coding project
-        - Coordination: Event coordinator for OSU's Linux User Group
-        - Adaptation: Studied abroad in San Miguel de Allende, GTO, Mexico
-        - Communication: Several years of Internet technical support experience
+    - JavaScript, jQuery, Backbone.js, JSON
+    - Python, Django, Bottle, CherryPy
+    - HTML 5, CSS 3, Bootstrap, LESS
+    - Linux, Git, Bash, ViM
+    - Java, PHP, Drupal
 
 
->>> Key Interests
-===============================================================================
+  Social:
 
-    - Open source software and community development
-
-    - Web application development and design
-
-    - The Internet as a computing platform
-
-    - End-user software engineering
+    - Leadership: Lead for an enterprise-wide collaborative coding project
+    - Coordination: Event coordinator for OSU's Linux User Group
+    - Adaptation: Studied abroad in San Miguel de Allende, GTO, Mexico
+    - Communication: Several years of Internet technical support experience
 
 
 >>> Work Experience
 ===============================================================================
 
-    >>> The Boeing Company
-    ---------------------------------------------------------------------------
-    Developer, Linux Sysadmin, Project Manager | June 2010 - Current
+  >>> The Boeing Company
+  -----------------------------------------------------------------------------
+  Developer, Linux Sysadmin, Project Manager | June 2010 - Current
 
 
-        GitLab Exploration Project:
+    GitLab Exploration Project:
 
-            - Led a team of 15 people to create and manage a GitHub-like,
-              collaborative coding service for 100+ users.
-
-
-        Web Analytics Service:
-
-            - Managed web analytics system for several enterprise-wide web
-              applications handling up to > 1.1 million hits/day
+        Led a team of 15 people to create and manage a GitHub-like,
+        collaborative coding service for 120+ users. Based on GitLab, Gitolite,
+        and Nginx.
 
 
-        Application Security Analysis:
+    Enterprise Search Web Frontend:
 
-            - Analyzed web and thick-client applications for information and
-              computer security vulnerabilities
-
-
-        Mainframe Java API:
-
-            - Designed and developed a Java programmable interface library to
-              an electrical-engineering IBM 3270 mainframe application
+        Primary developer of the web frontend for Boeing's internal,
+        enterprise-wide search application handling more than 270,000 hits/day.
+        Based on Bootstrap, Backbone.js, jQuery, and Wok.
 
 
-        Data Migration Bridge:
+    Web Analytics Service:
 
-            - Designed and developed a multi-threaded Java application
-              interfacing two major manufacturing/production engineering
-              applications
-
-            - Achieved a speedup of 6.5x over legacy system
+        Created and managed a web analytics service for several enterprise-
+        wide web applications handling more than 1.1 million hits/day. Based on
+        Piwik, MySQL, and Nginx.
 
 
-    >>> The Open Source Lab
-    ---------------------------------------------------------------------------
-    Software Developer | Dec. 2008 - June 2011
+    Data Migration Bridge:
+
+        Designed and developed a multi-threaded Java application interfacing
+        two major manufacturing/production engineering applications. Achieved a
+        speedup of 6.5x over legacy systems, reducing an 13-hour nightly job to
+        only 2 hours.
 
 
-        Ganeti Web Manager:
+    Mainframe Java API:
 
-            - Key developer of Ganeti Web Manager, a web-based application for
-              managing Google's Ganeti cluster virtual machines.
-              <https://code.osuosl.org/projects/ganeti-webmgr>
-
-
-        Touchscreen:
-
-            - Key developer and designer of Touchscreen, an interactive kiosk
-              framework written in Python, JavaScript, HTML, and CSS
+        Designed and developed a Java programmable interface library to an
+        electrical-engineering mainframe application. Based on the IBM 3270
+        terminal emulator.
 
 
-        Drupal Websites:
+    Application Security Analysis:
 
-            - Collaborated on the design, development, installation, and
-              configuration of http://osuosl.org, http://goscon.org,
-              http://www.co.polk.or.us based on the Drupal CMS
+        Penetration tested and analyzed web and thick-client applications for
+        information and computer security vulnerabilities.
 
 
-    >>> Portland Art Museum, NW Film Center
-    --------------------------------------------------------------------------
-    Assistant Instructor, Digital Film Editor | July 2003 - July 2007
+  >>> The Open Source Lab
+  -----------------------------------------------------------------------------
+  Software Developer | Dec. 2008 - June 2011
 
-        - Taught students how to animate and edit their own films
 
-        - Edited digital film for the final class presentations at the Guild
-          Theater in downtown Portland
+    Ganeti Web Manager:
+
+        Key developer of Ganeti Web Manager, a web-based application for
+        managing Google's Ganeti cluster-based virtual machines. Based on
+        Python, Django, javaScript, jQuery, HTML, and CSS.
+
+
+    Touchscreen:
+
+        Key developer and designer of Touchscreen, an interactive kiosk
+        framework. Used to run the OSL's datacenter kiosk. Built with  Python,
+        Django, Twisted, JavaScript, HTML, and CSS. Also gave a talk at
+        OSBridge June 2010.
+
+
+    Drupal Websites:
+
+        Collaborated on the design, development, installation, and
+        configuration of osuosl.org, goscon.org , and co.polk.or.us, based on
+        the Drupal PHP content management system.
+
+
+  >>> Portland Art Museum, NW Film Center
+  -----------------------------------------------------------------------------
+  Assistant Instructor, Digital Film Editor | July 2003 - July 2007
+
+    Children's Animation Courses:
+
+        Taught students how to animate their own short films, and edited
+        digital film for final class presentations, premiered at the Guild
+        Theater in Portland.
+
+
+>>> Education
+===============================================================================
+
+  Oregon State University:
+
+    - B.S. in Computer Science, Sept. 2011
+
+
+  Mt. Hood Community College
+
+    - A.S. in Computer Science, Sept. 2008
+    - A.S. in Mathematics, Sept. 2008
 
 
 >>> Conferences
 ===============================================================================
 
-    Speaker:
+  Speaker:
 
-        - Open Source Bridge, June 2010 in Portland, OR:
-          "Building Interactive Displays with Touchscreen 2.0"
-          <http://opensourcebridge.org/sessions/404>
+    - Open Source Bridge, June 2010 in Portland, OR: "Building Interactive
+      Displays with Touchscreen 2.0" <http://opensourcebridge.org/sessions/404>
 
 
-    Attendee:
+  Attendee:
 
-        - GOSCON (Government Open Source Converence), Oct. 2010 in Portland, OR
-        - Google I/O, June 2011 in San Francisco, CA
+    - GOSCON (Government Open Source Conference), Oct. 2010 in Portland, OR
+    - Google I/O, June 2011 in San Francisco, CA
