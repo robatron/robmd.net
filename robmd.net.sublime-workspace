@@ -1,0 +1,416 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"secondary",
+				"secondary_btn"
+			],
+			[
+				"se",
+				"secondary-btn"
+			],
+			[
+				"piwik",
+				"piwikTracker"
+			],
+			[
+				"clear",
+				"clear_container"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "robmd.net.sublime-project",
+			"settings":
+			{
+				"buffer_size": 86,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"package control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"convert ",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"convert to",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"convert",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"Package Control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 417.0
+	},
+	"console":
+	{
+		"height": 279.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/robmd.net.sublime-workspace",
+		"/C/Users/ew630d/mystuff/search/create-boostrap-modal.js",
+		"/C/Users/ew630d/mystuff/scratch.txt",
+		"/C/Users/ew630d/mystuff/search/standalone-search/designs/dynamic-prototype/js/app.js",
+		"/C/Users/ew630d/mystuff/search/standalone-search/designs/dynamic-prototype/js/fragstate.js",
+		"/C/Users/ew630d/mystuff/search/standalone-search/designs/dynamic-prototype/js/globals.js",
+		"/C/Users/ew630d/mystuff/search/standalone-search/designs/dynamic-prototype/js/models.js",
+		"/C/Users/ew630d/mystuff/search/standalone-search/designs/dynamic-prototype/js/template.js",
+		"/C/Users/ew630d/mystuff/search/standalone-search/designs/dynamic-prototype/js/util.js",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/base.html",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/media/less/base.less",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/home.html",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/resume.html",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/media/less/home.less",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/media/less/resume.less",
+		"/C/Users/ew630d/mystuff/scripts/backup.sh",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/media/css/bootstrap-2.1.1.min.css",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/design/resume.txt",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/design/resume.py",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/design/mcguire-dale,rob-resume.pdf",
+		"/C/Users/ew630d/mystuff/scripts/backup.old.bat",
+		"/C/Users/ew630d/Desktop/id_rsa.pub",
+		"/C/Users/ew630d/mystuff/scripts/backup.bat",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/content/home.mkd",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/media/less/blog.less",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/blog-base.html",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/contact.html",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/hooks/blog_images.py",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/build.py",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/hooks/__hooks__.py",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/hooks/less.py",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/build-server.bat",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/hooks/compile_less.py",
+		"/C/Users/ew630d/mystuff/search/stress-tests/queries",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/about.html",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/design/resume-ascii-art.txt",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/media/less/resume.less.css",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/.gitignore",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/build/README.md",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/design/README.md",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/media/less/base.less.css",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/vendor/README.md",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/build/build-wok",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/build",
+		"/C/Users/ew630d/Desktop/node-less-test/lessc.node",
+		"/C/Users/ew630d/Desktop/node-less-test/less-1.3.1/Makefile",
+		"/C/Users/ew630d/Desktop/feed",
+		"/C/Users/ew630d/mystuff/search/notes/gsa-vms",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/.htaccess",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/design/resume.json",
+		"/C/Users/ew630d/mystuff/search/piwik-tracking-code.html",
+		"/C/Users/ew630d/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/ew630d/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/design/resume.coffee",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/config",
+		"/C/Users/ew630d/mystuff/gitlab/notes",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/content/resume.mkd",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/blog-list.html",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/blog-article.html",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/media/less/contact.less",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/content/contact.mkd",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/.git/config",
+		"/C/Users/ew630d/Desktop/oss-toolkit-request-to-add-nginx.txt",
+		"/C/Users/ew630d/Desktop/nginx-1.2.4/configure",
+		"/C/Users/ew630d/Desktop/nginx-1.2.4/README",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/run-wok.py",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/run-wok-server.bat",
+		"/C/Users/ew630d/.ssh/id_rsa.pub",
+		"/C/Users/ew630d/mystuff/search/matryoshka-test/index.html",
+		"/C/Users/ew630d/mystuff/search/matryoshka-test/README.md",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/media/sass/base.scss",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/media/sass/blog.scss",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/content/blog-articles/js-tag-filtering.mkd",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/pymods/wok-master/wok/dev_server.py",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/pymods/wok-master/wok/engine.py",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/blog-base.jinja2",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/blog-base.jinja.html",
+		"/C/Users/ew630d/mystuff/non-work/robmd.net/templates/blog-base.jinja",
+		"/C/Users/ew630d/ext-dotfiles/src/conf/.vimrc",
+		"/C/Users/ew630d/ext-dotfiles/src/conf/.terminatorconf",
+		"/C/Users/ew630d/ext-dotfiles/src/conf/.bash_aliases",
+		"/C/Users/ew630d/ext-dotfiles/setup/ubuntu-desktop",
+		"/C/Users/ew630d/ext-dotfiles/setup/ubuntu-common",
+		"/C/Users/ew630d/ext-dotfiles/setup/README.md",
+		"/C/Users/ew630d/ext-dotfiles/config/bash-aliases",
+		"/C/Users/ew630d/ext-dotfiles/config/git",
+		"/C/Users/ew630d/ext-dotfiles/config/terminator",
+		"/C/Users/ew630d/ext-dotfiles/config/vim",
+		"/C/Users/ew630d/ext-dotfiles/config/README.md",
+		"/C/Users/ew630d/ext-dotfiles/src/scripts/decrypt",
+		"/C/Users/ew630d/ext-dotfiles/src/scripts/encrypt",
+		"/C/Users/ew630d/ext-dotfiles/src/scripts/pydmenu",
+		"/C/Users/ew630d/ext-dotfiles/src/scripts/pydmenu.py",
+		"/C/Users/ew630d/ext-dotfiles/.gitignore",
+		"/C/Users/ew630d/ext-dotfiles/README.md",
+		"/C/Users/ew630d/ext-dotfiles/deploy-ubuntu",
+		"/C/Users/ew630d/ext-dotfiles/conf/vim",
+		"/C/Users/ew630d/ext-dotfiles/conf/terminator",
+		"/C/Users/ew630d/ext-dotfiles/conf/git",
+		"/C/Users/ew630d/ext-dotfiles/conf/bash-aliases",
+		"/C/Users/ew630d/ext-dotfiles/deploy/git",
+		"/C/Users/ew630d/ext-dotfiles/deploy/bash-aliases",
+		"/C/Users/ew630d/ext-dotfiles/install-scripts/deploy-ubuntu",
+		"/C/Users/ew630d/ext-dotfiles/install-scripts/git",
+		"/C/Users/ew630d/ext-dotfiles/setup-scripts/deploy-ubuntu",
+		"/C/Users/ew630d/ext-dotfiles/deploy/scripts",
+		"/C/Users/ew630d/ext-dotfiles/deploy/terminator",
+		"/C/Users/ew630d/ext-dotfiles/deploy/vim",
+		"/C/Users/ew630d/ext-dotfiles/scripts/scripts",
+		"/C/Users/ew630d/mystuff/search/matryoshka-test/js/matryoshka.js",
+		"/C/Users/ew630d/mystuff/greasemonkey/gm_scripts/ETS_Enhancements/ets_enhancements.user.js",
+		"/C/Users/ew630d/mystuff/greasemonkey/gm_scripts/SIPAS_Enhancements/sipas_enhancements.user.js",
+		"/C/Users/ew630d/mystuff/search/nested-divs/index.html",
+		"/C/Users/ew630d/mystuff/search/standalone-search/designs/dynamic-prototype/js/views/content.js",
+		"/C/Users/ew630d/mystuff/search/standalone-search/designs/dynamic-prototype/tmpl/welcome.handlebars",
+		"/C/Users/ew630d/mystuff/search/standalone-search/designs/dynamic-prototype/index.html",
+		"/C/Users/ew630d/mystuff/search/nested-divs/nested-divs.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\ew630d\\mystuff\\non-work\\robmd.net\\templates",
+			"C:\\Users\\ew630d\\ext-dotfiles\\config"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"make_modal",
+			"and",
+			"and and",
+			"<\\/*strong>",
+			"\\.less\\.css",
+			"css.less",
+			"sass_arg",
+			"sass_dest",
+			"sass_src",
+			"</*strong>",
+			">\n",
+			"\\.less",
+			"MODULES",
+			"PYMODS",
+			"PYLIBS",
+			"PYMOD_DIR",
+			"Web Developer",
+			"resume",
+			"date",
+			"dates",
+			"=",
+			"= ",
+			";",
+			"\"",
+			"python",
+			"highlight_filter_link",
+			"update_filter_status",
+			"deactivate_all",
+			"PROD",
+			"<(/*)li>",
+			"sub pro",
+			"sub p",
+			"^sub [^action]",
+			"title",
+			"ID_Logout",
+			"spUserID",
+			"id",
+			"spUserId",
+			"Nginx",
+			"#777;",
+			"h5",
+			"h3",
+			"padding",
+			"Python",
+			"span9",
+			"span3",
+			"span4",
+			"^\\s*-",
+			"box",
+			"match",
+			"border",
+			"line-height",
+			"change",
+			"hooks_dir",
+			"hooks",
+			"hooks_dir",
+			"hooks",
+			"_dir",
+			"block css",
+			"`pwd`/conf/",
+			"TO_INSTALL_COMMON",
+			"GM_",
+			"report",
+			"Nested tag test",
+			"browser_compat",
+			"href='#'",
+			"container",
+			"clear_body",
+			"clear-body",
+			"control-label",
+			"control-group",
+			"h5",
+			"h3",
+			"\"",
+			"\\\"",
+			"element",
+			"span"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"**",
+			".css",
+			"",
+			"'",
+			"<\\1p>",
+			"",
+			"block style",
+			"`pwd`/../src/conf/",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "robmd.net.sublime-project",
+					"settings":
+					{
+						"buffer_size": 86,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								86,
+								86
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 220.0,
+	"status_bar_visible": true
+}
