@@ -161,7 +161,11 @@
                 /* Highlight syntax with Google Prettify, and excape any HTML
                 classed with 'lang-html'
                 */
+
+                // Escape HTML in code tagged as HTML
                 $('.lang-html').text($('.lang-html').html())
+
+                // Execute prettyprint
                 prettyPrint()
             }
 
