@@ -7,3 +7,4 @@ robots.txt
 .sass-cache
 media/sass/*.css
 *.less.css
+*.sublime-workspace
