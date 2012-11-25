@@ -10,21 +10,7 @@
             <div class='blog-post row'
                     tags='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
 
-                <div class='span3 hidden-phone'>
-                    {% if page.title_img_thumb %}
-                        <div class='blog-thumb img-polaroid'>
-                            <a href='{{page.url}}'>
-                                <!-- img src="http://placehold.it/300x200"
-                                -->
-                                <img src='{{page.title_img_thumb}}'
-                                        title='Thumbnail for "{{page.title}}"'>
-                            </a>
-                        </div>
-                    {% endif %}
-                </div>
-
-                <div class='summary span6'>
-
+                <div class='summary {% if page.title_img_thumb %}span6{% else %}span9{% endif %}'>
                     <div class='title'>
                         <a href='{{page.url}}'>
                             <h3>{{page.title}}</h3>
@@ -46,52 +32,21 @@
                         </a>
                     {% endif %}
                 </div>
+
+                {% if page.title_img_thumb %}
+                    <div class='span3 hidden-phone'>
+                            <div class='blog-thumb img-polaroid'>
+                                <a href='{{page.url}}'>
+                                    <!-- img src="http://placehold.it/300x200"
+                                    -->
+                                    <img src='{{page.title_img_thumb}}'
+                                            title='Thumbnail for "{{page.title}}"'>
+                                </a>
+                            </div>
+                    </div>
+                {% endif %}
+
             </div>
-
-            <!-- div class='article {% if loop.last %}last{% endif %}'>
-                <div class='{% for tag in page.tags %}{{nospace(tag)}} {% endfor %}'>
-                    <table>
-                        <tr>
-                            <td class='title-img-wrap'>
-                                {% if page.title_img_thumb %}
-                                    <a href='{{page.url}}'>
-                                        <img class='title-img'
-                                            src='{{page.title_img_thumb}}'>
-                                    </a>
-                                {% endif %}
-                            </td>
-
-                            <td class='text'>
-                                <div class='title-bar'>
-                                    <h1 class='title'>
-                                        <a href='{{page.url}}'>
-                                            {{page.title}}
-                                        </a>
-                                    </h1>
-
-                                    <div class='subtitle'>
-                                        {{page.date}}
-
-                                        {% if page.tags %}
-                                            | in {{ tag_list(page.tags) }}
-                                        {% endif %}
-                                    </div>
-                                </div>
-
-                                <div class='snippet'>
-                                    {% if page.snippet %}
-                                        {{ page.snippet|truncate(length=200) }}
-                                        <a href='{{page.url}}'>
-                                            &raquo;
-                                        </a>
-                                    {% endif %}
-                                </div>
-
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div -->
         {% endfor %}
 
     {% else %}
