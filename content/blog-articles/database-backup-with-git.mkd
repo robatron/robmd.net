@@ -4,7 +4,9 @@ category: blog
 date: 2012-11-10
 tags: [sysadmin, database, git]
 snippet: >
-    A quick 'n' simple solution to versioned database backup using Git.
+    I came up with a simple, intuitive database backup solution using Git to
+    track revisions. If you've got a small- to medium-sized database, this
+    may work for you too.
 ---
 
 I'm new to system/database adminstration. I'm currently running a web
@@ -12,16 +14,16 @@ application that recieves around ~55,000 hits/day, and whose database grows by
 about 60 MiB of plain-text per day.
 
 I came up with a simple, intuitive database backup solution using Git to track
-revisions. If you've got a small- to medium-sized database, this should work
-for you too.
+revisions. (Apparently I [wasn't the first][ref-article].) If you've got a
+small- to medium-sized database, this may work for you too.
 
 
 Hand-versioning: really inefficient
 -----------------------------------
 
 Backing up your database is important, but one must also consider keeping
-*revisions* of those backups. If you keep only the latest backup, but you risk
-overwriting good backups with bad ones.
+*revisions* of those backups, since if you keep only the latest backup, but you
+risk overwriting a good backup with bad ones.
 
     bad-dump.sql -> good-dump-from-yesterday.sql
 
@@ -33,8 +35,7 @@ backup will consume the entire size of the database each backup, in my case,
     dump2.sql   10 GiB
     dump3.sql   10 GiB
 
-If most of the data in your database is static, that's a lot
-of wasted space.
+If most of the data in your database is static, that's a lot of wasted space.x
 
 
 Enter: Git
@@ -94,9 +95,9 @@ Now what?
 
 Anything you can do with a normal Git repository, including:
 
-- Push to a remote repository on a backup server
-- Pull the latest database changes to your development server
-- View changes to your database with `git whatchanged`
+- Push to a remote repository on a **backup server**
+- Pull the latest database changes to your **development server**
+- **View changes** to your database with `git whatchanged`
 
 Optimizations
 -------------
