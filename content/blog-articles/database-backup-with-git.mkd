@@ -14,7 +14,7 @@ application that recieves around ~55,000 hits/day, and whose database grows by
 about 60 MiB of plain-text per day.
 
 I came up with a simple, intuitive database backup solution using Git to track
-revisions. (Apparently I [wasn't the first][ref-article].) If you've got a
+revisions. (And I [wasn't the first][ref-article].) If you've got a
 small- to medium-sized database, this may work for you too.
 
 
