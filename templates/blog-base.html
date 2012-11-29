@@ -169,10 +169,6 @@
     // Filter status box
     // -----------------
 
-    function init_filter_status(){
-        $('#filter-status').hide()
-    }
-
     function show_filter_status(tag){
         $('#filter-status').slideDown()
         $('#filter-status .tag-label').text(tag)
@@ -188,9 +184,6 @@
 
     // Highlight the 'blog' menu item
     menu_highlight('blog');
-
-    // Initialize filter status box (hide it)
-    init_filter_status()
 
     // Filter by tag on load if necessary
     var filter_on_hash = function(){
