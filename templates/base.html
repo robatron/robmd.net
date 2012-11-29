@@ -54,8 +54,7 @@
         <title>{{ page.title }} &raquo; {{ site.title }}</title>
 
         <!-- CSS -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|Orbitron'
-                rel='stylesheet' type='text/css'>
+        <link id='titlebar-font' rel='stylesheet' type='text/css'>
         <link href="/css/prettify-r187.min.css" type="text/css"
                 rel="stylesheet" />
 
@@ -155,8 +154,12 @@
         <script src="/js/lib/jquery-1.8.2.min.js"></script>
         <script src='/js/lib/bootstrap-2.1.1.min.js'></script>
         <script>
-            // Init
-            // ====
+            // Settings
+            // ========
+            var TITLEBAR_FONT_URL =
+                'http://fonts.googleapis.com/css?family=Open+Sans:400,600|Orbitron'
+
+
             function highlight_syntax(){
                 /* Highlight syntax with Google Prettify, and excape any HTML
                 classed with 'lang-html'
@@ -176,40 +179,56 @@
                         .attr('class', 'active')
             }
 
-            {# JavaScript init block for templates to include thier own JS #}
-            {% block js_init %}{% endblock %}
+            function track(){
+                /* Google Analytics tracking code. Official docs recommend
+                placing at the bottom of </head>, but practice calls for
+                placing the JS at the bottom of the body to speed up appearance
+                of page load for users.
+                */
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-17987944-2']);
+                _gaq.push(['_setDomainName', 'robmd.net']);
+                _gaq.push(['_trackPageview']);
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ?
+                            'https://ssl' :
+                            'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                })();
+            }
 
-            // Doc ready
-            // =========
-            $(function(){
+            // Init
+            // ====
+            function init(){
+                /* Initialize the JavaScript for RobMD.net
+                */
+                var local = window.location.hostname === 'localhost'
+                if(!local){
+                    track()
+                    $('titlebar-font').attr('href', TITLEBAR_FONT_URL)
+                }
+            }
+
+            // "Main"
+            // ======
+            init()
+
+            // Subpage init --
+            {% block js_init %}{% endblock %}
+            // -- end subpage init
+
+            $(document).ready(function(){
                 /* Run when the document is ready
                 */
-
                 highlight_syntax()
 
-                {# Allow adding JavaScript to the document ready #}
+                // Subpage doc ready --
                 {% block js_doc_ready %}{% endblock %}
+                // -- end subpage doc ready
             });
-
-            // Google Analytics
-            // ================
-            /* Google Analytics tracking code. Official docs recommend placing
-            at the bottom of </head>, but practice calls for placing the JS at
-            the bottom of the body.
-            */
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-17987944-2']);
-            _gaq.push(['_setDomainName', 'robmd.net']);
-            _gaq.push(['_trackPageview']);
-            (function() {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ?
-                        'https://ssl' :
-                        'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(ga, s);
-            })();
         </script>
     </body>
 </html>
