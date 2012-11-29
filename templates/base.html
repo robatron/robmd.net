@@ -54,7 +54,6 @@
         <title>{{ page.title }} &raquo; {{ site.title }}</title>
 
         <!-- CSS -->
-        <link id='titlebar-font' rel='stylesheet' type='text/css'>
         <link href="/css/prettify-r187.min.css" type="text/css"
                 rel="stylesheet" />
 
@@ -154,12 +153,6 @@
         <script src="/js/lib/jquery-1.8.2.min.js"></script>
         <script src='/js/lib/bootstrap-2.1.1.min.js'></script>
         <script>
-            // Settings
-            // ========
-            var TITLEBAR_FONT_URL =
-                'http://fonts.googleapis.com/css?family=Open+Sans:400,600|Orbitron'
-
-
             function highlight_syntax(){
                 /* Highlight syntax with Google Prettify, and excape any HTML
                 classed with 'lang-html'
@@ -206,10 +199,7 @@
                 /* Initialize the JavaScript for RobMD.net
                 */
                 var local = window.location.hostname === 'localhost'
-                if(!local){
-                    track()
-                    $('titlebar-font').attr('href', TITLEBAR_FONT_URL)
-                }
+                if(!local) track()
             }
 
             // "Main"
