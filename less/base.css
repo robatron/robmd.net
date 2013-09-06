@@ -1,0 +1,6 @@
+font-family:'Open Sans',sans-serif;#navbar{margin-bottom:0px;box-shadow:none;}@media (min-width:1200px){#navbar{}}#navbar .navbar-inner{background-image:none;background-color:whitesmoke;border-bottom:1px solid #777777;padding:0;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;text-shadow:none;}#navbar .navbar-inner .brand{font-size:2.5em;padding-left:18px;color:#444;}@media (max-width:518px){#navbar .navbar-inner .brand{float:none;text-align:center;}}
+#navbar .navbar-inner .active *{box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;background-color:white;border-left:1px solid #777777;border-right:1px solid #777777;font-weight:bold;}
+@media (max-width:518px){#navbar .navbar-inner .nav{float:none;}}
+#content{}@media (min-width:980px){#content{padding-top:40px;}}#content .photo-cap{font-size:0.75em;}
+#content pre.prettyprint,#content pre{margin-top:20px;margin-bottom:20px;padding-top:10px;padding-bottom:10px;padding-left:40px;}
+footer{margin-top:50px;padding-top:40px;padding-bottom:40px;border-top:1px solid #777777;background-color:whitesmoke;}@media (max-width:767px){footer{margin-left:-20px;margin-right:-20px;padding-left:20px;padding-right:20px;}}

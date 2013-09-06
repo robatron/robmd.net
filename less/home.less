@@ -1,0 +1,43 @@
+/* LESS stylesheet for home
+*/
+
+#home {
+    .hero-unit {
+        color: lightgrey;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+
+        /* Large desktop */
+        @media (min-width: 1200px) {
+            margin-top: -390px;
+            margin-left: 488px;
+            padding: 30px 80px;
+        }
+
+        margin-top: -318px;
+        margin-left: 395px;
+        padding: 10px 60px;
+
+        @media (min-width: 768px) and (max-width: 979px) {
+            margin-top: -295px;
+            margin-left: 354px;
+            padding: 17.5px 40px;
+
+            webkit-border-radius: 0px;
+            moz-border-radius: 0px;
+            border-radius: 0px;
+
+            h1 {
+                display: none;
+            }
+        }
+
+        h1, strong {
+            color: whitesmoke;
+        }
+
+        a:hover {
+            color: #08C;
+        }
+    }
+}

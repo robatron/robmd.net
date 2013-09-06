@@ -1,0 +1,2 @@
+#home .hero-unit{color:lightgrey;background-color:rgba(0, 0, 0, 0.8);position:absolute;margin-top:-318px;margin-left:395px;padding:10px 60px;}@media (min-width:1200px){#home .hero-unit{margin-top:-390px;margin-left:488px;padding:30px 80px;}}@media (min-width:768px) and (max-width:979px){#home .hero-unit{margin-top:-295px;margin-left:354px;padding:17.5px 40px;webkit-border-radius:0px;moz-border-radius:0px;border-radius:0px;}#home .hero-unit h1{display:none;}}#home .hero-unit h1,#home .hero-unit strong{color:whitesmoke;}
+#home .hero-unit a:hover{color:#08C;}

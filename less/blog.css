@@ -1,0 +1,12 @@
+#blog-base{padding-top:40px;}#blog-base .img-polaroid{box-shadow:3px 4px 6px 1px #AAA;}
+#blog-base #filter-status{display:none;}
+#blog-base #blog-list #filter-list li{margin-bottom:5px;}
+#blog-base #blog-list .blog-thumb img{margin-left:auto;margin-right:auto;display:block;}
+#blog-base #blog-list .blog-post{margin-bottom:40px;}#blog-base #blog-list .blog-post .summary .title a:hover{text-decoration:none;}
+#blog-base #blog-list .blog-post .summary .title h3{margin-top:0px;padding-top:0px;line-height:20px;}
+#blog-base #blog-list .blog-post .summary .subtitle{font-size:0.9em;margin-bottom:5px;}
+#blog-base #blog-article #title-bar{margin-bottom:20px;}#blog-base #blog-article #title-bar #blog-back{font-size:1.25em;margin-top:0;line-height:0;margin-bottom:20px;}
+#blog-base #blog-article #title-img{margin-left:auto;margin-right:auto;display:block;}
+#blog-base #blog-article #article-body{margin-top:40px;}#blog-base #blog-article #article-body h2{margin-top:40px;border-bottom:1px solid lightgrey;font-size:24px;}
+#blog-base #blog-article #article-body .article-image{margin-top:10px;margin-bottom:20px;margin-left:auto;margin-right:auto;display:block;}
+#blog-base #blog-article #article-footer{margin-top:40px;}

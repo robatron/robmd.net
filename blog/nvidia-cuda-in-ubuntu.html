@@ -1,0 +1,745 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+                                   _
+                                ==(W{==========-      /===-
+                                  ||  (.--.)         /===-_---~~~~~~~~~------____
+                                  | \_,|**|,__      |===-~___                _,-' `
+                     -==\\        `\ ' `--'   ),    `//~\\   ~~~~`---.___.-~~
+                 ______-==|        /`\_. .__/\ \    | |  \\           _-~`
+           __--~~~  ,-/-==\\      (   | .  |~~~~|   | |   `\        ,'
+        _-~       /'    |  \\     )__/==0==-\<>/   / /      \      /
+      .'        /       |   \\      /~\___/~~\/  /' /        \   /'
+    /  ____  /         |    \`\.__/-~~   \  |_/'  /          \/'
+    /-'~    ~~~~~---__  |     ~-/~         ( )   /'        _--~`
+                      \_|      /        _) | ;  ),   __--~~
+                        '~~--_/      _-~/- |/ \   '-~ \
+                       {\__--_/}    / \\_>-|)<__\      \
+                       /'   (_/  _-~  | |__>--<__|      |
+                      |   _/) )-~     | |__>--<__|      |
+                      / /~ ,_/       / /__>---<__/      |
+                     o-o _//        /-~_>---<__-~      /
+                     (^(~          /~_>---<__-      _-~
+                    ,/|           /__>--<__/     _-~
+                 ,//('(          |__>--<__|     /                  .----_
+                ( ( '))          |__>--<__|    |                 /' _---_~\
+             `-)) )) (           |__>--<__|    |               /'  /     ~\`\
+            ,/,'//( (             \__>--<__\    \             /'  //        ||
+          ,( ( ((, ))              ~-__>--<_~-_  ~--____---~' _/'/        /'
+        `~/  )` ) ,/|                 ~-_~>--<_/-__       __-~ _/
+      ._-~//( )/ )) `                    ~~-'_/_/ /~~~~~~~__--~
+       ;'( ')/ ,)(                              ~~~~~~~~~~
+     ' ') '( (/
+        '   '  `
+
+    Handcrafted by
+       ___         __
+      / _ \ ___   / /
+     / , _// _ \ / _ \
+    /_/|_| \___//_.__/
+       __  ___      _____       _                 ___         __
+      /  |/  /____ / ___/__ __ (_)____ ___  ____ / _ \ ___ _ / /___
+     / /|_/ // __// (_ // // // // __// -_)/___// // // _ `// // -_)
+    /_/  /_/ \__/ \___/ \_,_//_//_/   \__/     /____/ \_,_//_/ \__/
+
+         Providing a tiny dent in the fabric of spacetime since 1986
+    -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>nVidia CUDA multi-core development in Ubuntu &raquo; Rob McGuire-Dale</title>
+
+        <!-- CSS -->
+        <link href="/css/prettify-r187.min.css" type="text/css"
+                rel="stylesheet" />
+
+        <link href='/css/bootstrap-2.1.1.min.css' type='text/css'
+                rel="stylesheet" />
+        <link href='/css/bootstrap-responsive-2.1.1.min.css' type='text/css'
+                rel="stylesheet"/>
+        <link href='/less/base.css' type='text/css' rel="stylesheet"/>
+
+        
+        
+    <link href='/less/blog.css' type='text/css' rel="stylesheet"/>
+
+
+        
+        
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div id='navbar' class='navbar navbar-fixed-top'>
+            <div class="navbar-inner">
+                <div class="container">
+
+                    <a class='brand' href='/'>
+                        <div class='hidden-phone'>Rob McGuire-Dale</div>
+                        <div id='short-name' class='visible-phone'>
+                            Rob M.D.
+                        </div>
+                    </a>
+
+                    <div id='nav-links'>
+                        <ul class='nav pull-right'>
+                            <li>
+                                <a id='home' href='/'>
+                                    home
+                                </a>
+                            </li>
+                            <li>
+                                <a id='blog' href='/blog/'>
+                                    blog
+                                </a>
+                            </li>
+                            <li>
+                                <a id='resume' href='/resume/'>
+                                    r&eacute;sum&eacute;
+                                </a>
+                            </li>
+                            <li>
+                                <a id='contact' href='/contact/'>
+                                    contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div id='content' class='container'>
+            
+<div id='blog-base'>
+    <div class='row'>
+
+        <!-- Blog filtering -->
+        <div class='span3 hidden-phone'>
+            <ul id='filter-list' class='nav nav-list'>
+
+                <!-- Tags -->
+                <li class='nav-header'>
+                    Tags
+                </li>
+
+                
+                    <li class='filter-link' tag='database'>
+                            <a href='/blog/#database'
+            class='tag-link '
+            tag='database'>
+        
+            database (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='git'>
+                            <a href='/blog/#git'
+            class='tag-link '
+            tag='git'>
+        
+            git (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='how-to'>
+                            <a href='/blog/#how-to'
+            class='tag-link '
+            tag='how-to'>
+        
+            how-to (2)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='linux'>
+                            <a href='/blog/#linux'
+            class='tag-link '
+            tag='linux'>
+        
+            linux (3)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='meta'>
+                            <a href='/blog/#meta'
+            class='tag-link '
+            tag='meta'>
+        
+            meta (3)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='netsec'>
+                            <a href='/blog/#netsec'
+            class='tag-link '
+            tag='netsec'>
+        
+            netsec (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='programming'>
+                            <a href='/blog/#programming'
+            class='tag-link '
+            tag='programming'>
+        
+            programming (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='software'>
+                            <a href='/blog/#software'
+            class='tag-link '
+            tag='software'>
+        
+            software (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='sysadmin'>
+                            <a href='/blog/#sysadmin'
+            class='tag-link '
+            tag='sysadmin'>
+        
+            sysadmin (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='windows'>
+                            <a href='/blog/#windows'
+            class='tag-link '
+            tag='windows'>
+        
+            windows (1)
+        
+    </a>
+                    </li>
+                
+
+                <li class="divider"></li>
+
+                <!-- Recent posts -->
+                <div id='recent-posts'>
+                    <li class='nav-header'>
+                        Recent posts
+                    </li>
+
+                    
+                        <li>
+                            <a href='/blog/database-backup-with-git.html'>
+                                Versioned database backups with Git
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/js-tag-filtering.html'>
+                                JavaScript-based tag filtering
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/tunneling-with-putty.html'>
+                                Tunneling with PuTTY
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/blag.html'>
+                                Blag
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/new-site-powered-by-wok.html'>
+                                New website, powered by wok
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/xmonad+gnome-in-ubuntu.html'>
+                                Xmonad + GNOME in Ubuntu
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/nvidia-cuda-in-ubuntu.html'>
+                                nVidia CUDA multi-core development in Ubuntu
+                            </a>
+                        </li>
+                    
+                </div>
+            </ul>
+        </div>
+
+        <!-- Blog content -->
+        <div id='blog-content' class='span9'>
+            <div id='filter-status' class='text-info well'>
+                <strong>
+                    Viewing articles tagged with
+                    "<span class='tag-label'></span>"
+                </strong>
+                <a href='#' class='clear-filter btn btn-mini pull-right'>View all</a>
+            </div>
+
+            
+<div id='blog-article'>
+
+    <div id='title-bar'>
+        <h2 id='blog-back'>
+            <a href='/blog'>
+                &laquo; Blog
+            </a>
+        </h2>
+        <h1 id='title'>
+            <a href='/blog/nvidia-cuda-in-ubuntu.html'>
+                nVidia CUDA multi-core development in Ubuntu
+            </a>
+        </h1>
+
+        <div id='subtitle' class='muted'>
+            
+            2010-09-21
+
+            
+                | in 
+        
+            <a href='/blog/#how-to'
+            class='tag-link '
+            tag='how-to'>
+        
+            how-to
+        
+    </a>,
+        
+    
+        
+            <a href='/blog/#linux'
+            class='tag-link '
+            tag='linux'>
+        
+            linux
+        
+    </a>,
+        
+    
+        
+            and <a href='/blog/#programming'
+            class='tag-link '
+            tag='programming'>
+        
+            programming
+        
+    </a>
+        
+    
+            
+        </div>
+    </div>
+
+    
+        <div class='img-polaroid'>
+            <a href='https://lh6.googleusercontent.com/-aO3oKZEMCpg/TM3JTfO7giI/AAAAAAAACWg/H6o3MoxiAYY/s0/Screenshot.png'>
+                <img id='title-img' src='https://lh6.googleusercontent.com/-aO3oKZEMCpg/TM3JTfO7giI/AAAAAAAACWg/H6o3MoxiAYY/s870/Screenshot.png'/>
+            </a>
+        </div>
+    
+
+    <div id='article-body'>
+        <p>Here's a step-by-step guide on how to install nVidia's CUDA SDK for multi-core
+development on Ubuntu 9.10 (and possibly later versions).</p>
+<h1>Download the driver, toolkit, and SDK</h1>
+<ol>
+<li>Go to the <a href="http://developer.nvidia.com/cuda-downloads">CUDA download page</a> and click the <em>Get latest CUDA
+   toolkit</em> link</li>
+<li>Under the <em>Linux</em> section, find the latest <em>Ubuntu</em> packages</li>
+<li>Download the latest Ubuntu package for your architecture, and remember where
+   you put it</li>
+</ol>
+<h1>Install the CUDA-enabled nVidia driver</h1>
+<ol>
+<li>On your GNOME panel, go to <em>System -&gt; Administration -&gt; Hardware Drivers</em></li>
+<li>Disable your current nVidia driver</li>
+<li>Enter a virtual terminal by pressing <em>Ctrl + Alt + F1</em></li>
+<li>Log in to your virtual terminal</li>
+<li>
+<p>Kill X and GDM</p>
+<p><pre class='prettyprint'>
+    sudo service gdm stop
+</pre></p>
+</li>
+<li>
+<p><code>cd</code> to where you downloaded the driver</p>
+</li>
+<li>
+<p>Run the driver installer script</p>
+<p><pre class='prettyprint'>
+    sudo ./nvidia-driver-install-script-name.run
+</pre>      <br />
+</p>
+</li>
+<li>
+<p>Follow the on-screen instructions to install the driver. Allow it to
+   automatically configure your <code>xorg.config</code> for you.</p>
+</li>
+<li>
+<p>After the installer has finished, reboot</p>
+<p><pre class='prettyprint'>
+    sudo reboot
+</pre>      <br />
+</p>
+</li>
+</ol>
+<h1>Install the CUDA toolkit</h1>
+<ol>
+<li>Open a terminal and <code>cd</code> to where you donloaded the toolkit</li>
+<li>
+<p>Run the toolkit installer</p>
+<p><pre class='prettyprint'>
+    sudo ./nvidia-toolkit-install-script-name.run
+</pre>      <br />
+</p>
+</li>
+</ol>
+<h1>Add CUDA to your environment variables</h1>
+<ol>
+<li>
+<p>Open a terminal and type</p>
+<p><pre class='prettyprint'>
+    echo "# CUDA stuff
+    PATH=$PATH:/usr/local/cuda/bin
+    LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib
+    export PATH
+    export LD_LIBRARY_PATH" &gt;&gt; ~/.bashrc
+</pre></p>
+</li>
+<li>
+<p>Reload your <code>.bashrc</code> by either restarting your terminal, or with</p>
+<p><pre class='prettyprint'>
+    . ~/.bashrc
+</pre></p>
+</li>
+</ol>
+<h1>Install the CUDA SDK</h1>
+<ol>
+<li>Open a terminal and <code>cd</code> to where you downloaded the SDK</li>
+<li>
+<p>Run the toolkit installer</p>
+<p><pre class='prettyprint'>
+    sudo ./nvidia-SDK-install-script-name.run
+</pre></p>
+</li>
+</ol>
+<h1>Install and configure GCC v4.3</h1>
+<p>At the time that this was written, GCC v4.4 had issues compiling CUDA code. You
+must first install and configure GCC v4.3. (Don't worry, you can still keep 
+v4.4 and change it back whenever you want.)</p>
+<ol>
+<li>
+<p>Open a terminal and install gcc v4.3 from APT</p>
+<p><pre class='prettyprint'>
+    sudo apt-get install gcc-4.3
+</pre></p>
+</li>
+<li>
+<p><code>cd</code> to <code>/usr/bin</code></p>
+</li>
+<li>
+<p>Remove the current gcc and g++ symlinks</p>
+<p><pre class='prettyprint'>
+    sudo rm gcc g++
+</pre></p>
+</li>
+<li>
+<p>Create new symlinks to v4.3</p>
+<p><pre class='prettyprint'>
+    ln -s gcc-4.3 gcc
+    ln -s g++-4.3 g++
+</pre></p>
+</li>
+</ol>
+<h1>Disable Compiz</h1>
+<p>Many of the CUDA examples are OpenGL-based, and Compiz has a tendency to
+interfere.</p>
+<ol>
+<li>Click <em>System -&gt; Preferences -&gt; Appearance</em></li>
+<li>Disable Compiz effects by clicking on the <em>Visual Effects</em> tab and selecting
+   <em>none</em></li>
+</ol>
+<h1>Build and run CUDA examples</h1>
+<ol>
+<li>
+<p><code>cd</code> to the <em>C</em> directory in the CUDA SDK installation directory</p>
+<p><pre class='prettyprint'>
+    cd ~/NVIDIA_GPU_Computing_SDK/C
+</pre></p>
+</li>
+<li>
+<p>Build the examples. This will take a few minutes to compile.</p>
+<p><pre class='prettyprint'>
+    sudo make
+</pre></p>
+</li>
+<li>
+<p>Run the examples in `~/NVIDIA_GPU_Computing_SDK/C/bin/linux/release</p>
+</li>
+<li>Have fun!</li>
+</ol>
+    </div>
+
+    <div id='article-footer'>
+        <a href='/blog'>&laquo; Back to blog list</a>
+    </div>
+
+    <!-- Disquis comment system -->
+    <hr>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        // Disqus config
+        var disqus_shortname = 'robmd';
+
+        // Disqus init
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] ||
+                document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+        Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus
+        </a>.
+    </noscript> <!--/disquis -->
+</div>
+
+        </div>
+
+
+    </div>
+</div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class='container muted'>
+                <p class='pull-right hidden-phone'>
+                    <a href='#'>Back to top</a>
+                </p>
+                <div class='visible-phone'>
+                    <p>
+                        <a href='#' class='btn'>Back to top</a>
+                    </p>
+                    <br>
+                </div>
+                <p>
+                    Last generated at
+                    2012/11/28 17:06:14 by
+                    <a href="https://github.com/mythmon/wok">Wok</a>.
+                </p>
+                <p>
+                    Site source code availible on
+                    <a href="http://github.com/robatron/robmd.net">GitHub</a>.
+                </p>
+                <p>
+                    &copy; Copyright
+                    <a href="http://robmd.net/">Rob McGuire-Dale</a>.
+                </p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="/js/lib/prettify-r187.min.js"></script>
+        <script src="/js/lib/prettify-lang-hs-r187.min.js"></script>
+        <script src='/js/lib/less-1.3.0.min.js'></script>
+        <script src="/js/lib/jquery-1.8.2.min.js"></script>
+        <script src='/js/lib/bootstrap-2.1.1.min.js'></script>
+        <script>
+            function highlight_syntax(){
+                /* Highlight syntax with Google Prettify, and excape any HTML
+                classed with 'lang-html'
+                */
+
+                // Escape HTML in code tagged as HTML
+                $('.lang-html').text($('.lang-html').html())
+
+                // Execute prettyprint
+                prettyPrint()
+            }
+
+            function menu_highlight(menu_id){
+                /* Highlight specified menu item
+                */
+                $('#navbar .nav li a#'+menu_id).parent('li')
+                        .attr('class', 'active')
+            }
+
+            function track(){
+                /* Google Analytics tracking code. Official docs recommend
+                placing at the bottom of </head>, but practice calls for
+                placing the JS at the bottom of the body to speed up appearance
+                of page load for users.
+                */
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-17987944-2']);
+                _gaq.push(['_setDomainName', 'robmd.net']);
+                _gaq.push(['_trackPageview']);
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ?
+                            'https://ssl' :
+                            'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                })();
+            }
+
+            // Init
+            // ====
+            function init(){
+                /* Initialize the JavaScript for RobMD.net
+                */
+                var local = window.location.hostname === 'localhost'
+                if(!local) track()
+            }
+
+            // "Main"
+            // ======
+            init()
+
+            // Subpage init --
+            
+
+    // Tag filtering
+    // -------------
+
+    function filter_by_tag(tag){
+        /* Remove all blog posts that aren't tagged with `tag`, show all that
+        are. Ignore blank tag names.
+        */
+
+        if(tag){
+            $('.blog-post').each(function(index){
+                var tags = $(this).attr('tags').split(' ')
+                var has_tag = false
+
+                for(var i in tags){
+                    if(tags[i] === tag){
+                        has_tag = true
+                        break
+                    }
+                }
+
+                if(has_tag) {
+                    $(this).slideDown("slow")
+                } else {
+                    $(this).slideUp("slow")
+                }
+            });
+        }
+
+        activate_filter_link(tag)
+        show_filter_status(tag)
+    }
+
+    function show_all(){
+        /* Show all blog articles
+        */
+
+        $('.blog-post').slideDown('slow')
+    }
+
+    // Tag link de/activate
+    // --------------------
+
+    function activate_filter_link(tag){
+        /* Radio-activate the specified tag link's list-item
+        */
+        var $link = $('#filter-list .filter-link[tag="' + tag + '"]')
+        deactivate_all_filter_links()
+        $link.addClass('active')
+    }
+
+    function deactivate_all_filter_links(){
+        /* Deactivate all tag links' list items
+        */
+        $('#filter-list li').removeClass('active')
+    }
+
+    // Filter status box
+    // -----------------
+
+    function show_filter_status(tag){
+        $('#filter-status').slideDown()
+        $('#filter-status .tag-label').text(tag)
+    }
+
+    function hide_filter_status(){
+        $('#filter-status').slideUp()
+    }
+
+            // -- end subpage init
+
+            $(document).ready(function(){
+                /* Run when the document is ready
+                */
+                highlight_syntax()
+
+                // Subpage doc ready --
+                
+
+    // Highlight the 'blog' menu item
+    menu_highlight('blog');
+
+    // Filter by tag on load if necessary
+    var filter_on_hash = function(){
+        if(window.location.hash){
+            filter_by_tag(window.location.hash.slice(1));
+        }
+    }();
+
+    // When a tag link is clicked...
+    $('.tag-link').click(function(){
+        /* When the user clicks on a tag link, filter blog articles by the
+        specified tag and activate the link's list item.
+        */
+        filter_by_tag($(this).attr('tag'))
+    });
+
+    // When a 'clear filter' link is clicked...
+    $('a.clear-filter').click(function(){
+        /* When the user clicks on a 'clear filter' link, show all blog
+        articles, and deactivate any filter links.
+        */
+
+        show_all();
+        deactivate_all_filter_links();
+        hide_filter_status();
+    })
+
+                // -- end subpage doc ready
+            });
+        </script>
+    </body>
+</html>

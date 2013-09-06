@@ -1,0 +1,677 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+                                   _
+                                ==(W{==========-      /===-
+                                  ||  (.--.)         /===-_---~~~~~~~~~------____
+                                  | \_,|**|,__      |===-~___                _,-' `
+                     -==\\        `\ ' `--'   ),    `//~\\   ~~~~`---.___.-~~
+                 ______-==|        /`\_. .__/\ \    | |  \\           _-~`
+           __--~~~  ,-/-==\\      (   | .  |~~~~|   | |   `\        ,'
+        _-~       /'    |  \\     )__/==0==-\<>/   / /      \      /
+      .'        /       |   \\      /~\___/~~\/  /' /        \   /'
+    /  ____  /         |    \`\.__/-~~   \  |_/'  /          \/'
+    /-'~    ~~~~~---__  |     ~-/~         ( )   /'        _--~`
+                      \_|      /        _) | ;  ),   __--~~
+                        '~~--_/      _-~/- |/ \   '-~ \
+                       {\__--_/}    / \\_>-|)<__\      \
+                       /'   (_/  _-~  | |__>--<__|      |
+                      |   _/) )-~     | |__>--<__|      |
+                      / /~ ,_/       / /__>---<__/      |
+                     o-o _//        /-~_>---<__-~      /
+                     (^(~          /~_>---<__-      _-~
+                    ,/|           /__>--<__/     _-~
+                 ,//('(          |__>--<__|     /                  .----_
+                ( ( '))          |__>--<__|    |                 /' _---_~\
+             `-)) )) (           |__>--<__|    |               /'  /     ~\`\
+            ,/,'//( (             \__>--<__\    \             /'  //        ||
+          ,( ( ((, ))              ~-__>--<_~-_  ~--____---~' _/'/        /'
+        `~/  )` ) ,/|                 ~-_~>--<_/-__       __-~ _/
+      ._-~//( )/ )) `                    ~~-'_/_/ /~~~~~~~__--~
+       ;'( ')/ ,)(                              ~~~~~~~~~~
+     ' ') '( (/
+        '   '  `
+
+    Handcrafted by
+       ___         __
+      / _ \ ___   / /
+     / , _// _ \ / _ \
+    /_/|_| \___//_.__/
+       __  ___      _____       _                 ___         __
+      /  |/  /____ / ___/__ __ (_)____ ___  ____ / _ \ ___ _ / /___
+     / /|_/ // __// (_ // // // // __// -_)/___// // // _ `// // -_)
+    /_/  /_/ \__/ \___/ \_,_//_//_/   \__/     /____/ \_,_//_/ \__/
+
+         Providing a tiny dent in the fabric of spacetime since 1986
+    -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Xmonad + GNOME in Ubuntu &raquo; Rob McGuire-Dale</title>
+
+        <!-- CSS -->
+        <link href="/css/prettify-r187.min.css" type="text/css"
+                rel="stylesheet" />
+
+        <link href='/css/bootstrap-2.1.1.min.css' type='text/css'
+                rel="stylesheet" />
+        <link href='/css/bootstrap-responsive-2.1.1.min.css' type='text/css'
+                rel="stylesheet"/>
+        <link href='/less/base.css' type='text/css' rel="stylesheet"/>
+
+        
+        
+    <link href='/less/blog.css' type='text/css' rel="stylesheet"/>
+
+
+        
+        
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div id='navbar' class='navbar navbar-fixed-top'>
+            <div class="navbar-inner">
+                <div class="container">
+
+                    <a class='brand' href='/'>
+                        <div class='hidden-phone'>Rob McGuire-Dale</div>
+                        <div id='short-name' class='visible-phone'>
+                            Rob M.D.
+                        </div>
+                    </a>
+
+                    <div id='nav-links'>
+                        <ul class='nav pull-right'>
+                            <li>
+                                <a id='home' href='/'>
+                                    home
+                                </a>
+                            </li>
+                            <li>
+                                <a id='blog' href='/blog/'>
+                                    blog
+                                </a>
+                            </li>
+                            <li>
+                                <a id='resume' href='/resume/'>
+                                    r&eacute;sum&eacute;
+                                </a>
+                            </li>
+                            <li>
+                                <a id='contact' href='/contact/'>
+                                    contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div id='content' class='container'>
+            
+<div id='blog-base'>
+    <div class='row'>
+
+        <!-- Blog filtering -->
+        <div class='span3 hidden-phone'>
+            <ul id='filter-list' class='nav nav-list'>
+
+                <!-- Tags -->
+                <li class='nav-header'>
+                    Tags
+                </li>
+
+                
+                    <li class='filter-link' tag='database'>
+                            <a href='/blog/#database'
+            class='tag-link '
+            tag='database'>
+        
+            database (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='git'>
+                            <a href='/blog/#git'
+            class='tag-link '
+            tag='git'>
+        
+            git (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='how-to'>
+                            <a href='/blog/#how-to'
+            class='tag-link '
+            tag='how-to'>
+        
+            how-to (2)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='linux'>
+                            <a href='/blog/#linux'
+            class='tag-link '
+            tag='linux'>
+        
+            linux (3)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='meta'>
+                            <a href='/blog/#meta'
+            class='tag-link '
+            tag='meta'>
+        
+            meta (3)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='netsec'>
+                            <a href='/blog/#netsec'
+            class='tag-link '
+            tag='netsec'>
+        
+            netsec (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='programming'>
+                            <a href='/blog/#programming'
+            class='tag-link '
+            tag='programming'>
+        
+            programming (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='software'>
+                            <a href='/blog/#software'
+            class='tag-link '
+            tag='software'>
+        
+            software (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='sysadmin'>
+                            <a href='/blog/#sysadmin'
+            class='tag-link '
+            tag='sysadmin'>
+        
+            sysadmin (1)
+        
+    </a>
+                    </li>
+                
+                    <li class='filter-link' tag='windows'>
+                            <a href='/blog/#windows'
+            class='tag-link '
+            tag='windows'>
+        
+            windows (1)
+        
+    </a>
+                    </li>
+                
+
+                <li class="divider"></li>
+
+                <!-- Recent posts -->
+                <div id='recent-posts'>
+                    <li class='nav-header'>
+                        Recent posts
+                    </li>
+
+                    
+                        <li>
+                            <a href='/blog/database-backup-with-git.html'>
+                                Versioned database backups with Git
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/js-tag-filtering.html'>
+                                JavaScript-based tag filtering
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/tunneling-with-putty.html'>
+                                Tunneling with PuTTY
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/blag.html'>
+                                Blag
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/new-site-powered-by-wok.html'>
+                                New website, powered by wok
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/xmonad+gnome-in-ubuntu.html'>
+                                Xmonad + GNOME in Ubuntu
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href='/blog/nvidia-cuda-in-ubuntu.html'>
+                                nVidia CUDA multi-core development in Ubuntu
+                            </a>
+                        </li>
+                    
+                </div>
+            </ul>
+        </div>
+
+        <!-- Blog content -->
+        <div id='blog-content' class='span9'>
+            <div id='filter-status' class='text-info well'>
+                <strong>
+                    Viewing articles tagged with
+                    "<span class='tag-label'></span>"
+                </strong>
+                <a href='#' class='clear-filter btn btn-mini pull-right'>View all</a>
+            </div>
+
+            
+<div id='blog-article'>
+
+    <div id='title-bar'>
+        <h2 id='blog-back'>
+            <a href='/blog'>
+                &laquo; Blog
+            </a>
+        </h2>
+        <h1 id='title'>
+            <a href='/blog/xmonad+gnome-in-ubuntu.html'>
+                Xmonad + GNOME in Ubuntu
+            </a>
+        </h1>
+
+        <div id='subtitle' class='muted'>
+            
+            2011-05-02
+
+            
+                | in 
+        
+            <a href='/blog/#how-to'
+            class='tag-link '
+            tag='how-to'>
+        
+            how-to
+        
+    </a>,
+        
+    
+        
+            and <a href='/blog/#linux'
+            class='tag-link '
+            tag='linux'>
+        
+            linux
+        
+    </a>
+        
+    
+            
+        </div>
+    </div>
+
+    
+        <div class='img-polaroid'>
+            <a href='https://lh5.googleusercontent.com/-XYXWyrfQNPk/Tb4Htcs9mLI/AAAAAAAACZ8/AcXqaLkziPE/s0/Screenshot.png'>
+                <img id='title-img' src='https://lh5.googleusercontent.com/-XYXWyrfQNPk/Tb4Htcs9mLI/AAAAAAAACZ8/AcXqaLkziPE/s870/Screenshot.png'/>
+            </a>
+        </div>
+    
+
+    <div id='article-body'>
+        <p>Dislike the <a href="http://en.wikipedia.org/wiki/Unity_(desktop_environment)">Unity shell</a> in Ubuntu? Like <a href="http://en.wikipedia.org/wiki/Tiling_window_manager">tiling window 
+managers</a>? Here's how to replace GNOME's 
+<a href="http://en.wikipedia.org/wiki/Metacity">default window manager</a> with the <a href="http://xmonad.org">Xmonad</a> 
+dynamically-tiling window manager to create a slick GNOME/Xmonad hybrid in 
+Ubuntu 11.04 (and possibly later versions).</p>
+<h1>Install Xmonad</h1>
+<p>First, install xmonad from the repositories with <a href="http://en.wikipedia.org/wiki/Advanced_Packaging_Tool">APT</a>. This will install
+Xmonad and all of it's <a href="http://en.wikipedia.org/wiki/Haskell_%28programming_language%29">Haskell</a>-related dependencies. (<em>Warning:</em> This can
+sometimes be quite a bit of stuff, i.e., 60-300 MiB.)</p>
+<pre class='prettyprint'>
+    sudo apt-get install xmonad
+</pre>
+
+<h1>Edit the default Xmonad GNOME session</h1>
+<p>Now we'll need to edit Xmonad's GNOME session to include GNOME stuff, e.g., the
+gnome panels, the <a href="http://live.gnome.org/Nautilus">Nautilus file manager</a>, etc. Open 
+<code>/usr/share/gnome-sessions/xmonad.session</code> and make it look something like
+this: </p>
+<pre class='prettyprint'>
+    [GNOME Session]
+    Name=Xmonad
+    Required=windowmanager;panel;filemanager;
+    Required-windowmanager=xmonad
+    Required-panel=gnome-panel
+    Required-filemanager=nautilus
+    DefaultApps=gnome-settings-daemon;
+</pre>
+
+<h1>Create a new X session</h1>
+<p>Now let's add a new X session entry for our GNOME/Xmonad hybrid. Copy
+<code>/usr/share/xsessions/xmonad.desktop</code> to 
+<code>/usr/share/xsessions/xmonad-gnome.desktop</code> and make it look something like
+this:</p>
+<pre class='prettyprint'>
+    [Desktop Entry]
+    Encoding=UTF-8
+    Name=GNOME/xmonad hybrid of amazingness
+    Comment=GNOME + XMonad tiling window manager
+    Exec=gnome-session --session=xmonad
+    Icon=xmonad.png
+    Type=XSession
+</pre>
+
+<h1>Configure Xmonad</h1>
+<p>Lastly, we'll need to configure Xmonad itself to work with GNOME. Create a
+configuration file at <code>~/.xmonad/xmonad.hs</code> and make it look like this: </p>
+<pre class='prettyprint lang-hs'>
+    import XMonad
+    import XMonad.Config.Gnome
+
+main = xmonad gnomeConfig
+</pre>
+
+<p><em>Note:</em> If you want to customize your config file, you'll need to extend the
+gnomeConfig structure. If you've never programmed in Haskell before, I suggest
+reading <a href="http://www.haskell.org/haskellwiki/Xmonad/Config_archive#Quick_Introductions_to_Haskell">a quick intro to Haskell</a> first. Here's how my Xmonad config
+looks:</p>
+<pre class='prettyprint lang-hs'>
+    import XMonad
+    import XMonad.Config.Gnome
+
+-- Declare config preferences
+    config_terminal = "terminator"      -- Default terminal to run
+    config_focusFollowsMouse :: Bool    -- Have focus not follow mouse
+    config_focusFollowsMouse = False
+
+-- Run xmonad with the specified conifguration
+    main = xmonad myConfig
+
+-- Use the gnomeConfig, but change a couple things
+    myConfig = gnomeConfig {
+        terminal = config_terminal,
+        focusFollowsMouse = config_focusFollowsMouse
+    }
+</pre>
+
+<h1>References</h1>
+<ul>
+<li><a href="http://www.haskell.org/haskellwiki/Xmonad/Using_xmonad_in_Gnome#Ubuntu_Natty">Haskell wiki: Using Xmonad in GNOME</a></li>
+<li><a href="http://www.haskell.org/haskellwiki/Xmonad/Config_archive">Haskell wiki: Xmonad config archive</a></li>
+</ul>
+    </div>
+
+    <div id='article-footer'>
+        <a href='/blog'>&laquo; Back to blog list</a>
+    </div>
+
+    <!-- Disquis comment system -->
+    <hr>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        // Disqus config
+        var disqus_shortname = 'robmd';
+
+        // Disqus init
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] ||
+                document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+        Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus
+        </a>.
+    </noscript> <!--/disquis -->
+</div>
+
+        </div>
+
+
+    </div>
+</div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class='container muted'>
+                <p class='pull-right hidden-phone'>
+                    <a href='#'>Back to top</a>
+                </p>
+                <div class='visible-phone'>
+                    <p>
+                        <a href='#' class='btn'>Back to top</a>
+                    </p>
+                    <br>
+                </div>
+                <p>
+                    Last generated at
+                    2012/11/28 17:06:14 by
+                    <a href="https://github.com/mythmon/wok">Wok</a>.
+                </p>
+                <p>
+                    Site source code availible on
+                    <a href="http://github.com/robatron/robmd.net">GitHub</a>.
+                </p>
+                <p>
+                    &copy; Copyright
+                    <a href="http://robmd.net/">Rob McGuire-Dale</a>.
+                </p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="/js/lib/prettify-r187.min.js"></script>
+        <script src="/js/lib/prettify-lang-hs-r187.min.js"></script>
+        <script src='/js/lib/less-1.3.0.min.js'></script>
+        <script src="/js/lib/jquery-1.8.2.min.js"></script>
+        <script src='/js/lib/bootstrap-2.1.1.min.js'></script>
+        <script>
+            function highlight_syntax(){
+                /* Highlight syntax with Google Prettify, and excape any HTML
+                classed with 'lang-html'
+                */
+
+                // Escape HTML in code tagged as HTML
+                $('.lang-html').text($('.lang-html').html())
+
+                // Execute prettyprint
+                prettyPrint()
+            }
+
+            function menu_highlight(menu_id){
+                /* Highlight specified menu item
+                */
+                $('#navbar .nav li a#'+menu_id).parent('li')
+                        .attr('class', 'active')
+            }
+
+            function track(){
+                /* Google Analytics tracking code. Official docs recommend
+                placing at the bottom of </head>, but practice calls for
+                placing the JS at the bottom of the body to speed up appearance
+                of page load for users.
+                */
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-17987944-2']);
+                _gaq.push(['_setDomainName', 'robmd.net']);
+                _gaq.push(['_trackPageview']);
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ?
+                            'https://ssl' :
+                            'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                })();
+            }
+
+            // Init
+            // ====
+            function init(){
+                /* Initialize the JavaScript for RobMD.net
+                */
+                var local = window.location.hostname === 'localhost'
+                if(!local) track()
+            }
+
+            // "Main"
+            // ======
+            init()
+
+            // Subpage init --
+            
+
+    // Tag filtering
+    // -------------
+
+    function filter_by_tag(tag){
+        /* Remove all blog posts that aren't tagged with `tag`, show all that
+        are. Ignore blank tag names.
+        */
+
+        if(tag){
+            $('.blog-post').each(function(index){
+                var tags = $(this).attr('tags').split(' ')
+                var has_tag = false
+
+                for(var i in tags){
+                    if(tags[i] === tag){
+                        has_tag = true
+                        break
+                    }
+                }
+
+                if(has_tag) {
+                    $(this).slideDown("slow")
+                } else {
+                    $(this).slideUp("slow")
+                }
+            });
+        }
+
+        activate_filter_link(tag)
+        show_filter_status(tag)
+    }
+
+    function show_all(){
+        /* Show all blog articles
+        */
+
+        $('.blog-post').slideDown('slow')
+    }
+
+    // Tag link de/activate
+    // --------------------
+
+    function activate_filter_link(tag){
+        /* Radio-activate the specified tag link's list-item
+        */
+        var $link = $('#filter-list .filter-link[tag="' + tag + '"]')
+        deactivate_all_filter_links()
+        $link.addClass('active')
+    }
+
+    function deactivate_all_filter_links(){
+        /* Deactivate all tag links' list items
+        */
+        $('#filter-list li').removeClass('active')
+    }
+
+    // Filter status box
+    // -----------------
+
+    function show_filter_status(tag){
+        $('#filter-status').slideDown()
+        $('#filter-status .tag-label').text(tag)
+    }
+
+    function hide_filter_status(){
+        $('#filter-status').slideUp()
+    }
+
+            // -- end subpage init
+
+            $(document).ready(function(){
+                /* Run when the document is ready
+                */
+                highlight_syntax()
+
+                // Subpage doc ready --
+                
+
+    // Highlight the 'blog' menu item
+    menu_highlight('blog');
+
+    // Filter by tag on load if necessary
+    var filter_on_hash = function(){
+        if(window.location.hash){
+            filter_by_tag(window.location.hash.slice(1));
+        }
+    }();
+
+    // When a tag link is clicked...
+    $('.tag-link').click(function(){
+        /* When the user clicks on a tag link, filter blog articles by the
+        specified tag and activate the link's list item.
+        */
+        filter_by_tag($(this).attr('tag'))
+    });
+
+    // When a 'clear filter' link is clicked...
+    $('a.clear-filter').click(function(){
+        /* When the user clicks on a 'clear filter' link, show all blog
+        articles, and deactivate any filter links.
+        */
+
+        show_all();
+        deactivate_all_filter_links();
+        hide_filter_status();
+    })
+
+                // -- end subpage doc ready
+            });
+        </script>
+    </body>
+</html>
