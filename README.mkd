@@ -2,6 +2,10 @@
 
 These are the source files for my [personal web site][mysite]. 
 
+## Project Status
+
+This project is no longer maintained, and [site][mysite] is offline. This repo persists for historical purposes.
+
 ## Download the source
 
 Using git, clone this repository onto your own system:
